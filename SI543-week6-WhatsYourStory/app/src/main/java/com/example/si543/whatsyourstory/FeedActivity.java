@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.View;
 //Chia Hui
 public class FeedActivity extends Activity {
+
+
     public void hamburger() {
 
     }
