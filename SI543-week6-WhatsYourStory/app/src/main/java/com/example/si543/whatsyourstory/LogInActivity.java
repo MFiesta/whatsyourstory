@@ -1,12 +1,8 @@
 package com.example.si543.whatsyourstory;
-
+//Alice Rhee
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
-
-/**
- * Created by akimaru on 10/15/14.
- */
 
 public class LogInActivity extends Activity {
 //onClick Log In button

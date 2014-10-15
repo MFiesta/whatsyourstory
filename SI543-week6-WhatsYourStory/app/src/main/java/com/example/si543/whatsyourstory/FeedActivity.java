@@ -3,10 +3,7 @@ package com.example.si543.whatsyourstory;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
-
-/**
- * Created by akimaru on 10/15/14.
- */
+//Chia Hui
 public class FeedActivity extends Activity {
     public void hamburger() {
 
