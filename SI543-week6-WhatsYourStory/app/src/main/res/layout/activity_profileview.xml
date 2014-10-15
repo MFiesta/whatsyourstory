@@ -1,0 +1,148 @@
+<!-- Alice Rhee -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileDetailActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/placeholder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/title"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
+
+        <TextView
+            android:layout_width="129dp"
+            android:layout_height="37dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/username"
+            android:textStyle="bold"
+            android:id="@+id/textView"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/location"
+            android:id="@+id/textView3"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_message"
+            android:textStyle="bold"
+            android:id="@+id/button"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <!-- onClicking Message
+                explicit intent - takes you to the message activity
+
+Intent messageIntent = newIntent(this(), MessageActivity.class);
+startActivity(messageIntent)
+
+         -->
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_viewcal"
+            android:textStyle="bold"
+            android:id="@+id/button2"
+            android:layout_toEndOf="@+id/button"
+            android:layout_toRightOf="@+id/button"
+            android:layout_alignTop="@+id/button"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginLeft="41dp" />
+
+        <!-- onClicking Share Calendar
+                explicit intent - takes you to the calendar activity
+
+Intent calendarIntent = newIntent(this(), CalendarActivity.class);
+startActivity(messageIntent)
+
+This button will be hidden unless Eytan's approved you to see the calendar
+         -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/skills"
+            android:textStyle="bold"
+            android:id="@+id/textView4"
+            android:layout_toStartOf="@+id/textView2"
+            android:layout_toLeftOf="@+id/textView2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="34dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/experiences"
+            android:textStyle="bold"
+            android:id="@+id/textView5"
+            android:layout_toStartOf="@+id/button2"
+            android:layout_marginTop="43dp"
+            android:layout_below="@+id/listView2"
+            android:layout_alignLeft="@+id/listView2"
+            android:layout_alignStart="@+id/listView2"
+            android:layout_toLeftOf="@+id/button2" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:id="@+id/listView2"
+            android:layout_gravity="right|bottom"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:id="@+id/listView"
+            android:layout_gravity="right|bottom"
+            android:layout_below="@+id/textView5"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <QuickContactBadge
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:id="@+id/quickContactBadge"
+        android:layout_gravity="bottom|left|top"/>
+        //android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding"
+
+
+</FrameLayout>
