@@ -22,11 +22,7 @@ public class MessageActivity extends Activity {
         setContentView(R.layout.activity_message);
     }
     //public void Messaging(View, view) {
-        //insert intent code for launching sms application
-        //code below is based on solutions from Stack Overflow but are untested
-    //    Intent msgIntent = new Intent(Intent.ACTION_VIEW);
-    //    msgIntent.setData(Uri.parse("sms:"));
-    //    startActivity(msgIntent);
+        //Will likely use a Twilio API - Working to figure that out
     //}
 }
 
