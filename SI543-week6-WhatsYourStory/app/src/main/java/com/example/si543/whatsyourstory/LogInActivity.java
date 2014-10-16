@@ -15,7 +15,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 //onClick Log In button
 public void LogIn(View view) {
-        Intent FeedActivity = new Intent (this, FeedActivity.class);
+        Intent FeedActivity = new Intent (this, FeedView.class);
         startActivity(FeedActivity);
         }
 //onClick Sign Up button

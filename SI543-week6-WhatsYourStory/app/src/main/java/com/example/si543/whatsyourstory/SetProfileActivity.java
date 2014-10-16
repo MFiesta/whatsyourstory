@@ -19,7 +19,7 @@ public class SetProfileActivity extends Activity {
     }
 
     public void setUp(View view) {
-        Intent intent = new Intent(this, FeedActivity.class);
+        Intent intent = new Intent(this, FeedView.class);
         //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
         startActivity(intent);
     }
