@@ -17,8 +17,6 @@ public class SignUpActivity extends Activity {
     }
 
     public void SignUpNext(View view) {
-
-        public void signupNext (View view){
             //onClick Next button
             //verify un, password, confirm password, email info
 
