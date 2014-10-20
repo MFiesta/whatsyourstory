@@ -24,7 +24,6 @@ public class SignUpActivity extends Activity {
             startActivity(SetProfileActivity);
             finish(); //finishes the activity/destroys it?
         }
-    }
 }
 
 //onClick Next button

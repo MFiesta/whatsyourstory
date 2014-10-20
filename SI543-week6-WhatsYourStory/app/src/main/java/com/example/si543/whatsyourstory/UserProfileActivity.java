@@ -16,11 +16,6 @@ public class UserProfileActivity extends Activity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_editing);
-    }
     public void Message (View view){
         Intent messageIntent = new Intent (this, MessageActivity.class);
         startActivity(messageIntent);

@@ -35,14 +35,16 @@ public class MyActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public void LogIn (View view) {
+
+    public void LogIn(View view) {
         Intent LogInActivity = new Intent(this, LogInActivity.class);
         startActivity(LogInActivity);
     }
 
-    public void SignUp (View view){
+    public void SignUp(View view){
         Intent SignUpActivity = new Intent(this, SignUpActivity.class);
         startActivity(SignUpActivity);
     }
+
     }
 
