@@ -16,6 +16,11 @@ package com.example.si543.whatsyourstory;
 
 public class MessageActivity extends Activity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_message);
+    }
     //public void Messaging(View, view) {
         //insert intent code for launching sms application
         //code below is based on solutions from Stack Overflow but are untested

@@ -42,7 +42,7 @@
         tools:context=".MyActivity">
 
         <TextView
-            android:text="@string/title"
+            android:text="@string/feed_title"
             android:layout_centerHorizontal="true"
             android:padding="3dip"
             android:layout_width="wrap_content"

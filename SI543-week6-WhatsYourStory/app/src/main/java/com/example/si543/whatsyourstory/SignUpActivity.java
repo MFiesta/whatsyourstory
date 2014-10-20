@@ -8,15 +8,24 @@ import android.os.Bundle;
 import android.view.View;
 
 public class SignUpActivity extends Activity {
+
+    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
     }
 
-    public void SignUpNext (View view) {
-        Intent SetProfileActivity = new Intent(this, SetProfileActivity.class);
-        startActivity(SetProfileActivity);
-        finish(); //finishes the activity/destroys it?
+    public void SignUpNext(View view) {
+
+        public void signupNext (View view){
+            //onClick Next button
+            //verify un, password, confirm password, email info
+
+            Intent SetProfileActivity = new Intent(this, SetProfileActivity.class);
+            startActivity(SetProfileActivity);
+            finish(); //finishes the activity/destroys it?
+        }
     }
 }
 
