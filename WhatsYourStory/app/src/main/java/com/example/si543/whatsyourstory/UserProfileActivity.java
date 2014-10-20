@@ -12,7 +12,7 @@ public class UserProfileActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profileview);
+        setContentView(R.layout.activity_other_user_profile);
     }
 
 

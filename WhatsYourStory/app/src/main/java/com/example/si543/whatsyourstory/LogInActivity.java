@@ -37,7 +37,7 @@ public class LogInActivity extends Activity {
     }
 
     public void LogIn(View view) {
-        Intent LogInActivity = new Intent(this, FeedView.class);
+        Intent LogInActivity = new Intent(this, FeedActivity.class);
         startActivity(LogInActivity);
     }
 

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FeedView"
+            android:name=".FeedActivity"
             android:label="@string/title_activity_feed_view" >
         </activity>
 
@@ -26,8 +26,10 @@
             android:label="@string/action_sign_up" >
         </activity>
 
-        
-
+        <activity
+            android:name=".SetProfileActivity"
+            android:label="@string/action_next_interests" >
+        </activity>
 
     </application>
 
