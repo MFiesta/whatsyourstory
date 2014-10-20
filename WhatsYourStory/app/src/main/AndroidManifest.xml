@@ -20,6 +20,15 @@
             android:name=".FeedView"
             android:label="@string/title_activity_feed_view" >
         </activity>
+
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/action_sign_up" >
+        </activity>
+
+        
+
+
     </application>
 
 </manifest>
