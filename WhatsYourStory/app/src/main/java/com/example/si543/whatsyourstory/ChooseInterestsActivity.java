@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ChooseInterests extends Activity {
+public class ChooseInterestsActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

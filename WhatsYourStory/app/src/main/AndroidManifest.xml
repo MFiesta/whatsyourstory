@@ -33,7 +33,7 @@
             android:label="@string/title_activity_choose_skills" >
         </activity>
         <activity
-            android:name="com.example.si543.whatsyourstory.ChooseInterests"
+            android:name=".ChooseInterestsActivity"
             android:label="@string/title_activity_choose_interests" >
         </activity>
     </application>
