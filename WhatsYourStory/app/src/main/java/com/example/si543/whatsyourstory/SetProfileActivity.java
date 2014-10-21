@@ -16,8 +16,8 @@ public class SetProfileActivity extends Activity {
         setContentView(R.layout.activity_my_init_profile_settings);
     }
 
-    public void setUp(View view) {
-        Intent intent = new Intent(this, FeedActivity.class);
+    public void selectSkills(View view) {
+        Intent intent = new Intent(this, ChooseSkillsActivity.class);
         //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
         startActivity(intent);
     }
