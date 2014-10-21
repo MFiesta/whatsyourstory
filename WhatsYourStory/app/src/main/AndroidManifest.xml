@@ -29,12 +29,16 @@
             android:label="@string/action_next_interests" >
         </activity>
         <activity
+<<<<<<< Updated upstream
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
             android:label="Next" >
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseInterestsActivity"
             android:label="Next" >
+=======
+            android:name=".SetProfileActivity"
+            android:label="@string/action_next_interests" >
         </activity>
     </application>
 
