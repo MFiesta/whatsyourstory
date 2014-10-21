@@ -30,11 +30,11 @@
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
-            android:label="Next" >
+            android:label="Choose Skills" >
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseInterestsActivity"
-            android:label="Next" >
+            android:label="Choose Interests" >
         </activity>
     </application>
 

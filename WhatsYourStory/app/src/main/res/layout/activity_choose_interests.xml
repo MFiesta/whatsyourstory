@@ -46,8 +46,16 @@
         android:layout_height="wrap_content"
         android:text="Next"
         android:id="@+id/nextbutton"
-        android:layout_marginTop="33dp"
-        android:layout_centerHorizontal="true"
-        android:onClick="selectInterests"/>
+        android:onClick="selectInterests"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignStart="@+id/editText" />
 
 </RelativeLayout>
