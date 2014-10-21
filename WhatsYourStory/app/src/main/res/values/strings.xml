@@ -57,5 +57,7 @@
     <string name="first">Settings</string>
     <string name="descr_overflow_button">Menu</string>
     <string name="title_activity_feed_view">FeedView</string>
+    <string name="title_activity_choose_skills">ChooseSkillsActivity</string>
+    <string name="title_activity_choose_interests">ChooseInterests</string>
 
 </resources>
