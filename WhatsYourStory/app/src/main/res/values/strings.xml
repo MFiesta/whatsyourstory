@@ -72,4 +72,9 @@
     <string name="title_activity_choose_interests">ChooseInterests</string>
 
 
+    <!--Favorites-->
+    <string-array name="favorites_list">
+        <item>Eytan Adar</item>
+        <item>Captain America</item>
+    </string-array>
 </resources>
