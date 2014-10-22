@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class UserProfileActivity extends Activity {
+public class OtherUserProfileActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

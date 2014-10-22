@@ -45,9 +45,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:id="@+id/nextbutton"
+        android:id="@+id/SkillsNext"
         android:layout_marginTop="33dp"
         android:layout_centerHorizontal="true"
-        android:onClick="selectSkills"/>
+        android:onClick="SkillsNext"/>
 
 </RelativeLayout>

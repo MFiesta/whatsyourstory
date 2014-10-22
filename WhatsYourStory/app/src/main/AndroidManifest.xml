@@ -25,20 +25,17 @@
             android:label="@string/action_sign_up" >
         </activity>
         <activity
-            android:name="com.example.si543.whatsyourstory.SetProfileActivity"
-            android:label="@string/action_next_interests" >
+            android:name="com.example.si543.whatsyourstory.SetMyInitProfileActivity"
+            android:label="@string/action_my_init_profile_next" >
         </activity>
         <activity
-<<<<<<< Updated upstream
+
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
-            android:label="Next" >
+            android:label="@string/action_skills_next" >
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseInterestsActivity"
-            android:label="Next" >
-=======
-            android:name=".SetProfileActivity"
-            android:label="@string/action_next_interests" >
+            android:label="@string/action_interests_next" >
         </activity>
     </application>
 

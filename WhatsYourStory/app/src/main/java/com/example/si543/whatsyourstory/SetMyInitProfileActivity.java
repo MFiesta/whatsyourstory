@@ -8,7 +8,7 @@ import android.view.View;
 //Stephanie Wooten
 
 
-public class SetProfileActivity extends Activity {
+public class SetMyInitProfileActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,9 @@ public class SetProfileActivity extends Activity {
         setContentView(R.layout.activity_my_init_profile_settings);
     }
 
-    public void selectSkills(View view) {
-        Intent intent = new Intent(this, ChooseSkillsActivity.class);
+    public void MyInitProfileNext(View view) {
+        Intent SetMyInitProfileActivity = new Intent(this, ChooseSkillsActivity.class);
         //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
-        startActivity(intent);
+        startActivity(SetMyInitProfileActivity);
     }
-
-
 }

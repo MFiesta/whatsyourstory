@@ -20,7 +20,7 @@ public class SignUpActivity extends Activity {
             //onClick Next button
             //verify un, password, confirm password, email info
 
-            Intent SetProfileActivity = new Intent(this, SetProfileActivity.class);
+            Intent SetProfileActivity = new Intent(this, SetMyInitProfileActivity.class);
             startActivity(SetProfileActivity);
             finish(); //finishes the activity/destroys it?
         }

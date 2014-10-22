@@ -14,8 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-<!-- Users will be able to select multiple buttons with
- interests that they would like, or add their own interests. -->
+    <!-- Users will be able to select multiple buttons with
+     interests that they would like, or add their own interests. -->
 
     <Button
         android:layout_width="wrap_content"
@@ -45,9 +45,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:id="@+id/nextbutton"
+        android:id="@+id/InterestsNext"
         android:layout_marginTop="33dp"
         android:layout_centerHorizontal="true"
-        android:onClick="selectInterests"/>
+        android:onClick="InterestsNext"/>
 
 </RelativeLayout>
