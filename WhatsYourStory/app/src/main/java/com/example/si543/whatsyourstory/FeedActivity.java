@@ -42,8 +42,8 @@ public class FeedActivity extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
-    //Click Row 1
-    public void FeedRow1(View view){
+    //Click See button
+    public void SeeOtherProfile(View view){
         Intent FeedActivity = new Intent(this, OtherUserProfileActivity.class);
         startActivity(FeedActivity);
     }

@@ -88,6 +88,17 @@
                         android:layout_gravity="right"
                         style="@style/AppTheme"
                         android:layout_column="4" />
+
+                    <Button
+                        android:id="@+id/SeeOtherProfile"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="See"
+                        android:textStyle="bold"
+                        android:onClick="SeeOtherProfile"
+                        android:layout_gravity="center_horizontal" />
                 </TableRow>
 
                 <TableRow

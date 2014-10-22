@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.FeedActivity"
-            android:label="@string/action_feed_row_1" >
+            android:label="@string/action_see_other_profile" >
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.SignUpActivity"

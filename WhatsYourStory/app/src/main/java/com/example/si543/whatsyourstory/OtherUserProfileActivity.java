@@ -16,12 +16,12 @@ public class OtherUserProfileActivity extends Activity {
     }
 
 
-/*    public void Message (View view){
+   public void Message (View view){
         Intent messageIntent = new Intent (this, MessageActivity.class);
         startActivity(messageIntent);
     }
 
-    */
+
 
 //visibility contingent on user's approval to see their calendar
 
