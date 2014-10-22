@@ -33,16 +33,34 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.SetMyInitProfileActivity"
-            android:label="@string/action_my_init_profile_next" >
+            android:label="@string/action_my_init_profile_next"
+            android:parentActivityName="com.example.si543.whatsyourstory.SignUpActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.SignUpActivity" />
         </activity>
         <activity
 
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
-            android:label="@string/action_skills_next" >
+            android:label="@string/action_skills_next"
+            android:parentActivityName="com.example.si543.whatsyourstory.SetMyInitProfileActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.SetMyInitProfileActivity" />
         </activity>
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseInterestsActivity"
-            android:label="@string/action_interests_next" >
+            android:label="@string/action_interests_next"
+            android:parentActivityName="com.example.si543.whatsyourstory.ChooseSkillsActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.ChooseSkillsActivity" />
         </activity>
 
         <activity
