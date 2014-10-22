@@ -45,7 +45,11 @@
             android:label="@string/action_interests_next" >
         </activity>
 
+        <activity
 
+            android:name="com.example.si543.whatsyourstory.OtherUserProfileActivity"
+            android:label="@string/action_message" >
+        </activity>
 
     </application>
 
