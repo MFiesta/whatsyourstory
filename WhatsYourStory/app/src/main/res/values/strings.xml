@@ -66,10 +66,9 @@
     <string name="first">Settings</string>
     <string name="descr_overflow_button">Menu</string>
     <string name="title_activity_feed_view">FeedView</string>
+    <string name="action_feed_row_1">FeedRow1</string>
 
-
-
-    <string name="title_activity_choose_interests">ChooseInterests</string>
-
-
+    <!-- Action Bar -->
+    <string name="action_search">ActionBarSearch</string>
+    <string name="action_important">ActionBarImportant</string>
 </resources>

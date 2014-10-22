@@ -1,11 +1,11 @@
 package com.example.si543.whatsyourstory;
-//Chia Hui
 
 import android.app.Activity;
 
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -41,6 +41,11 @@ public class FeedActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+    }
+    //Click Row 1
+    public void FeedRow1(View view){
+        Intent FeedActivity = new Intent(this, OtherUserProfileActivity.class);
+        startActivity(FeedActivity);
     }
 
     @Override
@@ -80,7 +85,7 @@ public class FeedActivity extends Activity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.feed_view, menu);
+            getMenuInflater().inflate(R.menu.feed, menu);
             restoreActionBar();
             return true;
         }
@@ -126,8 +131,8 @@ public class FeedActivity extends Activity
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_feed_view, container, false);
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_feed, container, false);
             return rootView;
         }
 
@@ -137,11 +142,6 @@ public class FeedActivity extends Activity
             ((FeedActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
-
-       // public void clickProfile (View view) {
-       //     Intent UserProfileActivity = new Intent(this, UserProfileActivity.class);
-       //     startActivity(UserProfileActivity);
-       // }
     }
 
 }
