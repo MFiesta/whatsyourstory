@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class UserProfileActivity extends Activity {
+public class OtherUserProfileActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,14 @@ public class UserProfileActivity extends Activity {
     }
 
 
-    public void Message (View view){
+   public void Message (View view){
         Intent messageIntent = new Intent (this, MessageActivity.class);
         startActivity(messageIntent);
     }
-    //visibility contingent on user's approval to see their calendar
+
+
+
+//visibility contingent on user's approval to see their calendar
 
 //    public void ViewCalendar (View view){
 //        Intent calendarIntent = new Intent (this, CalendarActivity.class);

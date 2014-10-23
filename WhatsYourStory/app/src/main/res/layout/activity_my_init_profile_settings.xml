@@ -89,10 +89,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:id="@+id/button"
+        android:id="@+id/MyInitProfileNext"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/editText5"
         android:layout_centerHorizontal="true"
-        android:onClick="setUp"/>
+        android:onClick="MyInitProfileNext"/>
 
 </RelativeLayout>

@@ -16,8 +16,8 @@ public class ChooseInterestsActivity extends Activity {
         setContentView(R.layout.activity_choose_interests);
     }
 
-    public void selectInterests(View view) {
-        Intent FeedActivity = new Intent(this, FeedActivity.class);
-        startActivity(FeedActivity);
+    public void InterestsNext(View view) {
+        Intent ChooseInterestsActivity = new Intent(this, FeedActivity.class);
+        startActivity(ChooseInterestsActivity);
     }
 }

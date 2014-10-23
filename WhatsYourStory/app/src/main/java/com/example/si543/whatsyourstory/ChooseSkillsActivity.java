@@ -12,11 +12,11 @@ public class ChooseSkillsActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_interests);
+        setContentView(R.layout.activity_choose_skills);
     }
 
-    public void selectSkills(View view) {
-        Intent ChooseInterestsActivity = new Intent(this, ChooseInterestsActivity.class);
-        startActivity(ChooseInterestsActivity);
+    public void SkillsNext(View view) {
+        Intent ChooseSkillsActivity = new Intent(this, ChooseInterestsActivity.class);
+        startActivity(ChooseSkillsActivity);
     }
 }

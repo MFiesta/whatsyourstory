@@ -21,6 +21,15 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="hello_world">Hello</string>
 
+    <!-- Set My initial Profile -->
+    <string name="action_my_init_profile_next">Next</string>
+
+    <!-- Choose your skills -->
+    <string name="action_skills_next">Next</string>
+
+    <!-- Choose your interests -->
+    <string name="action_interests_next">Next</string>
+
     <!-- Profileview -->
     <string name="username">Eytan Adar</string>
     <string name="title">UMSI Faculty</string>
@@ -57,7 +66,18 @@
     <string name="first">Settings</string>
     <string name="descr_overflow_button">Menu</string>
     <string name="title_activity_feed_view">FeedView</string>
-    <string name="title_activity_choose_skills">ChooseSkillsActivity</string>
-    <string name="title_activity_choose_interests">ChooseInterests</string>
+    <string name="action_feed_row_1">FeedRow1</string>
+    <string name="action_see_other_profile">See</string>
 
+    <!-- Action Bar -->
+    <string name="action_search">ActionBarSearch</string>
+    <string name="action_important">ActionBarImportant</string>
+    <string name="action_add_to_important">Add this person to your favorite</string>
+    <string name="action_contact">Contact this person</string>
+
+    <!--Favorites-->
+    <string-array name="favorites_list">
+        <item>Eytan Adar</item>
+        <item>Captain America</item>
+    </string-array>
 </resources>

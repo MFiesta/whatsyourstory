@@ -39,7 +39,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        tools:context=".MyActivity">
+        tools:context=".Feed">
 
         <TextView
             android:text="@string/feed_title"
@@ -67,13 +67,16 @@
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:layout_marginBottom="10dip"
-                    android:onClick="ClickProfile">
+                    android:id="@+id/FeedRow1"
+                    android:clickable="true"
+                    android:onClick="FeedRow1">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_launcher"
-                        android:layout_gravity="center_vertical" />
+                        android:layout_gravity="center_vertical"
+                        android:clickable="false" />
 
                     <TextView
                         android:text=" User Name \n 2nd Year Student \n Ann Arbor"
@@ -85,6 +88,17 @@
                         android:layout_gravity="right"
                         style="@style/AppTheme"
                         android:layout_column="4" />
+
+                    <Button
+                        android:id="@+id/SeeOtherProfile"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="109dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="See"
+                        android:textStyle="bold"
+                        android:onClick="SeeOtherProfile"
+                        android:layout_gravity="center_horizontal" />
                 </TableRow>
 
                 <TableRow
