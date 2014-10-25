@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.si543.whatsyourstory" >
 
+<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name="com.example.si543.whatsyourstory.LogInActivity"
             android:label="@string/app_name" >
@@ -16,26 +19,55 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.example.si543.whatsyourstory.FeedActivity"
-            android:label="@string/title_activity_feed_view" >
+            android:label="@string/action_see_other_profile" >
         </activity>
+
         <activity
             android:name="com.example.si543.whatsyourstory.SignUpActivity"
-            android:label="@string/action_sign_up" >
+            android:label="@string/action_sign_up"
+            android:parentActivityName="com.example.si543.whatsyourstory.LogInActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.LogInActivity" />
         </activity>
+
         <activity
-            android:name="com.example.si543.whatsyourstory.SetProfileActivity"
-            android:label="@string/action_next_interests" >
+            android:name="com.example.si543.whatsyourstory.SetMyInitProfileActivity"
+            android:label="@string/action_my_init_profile_next"
+            android:parentActivityName="com.example.si543.whatsyourstory.SignUpActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.SignUpActivity" />
         </activity>
+
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
             android:label="Choose Skills" >
         </activity>
+
         <activity
             android:name="com.example.si543.whatsyourstory.ChooseInterestsActivity"
-            android:label="Choose Interests" >
+            android:label="@string/action_interests_next"
+            android:parentActivityName="com.example.si543.whatsyourstory.ChooseSkillsActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.ChooseSkillsActivity" />
         </activity>
+
+        <activity
+            android:name="com.example.si543.whatsyourstory.OtherUserProfileActivity"
+            android:label="@string/action_message" >
+        </activity>
+
     </application>
 
 </manifest>
