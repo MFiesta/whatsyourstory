@@ -142,7 +142,6 @@ This button will be hidden unless Eytan's approved you to see the calendar
         android:layout_height="119dp"
         android:id="@+id/quickContactBadge"
         android:layout_gravity="bottom|left|top"/>
-        //android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding"
 
 
 </FrameLayout>
