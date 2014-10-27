@@ -52,10 +52,8 @@
             android:text="@string/action_message"
             android:textStyle="bold"
             android:id="@+id/button"
-            android:layout_marginTop="38dp"
             android:layout_below="@+id/textView2"
-            android:layout_alignRight="@+id/textView4"
-            android:layout_alignEnd="@+id/textView4" />
+            android:layout_toEndOf="@+id/textView4" />
 
         <!-- onClicking Message
                 explicit intent - takes you to the message activity
@@ -65,19 +63,6 @@ startActivity(messageIntent)
 
          -->
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_viewcal"
-            android:textStyle="bold"
-            android:id="@+id/button2"
-            android:layout_toEndOf="@+id/button"
-            android:layout_toRightOf="@+id/button"
-            android:layout_alignTop="@+id/button"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2"
-            android:layout_marginLeft="41dp" />
 
         <!-- onClicking Share Calendar
                 explicit intent - takes you to the calendar activity
@@ -109,40 +94,37 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:text="@string/experiences"
             android:textStyle="bold"
             android:id="@+id/textView5"
-            android:layout_toStartOf="@+id/button2"
             android:layout_marginTop="43dp"
-            android:layout_below="@+id/listView2"
-            android:layout_alignLeft="@+id/listView2"
-            android:layout_alignStart="@+id/listView2"
-            android:layout_toLeftOf="@+id/button2" />
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="67dp"
-            android:id="@+id/listView2"
-            android:layout_gravity="right|bottom"
             android:layout_below="@+id/textView4"
-            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4" />
+
+        <QuickContactBadge
+            android:layout_width="119dp"
+            android:layout_height="119dp"
+            android:id="@+id/quickContactBadge"
+            android:layout_gravity="bottom|left|top"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Graphic Design"
+            android:id="@+id/textView6"
+            android:layout_below="@+id/textView4"
             android:layout_alignStart="@+id/textView4" />
 
-        <ListView
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="67dp"
-            android:id="@+id/listView"
-            android:layout_gravity="right|bottom"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Worked with a client in Ann Arbor to redesign their promotional brochures"
+            android:id="@+id/textView7"
             android:layout_below="@+id/textView5"
-            android:layout_alignLeft="@+id/button"
-            android:layout_alignStart="@+id/button"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignStart="@+id/textView5" />
 
     </RelativeLayout>
-
-    <QuickContactBadge
-        android:layout_width="119dp"
-        android:layout_height="119dp"
-        android:id="@+id/quickContactBadge"
-        android:layout_gravity="bottom|left|top"/>
-        //android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding"
 
 
 </FrameLayout>

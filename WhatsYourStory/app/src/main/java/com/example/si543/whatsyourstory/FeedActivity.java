@@ -57,8 +57,8 @@ public class FeedActivity extends Activity
                 .commit();
     }
 
-    public void onSectionAttached(int number) {
-        switch (number) {
+    public void onSectionAttached(int position) {
+        switch (position) {
             case 1:
                 mTitle = getString(R.string.title_section1);
                 break;
