@@ -21,7 +21,10 @@ public class OtherUserProfileActivity extends Activity {
         startActivity(messageIntent);
     }
 
-
+    public void Favorite (View view){
+        Intent favoriteIntent = new Intent (this, FavoritesActivity.class);
+        startActivity(favoriteIntent);
+    }
 
 //visibility contingent on user's approval to see their calendar
 
