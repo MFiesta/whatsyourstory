@@ -52,81 +52,99 @@
         android:id="@+id/nextbutton"
         android:onClick="skillsNext" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Computer Science"
         android:id="@+id/button2"
         android:layout_above="@+id/button3"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_toEndOf="@+id/button"
+        android:textOn="Computer Science"
+        android:textOff="Computer Science" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Apple"
         android:id="@+id/button3"
         android:layout_toStartOf="@+id/textView"
         android:layout_below="@+id/button"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textOn="Apple"
+        android:textOff="Apple" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Watercolor"
         android:id="@+id/button5"
         android:layout_toEndOf="@+id/button"
         android:layout_alignTop="@+id/button3"
-        android:layout_alignStart="@+id/choose_interests" />
+        android:layout_alignStart="@+id/choose_interests"
+        android:textOn="Watercolor"
+        android:textOff="Watercolor" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Windows"
         android:id="@+id/button6"
         android:layout_toEndOf="@+id/button5"
-        android:layout_alignTop="@+id/button5" />
+        android:layout_alignTop="@+id/button5"
+        android:textOn="Windows"
+        android:textOff="Windows" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dance"
         android:id="@+id/button7"
         android:layout_toStartOf="@+id/button5"
-        android:layout_below="@+id/button3" />
+        android:layout_below="@+id/button3"
+        android:textOn="Dance"
+        android:textOff="Dance" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CSS"
         android:id="@+id/button10"
         android:layout_toStartOf="@+id/button5"
         android:layout_alignTop="@+id/button7"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_alignEnd="@+id/editText"
+        android:textOn="CSS"
+        android:textOff="CSS" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Knitting"
         android:id="@+id/button11"
         android:layout_toStartOf="@+id/button5"
         android:layout_below="@+id/button7"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textOn="Knitting"
+        android:textOff="Knitting" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Craft beer"
         android:id="@+id/button13"
         android:layout_toStartOf="@+id/button6"
-        android:layout_below="@+id/button10" />
+        android:layout_below="@+id/button10"
+        android:textOn="Craft beer"
+        android:textOff="Craft beer" />
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Food"
         android:id="@+id/button14"
         android:layout_toStartOf="@+id/button10"
         android:layout_below="@+id/button11"
-        android:layout_alignStart="@+id/button7" />
+        android:layout_alignStart="@+id/button7"
+        android:textOn="Food"
+        android:textOff="Food"/>/>
 
 </RelativeLayout>
