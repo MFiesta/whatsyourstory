@@ -17,13 +17,15 @@
     <!-- Users will be able to select multiple buttons with
      skills that they have, or add their own skills. -->
 
-    <Button
+    <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Engineering"
         android:id="@+id/button"
         android:layout_below="@+id/choose_skills"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textOn="Engineering"
+        android:textOff="Engineering"/>
 
     <TextView
         android:layout_width="wrap_content"
