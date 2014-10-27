@@ -15,7 +15,7 @@ public class ChooseSkillsActivity extends Activity {
         setContentView(R.layout.activity_choose_skills);
     }
 
-    public void SkillsNext(View view) {
+    public void skillsNext(View view) {
         Intent ChooseSkillsActivity = new Intent(this, ChooseInterestsActivity.class);
         startActivity(ChooseSkillsActivity);
     }
