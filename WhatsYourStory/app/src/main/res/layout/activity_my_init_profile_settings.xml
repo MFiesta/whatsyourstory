@@ -32,6 +32,7 @@
         android:text="Edit Picture"
         android:id="@+id/textView"
         android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
 
