@@ -22,7 +22,7 @@ public class SignUpActivity extends Activity {
 
             Intent SetProfileActivity = new Intent(this, SetMyInitProfileActivity.class);
             startActivity(SetProfileActivity);
-            finish(); //finishes the activity/destroys it?
+            finish(); //finishes the activity/destroys it - verified that this is correctly removes from stack
         }
 }
 
