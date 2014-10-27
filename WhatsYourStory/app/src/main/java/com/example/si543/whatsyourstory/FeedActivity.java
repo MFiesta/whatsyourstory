@@ -58,9 +58,11 @@ public class FeedActivity extends Activity
     }
 
     public void onSectionAttached(int position) {
+        //Fragment fragment = null;
         switch (position) {
             case 1:
                 mTitle = getString(R.string.title_section1);
+                //fragment = EditProfileActivity.newInstance(position + 1);
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
