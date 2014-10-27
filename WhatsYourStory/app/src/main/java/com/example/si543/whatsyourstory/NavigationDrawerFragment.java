@@ -4,6 +4,7 @@ package com.example.si543.whatsyourstory;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -110,6 +111,7 @@ public class NavigationDrawerFragment extends Fragment {
         return mDrawerListView;
     }
 
+
     public boolean isDrawerOpen() {
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }
@@ -188,7 +190,25 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
+
+
     private void selectItem(int position) {
+        // Create a new fragment and specify the planet to show based on position
+        //Fragment fragment = new EditProfileFragment();
+        //Bundle args = new Bundle();
+        //args.putInt(EditProfile.ARG_PLANET_NUMBER, position);
+        //fragment.setArguments(args);
+
+        // Insert the fragment by replacing any existing fragment
+        //FragmentManager fragmentManager = getFragmentManager();
+        //fragmentManager.beginTransaction()
+        //        .replace(R.layout.activity_feed, fragment)
+        //        .commit();
+
+        // Highlight the selected item, update the title, and close the drawer
+        //mDrawerListView.setItemChecked(position, true);
+        //setTitle(mPlanetTitles[position]);
+        //mDrawerLayout.closeDrawer(mDrawerListView);
         mCurrentSelectedPosition = position;
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
