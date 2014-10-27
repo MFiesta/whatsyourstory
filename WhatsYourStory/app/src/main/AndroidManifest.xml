@@ -50,7 +50,6 @@
         <activity
 
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
-<<<<<<< HEAD
             android:label="@string/action_skills_next"
             android:parentActivityName="com.example.si543.whatsyourstory.SetMyInitProfileActivity">
             <!-- A child of the main activity -->
@@ -58,9 +57,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.SetMyInitProfileActivity" />
-=======
-            android:label="Choose Skills" >
->>>>>>> choose-skills-and-interests
+
         </activity>
 
         <activity
@@ -75,10 +72,6 @@
         </activity>
 
         <activity
-<<<<<<< HEAD
-
-=======
->>>>>>> choose-skills-and-interests
             android:name="com.example.si543.whatsyourstory.OtherUserProfileActivity"
             android:label="@string/action_message" >
         </activity>
