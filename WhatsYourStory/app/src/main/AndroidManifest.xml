@@ -22,7 +22,7 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.FeedActivity"
-            android:label="@string/action_see_other_profile" >
+            android:label="WhatsYourStory" >
         </activity>
 
         <activity
@@ -73,7 +73,7 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.OtherUserProfileActivity"
-            android:label="Feed"
+            android:label="WhatsYourStory"
             android:parentActivityName="com.example.si543.whatsyourstory.FeedActivity">
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -84,7 +84,7 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.FavoritesActivity"
-            android:label="Favorites"
+            android:label="Eytan Adar"
             android:parentActivityName="com.example.si543.whatsyourstory.OtherUserProfileActivity">
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
