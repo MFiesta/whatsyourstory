@@ -45,13 +45,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        android:id="@+id/nextbutton"
-        android:onClick="selectInterests"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/nextbutton"
+        android:onClick="selectInterests" />
 
     <Button
         android:layout_width="wrap_content"
@@ -125,41 +122,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="reddit"
-        android:id="@+id/button12"
-        android:layout_toStartOf="@+id/button6"
-        android:layout_toEndOf="@+id/button"
-        android:layout_below="@+id/button10"
-        android:layout_alignEnd="@+id/nextbutton" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Craft beer"
         android:id="@+id/button13"
         android:layout_toStartOf="@+id/button6"
-        android:layout_toEndOf="@+id/button12"
-        android:layout_below="@+id/button9"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/button10" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Food"
         android:id="@+id/button14"
-        android:layout_toStartOf="@+id/nextbutton"
-        android:layout_toEndOf="@+id/button12"
+        android:layout_toStartOf="@+id/button10"
         android:layout_below="@+id/button11"
         android:layout_alignStart="@+id/button7" />
-=======
->>>>>>> choose-skills-and-interests
-        android:id="@+id/InterestsNext"
-        android:layout_marginTop="33dp"
-        android:layout_centerHorizontal="true"
-        android:onClick="InterestsNext"/>
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> choose-skills-and-interests
 
 </RelativeLayout>
