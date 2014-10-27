@@ -48,7 +48,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/nextbutton"
-        android:onClick="selectInterests" />
+        android:onClick="skillsNext" />
 
     <Button
         android:layout_width="wrap_content"
