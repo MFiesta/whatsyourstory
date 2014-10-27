@@ -35,9 +35,14 @@
     <string name="title">UMSI Faculty</string>
     <string name="location">Ann Arbor, MI</string>
     <string name="action_message">Message</string>
-    <string name="action_viewcal">View Calendar</string>
+    <string name="action_favorite">Favorite</string>
     <string name="skills">Skills:</string>
     <string name="experiences">Experience:</string>
+    <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
+    <string name="eytanskills">Graphic Design</string>
+
+
+    <!--Edit my Profile-->
     <string name="interests">Interests:</string>
     <string name="myname">Steve Rogers</string>
     <string name="myinterests">Interests:</string>

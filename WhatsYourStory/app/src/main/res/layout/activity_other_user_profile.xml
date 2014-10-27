@@ -57,15 +57,6 @@
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_message"
-            android:textStyle="bold"
-            android:id="@+id/button"
-            android:layout_below="@+id/textView2"
-            android:layout_toEndOf="@+id/textView4" />
-
         <!-- onClicking Message
                 explicit intent - takes you to the message activity
 
@@ -92,7 +83,6 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:textStyle="bold"
             android:id="@+id/textView4"
             android:layout_toStartOf="@+id/textView2"
-            android:layout_toLeftOf="@+id/textView2"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -113,7 +103,7 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Graphic Design"
+            android:text="@string/eytanskills"
             android:id="@+id/textView6"
             android:layout_below="@+id/textView4"
             android:layout_alignStart="@+id/textView4" />
@@ -122,10 +112,30 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Worked with a client in Ann Arbor to redesign their promotional brochures"
+            android:text="@string/eytanexperiences"
             android:id="@+id/textView7"
             android:layout_below="@+id/textView5"
             android:layout_alignStart="@+id/textView5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_message"
+            android:textStyle="bold"
+            android:id="@+id/button2"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_below="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_favorite"
+            android:textStyle="bold"
+            android:id="@+id/button"
+            android:onClick="Favorite"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_below="@+id/textView3" />
 
     </RelativeLayout>
 
