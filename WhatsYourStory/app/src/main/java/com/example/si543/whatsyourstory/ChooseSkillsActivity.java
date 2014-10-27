@@ -20,11 +20,4 @@ public class ChooseSkillsActivity extends Activity {
         startActivity(ChooseSkillsActivity);
     }
 
-    Button button = (Button) findViewById(R.id.button_send);
-    button.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View v) {
-            // When users click button on this page, buttons will highlight
-        }
-    });
-
 }
