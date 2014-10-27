@@ -20,7 +20,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Interest"
+        android:text="Engineering"
         android:id="@+id/button"
         android:layout_below="@+id/choose_interests"
         android:layout_alignParentStart="true" />
@@ -45,9 +45,121 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        android:id="@+id/nextbutton"
+        android:onClick="selectInterests"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Science"
+        android:id="@+id/button2"
+        android:layout_above="@+id/button3"
+        android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apple"
+        android:id="@+id/button3"
+        android:layout_toStartOf="@+id/textView"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watercolor"
+        android:id="@+id/button5"
+        android:layout_toEndOf="@+id/button"
+        android:layout_alignTop="@+id/button3"
+        android:layout_alignStart="@+id/choose_interests" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Windows"
+        android:id="@+id/button6"
+        android:layout_toEndOf="@+id/button5"
+        android:layout_alignTop="@+id/button5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dance"
+        android:id="@+id/button7"
+        android:layout_toStartOf="@+id/button5"
+        android:layout_below="@+id/button3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HTML"
+        android:id="@+id/button9"
+        android:layout_toStartOf="@+id/button5"
+        android:layout_alignTop="@+id/button7"
+        android:layout_alignEnd="@+id/button6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSS"
+        android:id="@+id/button10"
+        android:layout_toStartOf="@+id/button5"
+        android:layout_alignTop="@+id/button7"
+        android:layout_alignEnd="@+id/editText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Knitting"
+        android:id="@+id/button11"
+        android:layout_toStartOf="@+id/button5"
+        android:layout_below="@+id/button7"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reddit"
+        android:id="@+id/button12"
+        android:layout_toStartOf="@+id/button6"
+        android:layout_toEndOf="@+id/button"
+        android:layout_below="@+id/button10"
+        android:layout_alignEnd="@+id/nextbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Craft beer"
+        android:id="@+id/button13"
+        android:layout_toStartOf="@+id/button6"
+        android:layout_toEndOf="@+id/button12"
+        android:layout_below="@+id/button9"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:id="@+id/button14"
+        android:layout_toStartOf="@+id/nextbutton"
+        android:layout_toEndOf="@+id/button12"
+        android:layout_below="@+id/button11"
+        android:layout_alignStart="@+id/button7" />
+=======
+>>>>>>> choose-skills-and-interests
         android:id="@+id/InterestsNext"
         android:layout_marginTop="33dp"
         android:layout_centerHorizontal="true"
         android:onClick="InterestsNext"/>
+<<<<<<< HEAD
+=======
+>>>>>>> master
+>>>>>>> choose-skills-and-interests
 
 </RelativeLayout>
