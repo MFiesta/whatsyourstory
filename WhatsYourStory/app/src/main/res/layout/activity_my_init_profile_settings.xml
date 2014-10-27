@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         android:ems="10"
         android:id="@+id/editText"
         android:layout_marginTop="49dp"
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:text="Title"
+        android:hint="Title"
         android:ems="10"
         android:id="@+id/editText2"
         android:layout_centerVertical="true"
@@ -71,7 +71,7 @@
         android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/editText2"
         android:layout_alignEnd="@+id/editText2"
-        android:text="Organization" />
+        android:hint="Organization" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
         android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/editText4"
         android:layout_alignEnd="@+id/editText4"
-        android:text="Location" />
+        android:hint="Location" />
 
     <Button
         android:layout_width="wrap_content"
