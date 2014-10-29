@@ -1,18 +1,18 @@
 package com.example.si543.whatsyourstory;
 
-import android.app.Activity;
-
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 public class FeedActivity extends Activity
@@ -41,6 +41,27 @@ public class FeedActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        ListView feedListView = (ListView) findViewById(R.id.feedListView);
+
+        // set adatper for this listview
+
+        String[] feedCareerValues = new String[]{"Android", "iPhone", "WindowsMobile",
+                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+                "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
+                "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
+                "Android", "iPhone", "WindowsMobile"};
+
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.listitem_in_activity_feed, R.id.feedCareer, feedCareerValues);
+        feedListView.setAdapter(adapter);
+
+        //set listview onitemclicklistener
+        feedListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
+            }
+        });
+
     }
     //Click See button
     public void SeeOtherProfile(View view){
