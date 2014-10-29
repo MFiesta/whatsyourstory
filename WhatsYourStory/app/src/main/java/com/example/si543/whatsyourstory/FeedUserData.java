@@ -5,24 +5,24 @@ package com.example.si543.whatsyourstory;
  */
 public class FeedUserData {
     protected String name;
-    protected String contact;
-    protected String thirdline;
+    protected String career;
+    protected String location;
     protected String imagePath;
 
-    public FeedUserData(String name, String contact, String thirdline, String imagePath) {
+    public FeedUserData(String name, String career, String location, String imagePath) {
         this.name = name;
-        this.contact = contact;
-        this.thirdline = thirdline;
+        this.career = career;
+        this.location = location;
         this.imagePath = imagePath;
     }
     public String getName() {
         return name;
     }
-    public String getContact() {
-        return contact;
+    public String getCareer() {
+        return career;
     }
-    public String getThirdline() {
-        return thirdline;
+    public String getLocation() {
+        return location;
     }
     public String getImagePath() {
         return imagePath;
