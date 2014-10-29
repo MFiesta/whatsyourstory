@@ -3,55 +3,51 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_height="wrap_content"
     android:padding="6dp"
     tools:context=".MyActivity">
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="6dp"
         android:contentDescription="TODO"
         android:src="@drawable/ic_launcher" />
 
-    <TextView
-        android:id="@+id/feedLocation"
-        android:layout_width="fill_parent"
-        android:layout_height="26dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/icon"
-        android:ellipsize="marquee"
-        android:singleLine="true"
-        android:text="Description"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/feedCareer"
-        android:layout_width="fill_parent"
-        android:layout_height="26dip"
-        android:layout_above="@id/feedLocation"
-        android:layout_alignParentRight="true"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_toRightOf="@id/icon"
-        android:gravity="center_vertical"
-        android:text="Example application"
-        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/feedName"
         android:layout_width="fill_parent"
         android:layout_height="26dip"
-        android:layout_above="@id/feedCareer"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignWithParentIfMissing="true"
         android:layout_toRightOf="@id/icon"
-        android:gravity="center_vertical"
         android:text="Eytan Adar"
         android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/feedCareer"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_below="@id/feedName"
+        android:layout_toRightOf="@id/icon"
+        android:text="Example application"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/feedLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="26dp"
+        android:layout_toRightOf="@id/icon"
+        android:layout_below="@id/feedCareer"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Description"
+        android:textSize="12sp" />
+
+
 
 </RelativeLayout>

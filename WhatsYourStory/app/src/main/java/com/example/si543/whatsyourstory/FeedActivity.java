@@ -14,6 +14,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 
 public class FeedActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -41,17 +43,21 @@ public class FeedActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
 
         // set adatper for this listview
+        ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
-        String[] feedCareerValues = new String[]{"Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-                "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-                "Android", "iPhone", "WindowsMobile"};
+        FeedUserData user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "imagepath: ");
+        values.add(user);
+        user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "imagepath: ");
+        values.add(user);
+        user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "imagepath: ");
+        values.add(user);
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.listitem_in_activity_feed, R.id.feedCareer, feedCareerValues);
+
+        MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this,R.layout.listitem_in_activity_feed, values);
         feedListView.setAdapter(adapter);
 
         //set listview onitemclicklistener
@@ -63,11 +69,7 @@ public class FeedActivity extends Activity
         });
 
     }
-    //Click See button
-    public void SeeOtherProfile(View view){
-        Intent FeedActivity = new Intent(this, OtherUserProfileActivity.class);
-        startActivity(FeedActivity);
-    }
+
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
