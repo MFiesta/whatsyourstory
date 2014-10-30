@@ -49,11 +49,11 @@ public class FeedActivity extends Activity
         // set adatper for this listview
         ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
-        FeedUserData user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "imagepath: ");
+        FeedUserData user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "adar_eytan.png");
         values.add(user);
-        user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "imagepath: ");
+        user = new FeedUserData("Kelly Kowatch", "Faculty at UM", "Ann Arbor", "adar_eytan.png");
         values.add(user);
-        user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "imagepath: ");
+        user = new FeedUserData("Shevon Desai", "faculty at UM", "Detroit", "adar_eytan.png");
         values.add(user);
 
 
