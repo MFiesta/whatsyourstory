@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true" />
 
     <!-- Users will be able to select multiple buttons with
-     interests that they have, or add their own interests.  TEST-->
+     interests that they have, or add their own interests. -->
 
     <ToggleButton
         android:layout_width="wrap_content"
@@ -148,5 +148,3 @@
         android:textOff="Food"/>/>
 
 </RelativeLayout>
-
-
