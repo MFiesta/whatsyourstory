@@ -20,5 +20,11 @@ public class SetMyInitProfileActivity extends Activity {
         Intent SetMyInitProfileActivity = new Intent(this, ChooseSkillsActivity.class);
         //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
         startActivity(SetMyInitProfileActivity);
+
+        /**
+         * Finishes the activity, destroys it, takes user to ChooseSkillsActivity to continue
+         * filling out profile
+         */
+
     }
 }
