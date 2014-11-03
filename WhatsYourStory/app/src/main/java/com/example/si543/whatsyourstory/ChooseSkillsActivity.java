@@ -20,4 +20,6 @@ public class ChooseSkillsActivity extends Activity {
         startActivity(ChooseSkillsActivity);
     }
 
+    //Takes User to ChooseInterestsActivity after they select which skills they have
+
 }

@@ -1,5 +1,6 @@
 package com.example.si543.whatsyourstory;
 
+//Stephanie Wooten
 
 import android.app.Activity;
 import android.app.ActionBar;
