@@ -17,17 +17,19 @@ public class LogInActivity extends Activity {
     }
 
 
-
-
     public void LogIn(View view) {
         Intent LogInActivity = new Intent(this, FeedActivity.class);
         startActivity(LogInActivity);
     }
 
+    //LogIn if user already has un, password; Takes user to FeedActivity
+
     public void SignUp(View view){
         Intent SignUpActivity = new Intent(this, SignUpActivity.class);
         startActivity(SignUpActivity);
     }
+
+    //SignUp if user does not already have un, password.  Takes user to SignUpActivity
 
     }
 
