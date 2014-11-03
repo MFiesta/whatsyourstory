@@ -36,68 +36,87 @@
             android:orientation="vertical"
             android:gravity="center_vertical">
 
-            <!-- To be replaced by the app's logo -->
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="40dp"
                 android:src="@drawable/ic_launcher"
                 android:layout_gravity="center_horizontal|bottom" />
 
-            <AutoCompleteTextView
-                android:id="@+id/email"
+            <EditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_enter_username"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:focusable="true" />
+                android:ems="10"
+                android:padding="15dp"
+                android:inputType="text"
+                android:background="@drawable/text_rounded_corner_top"
+                android:autoText="false"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="40dp">
+                <requestFocus/>
+            </EditText>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#ffe8e8e8" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_enter_password"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_log_in_short"
-                android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
-                android:maxLines="1"
-                android:singleLine="true"/>
+                android:ems="10"
+                android:padding="15dp"
+                android:background="@drawable/text_rounded_corner_bottom"
+                android:paddingLeft="20dp" />
 
             <Button
                 android:id="@+id/email_log_in_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="109dp"
-                android:layout_height="wrap_content"
+                android:layout_width="360dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_log_in"
-                android:textStyle="bold"
+                android:textStyle="normal"
+                android:textColor="@drawable/button_text"
                 android:onClick="LogIn"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:background= "@drawable/button_shape"
+                android:textSize="18dp"
+                android:singleLine="false" />
 
-            <!-- on clicking Log In
-
-             Intent LogInIntent = newIntent(this(), FeedActivity.class);
-startActivity(FeedIntent)-->
-
+            <!--
             <Button
                 android:id="@+id/SignUp"
                 style="?android:textAppearanceSmall"
-                android:layout_width="114dp"
-                android:layout_height="wrap_content"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_up"
-                android:textStyle="bold"
+                android:textStyle="normal"
+                android:textColor="@drawable/button_text"
                 android:onClick="SignUp"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_shape"
+                android:textSize="18dp" />
+                -->
 
-            <!-- on clicking Sign up
+            <TextView
+                android:id="@+id/SignUpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up for WhatsYourStory"
+                android:textSize="16dp"
+                android:textColor="@drawable/text_link"
+                android:paddingBottom="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="SignUpText"
+                android:clickable="true"/>
 
-             Intent SignUpIntent = newIntent(this(), SignupActivity.class);
-startActivity(SignupIntent)-->
 
         </LinearLayout>
     </ScrollView>

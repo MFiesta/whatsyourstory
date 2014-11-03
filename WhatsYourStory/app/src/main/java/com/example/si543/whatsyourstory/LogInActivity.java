@@ -2,6 +2,7 @@ package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,13 @@ public class LogInActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+    }
+    public void SignUpText(View view){
+        Intent SignUpActivity = new Intent(this, SignUpActivity.class);
+        startActivity(SignUpActivity);
+
     }
 
 
