@@ -36,14 +36,15 @@
             android:orientation="vertical"
             android:gravity="center_vertical">
 
+
             <!-- To be replaced by the app's logo -->
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="203dp"
+                android:layout_height="104dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/ic_launcher"
-                android:layout_gravity="center_horizontal|bottom" />
+                android:src="@drawable/wyslogo"
+                android:id="@+id/logo" />
 
             <AutoCompleteTextView
                 android:id="@+id/email"
@@ -101,6 +102,11 @@ startActivity(SignupIntent)-->
 
         </LinearLayout>
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"></RelativeLayout>
 
 </LinearLayout>
 
