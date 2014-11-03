@@ -59,16 +59,19 @@
     <string name="mytitle">Captain America</string>
 
     <!-- Message, side menu, profile setting -->
-    <string name="title_section0">My Profile</string>
-    <string name="title_section1">Messages</string>
-    <string name="title_section2">Favorites</string>
-    <string name="title_section3">Log Out</string>
+    <string-array name="navigation_drawer_array">
+        <item>My Profile</item>
+        <item>Messages</item>
+        <item>Favorites</item>
+        <item>Log Out</item>
+    </string-array>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_side_menu">SideMenu</string>
     <string name="title_activity_messages">Messages</string>
+    <string name="app_not_available">Oops! Looks like that option is not available.</string>
 
     <!-- Feed -->
     <string name="feed_title">People you might want to talk to</string>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="@dimen/activity_horizontal_margin"
+    android:layout_width="@dimen/navigation_drawer_width">
+    <item
+        android:id="@+id/my_profile"
+        android:title="My Profile"/>
+
+    <item
+        android:id="@+id/favorites"
+        android:title="Favorites"/>
+
+    <item
+        android:id="@+id/messages"
+        android:title="Messages"/>
+
+    <item
+        android:id="@+id/logout"
+        android:text="Log Out"/>
+
+</menu>
