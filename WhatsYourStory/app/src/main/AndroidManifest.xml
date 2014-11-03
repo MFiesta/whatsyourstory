@@ -2,16 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.si543.whatsyourstory" >
 
-<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19" />
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
-            android:name="com.example.si543.whatsyourstory.LogInActivity"
+            android:name=".LogInActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,80 +20,84 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.example.si543.whatsyourstory.FeedActivity"
+            android:name=".FeedActivity"
             android:label="WhatsYourStory" >
         </activity>
-
         <activity
-            android:name="com.example.si543.whatsyourstory.SignUpActivity"
+            android:name=".SignUpActivity"
             android:label="Log In"
-            android:parentActivityName="com.example.si543.whatsyourstory.LogInActivity">
+            android:parentActivityName=".LogInActivity" >
+
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.LogInActivity" />
         </activity>
-
         <activity
-            android:name="com.example.si543.whatsyourstory.SetMyInitProfileActivity"
+            android:name=".SetMyInitProfileActivity"
             android:label="Sign Up"
-            android:parentActivityName="com.example.si543.whatsyourstory.SignUpActivity">
+            android:parentActivityName=".SignUpActivity" >
+
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.SignUpActivity" />
         </activity>
-
         <activity
-
-            android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
+            android:name=".ChooseSkillsActivity"
             android:label="Profile setting"
-            android:parentActivityName="com.example.si543.whatsyourstory.SetMyInitProfileActivity">
+            android:parentActivityName=".SetMyInitProfileActivity" >
+
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.SetMyInitProfileActivity" />
-
         </activity>
-
         <activity
-            android:name="com.example.si543.whatsyourstory.ChooseInterestsActivity"
+            android:name=".ChooseInterestsActivity"
             android:label="Skills"
-            android:parentActivityName="com.example.si543.whatsyourstory.ChooseSkillsActivity">
+            android:parentActivityName=".ChooseSkillsActivity" >
+
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.ChooseSkillsActivity" />
         </activity>
-
         <activity
-            android:name="com.example.si543.whatsyourstory.OtherUserProfileActivity"
+            android:name=".OtherUserProfileActivity"
             android:label="WhatsYourStory"
-            android:parentActivityName="com.example.si543.whatsyourstory.FeedActivity">
+            android:parentActivityName=".FeedActivity" >
+
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.FeedActivity" />
         </activity>
-
         <activity
-            android:name="com.example.si543.whatsyourstory.FavoritesActivity"
+            android:name=".FavoritesActivity"
             android:label="Eytan Adar"
-            android:parentActivityName="com.example.si543.whatsyourstory.OtherUserProfileActivity">
+            android:parentActivityName=".OtherUserProfileActivity" >
+
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.FavoritesActivity" />
         </activity>
-
+        <activity
+            android:name=".Navigation_Drawer"
+            android:label="@string/title_activity_navigation__drawer" >
+        </activity>
+        <activity
+            android:name=".EditMyProfile"
+            android:label="@string/title_activity_edit_my_profile" >
+        </activity>
     </application>
 
 </manifest>
