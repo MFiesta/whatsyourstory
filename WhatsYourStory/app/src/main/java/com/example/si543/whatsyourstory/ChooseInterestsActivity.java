@@ -22,5 +22,5 @@ public class ChooseInterestsActivity extends Activity {
         startActivity(ChooseInterestsActivity);
     }
 
-    //Takes user to FeedActivity after they select their Interests 
+    //Takes user to FeedActivity after they select their Interests
 }
