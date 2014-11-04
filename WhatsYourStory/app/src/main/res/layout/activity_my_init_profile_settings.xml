@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backrepeat"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -39,62 +40,92 @@
     <!--Add code for editing picture functionality-->
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Name"
+        android:hint="@string/prompt_name"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_marginTop="49dp"
-        android:layout_below="@+id/textView"
+        android:textColorHint="#a8a8a8"
+        android:padding="13dp"
+        android:background="@drawable/text_rounded_corner_top"
+        android:autoText="false"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="20dp"
+        android:layout_above="@+id/editText2"
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:hint="Title"
+        android:hint="@string/prompt_title"
         android:ems="10"
         android:id="@+id/editText2"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
-        android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_alignEnd="@+id/editText"
+        android:textColorHint="#a8a8a8"
+        android:padding="13dp"
+        android:background="@drawable/text_rounded_corner_top"
+        android:autoText="false"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="20dp"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText4"
         android:layout_below="@+id/editText2"
         android:layout_alignLeft="@+id/editText2"
         android:layout_alignStart="@+id/editText2"
-        android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/editText2"
         android:layout_alignEnd="@+id/editText2"
-        android:hint="Organization" />
+        android:hint="@string/prompt_company"
+        android:textColorHint="#a8a8a8"
+        android:ems="10"
+        android:padding="13dp"
+        android:inputType="text"
+        android:background="@drawable/text_rounded_corner_top"
+        android:autoText="false"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="20dp"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText5"
         android:layout_below="@+id/editText4"
         android:layout_alignLeft="@+id/editText4"
         android:layout_alignStart="@+id/editText4"
-        android:layout_marginTop="20dp"
         android:layout_alignRight="@+id/editText4"
         android:layout_alignEnd="@+id/editText4"
-        android:hint="Location" />
+        android:hint="@string/prompt_location"
+        android:textColorHint="#a8a8a8"
+        android:ems="10"
+        android:padding="13dp"
+        android:inputType="text"
+        android:background="@drawable/text_rounded_corner_top"
+        android:autoText="false"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="20dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
         android:text="Next"
         android:id="@+id/MyInitProfileNext"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/editText5"
         android:layout_centerHorizontal="true"
-        android:onClick="MyInitProfileNext"/>
+        android:onClick="MyInitProfileNext"
+        style="?android:textAppearanceSmall"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@drawable/button_text"
+        android:background= "@drawable/button_shape"
+        android:layout_gravity="center_horizontal"/>
 
 </RelativeLayout>
