@@ -26,6 +26,10 @@
 
     <!-- Set My initial Profile -->
     <string name="action_my_init_profile_next">Next</string>
+    <string name="prompt_title">Enter Your Current Title</string>
+    <string name="prompt_name">Your Full Name</string>
+    <string name="prompt_company">Enter Your Current Company</string>
+    <string name="prompt_location">Current Location (City, State/Country)</string>
 
     <!-- Choose your skills -->
     <string name="action_skills_next">Next</string>
