@@ -48,13 +48,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_enter_username"
+                android:textColorHint="#a8a8a8"
                 android:ems="10"
                 android:padding="13dp"
                 android:inputType="text"
                 android:background="@drawable/text_rounded_corner_top"
                 android:autoText="false"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:paddingLeft="20dp"
-                android:layout_marginTop="40dp">
+                android:layout_marginTop="40dp"
+                android:textSize="16dp">
                 <requestFocus/>
             </EditText>
             <View
@@ -67,11 +70,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_enter_password"
+                android:textColorHint="#a8a8a8"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:inputType="textPassword"
                 android:ems="10"
                 android:padding="13dp"
                 android:background="@drawable/text_rounded_corner_bottom"
-                android:paddingLeft="20dp" />
+                android:paddingLeft="20dp"
+                android:textSize="16dp" />
 
             <Button
                 android:id="@+id/email_log_in_button"

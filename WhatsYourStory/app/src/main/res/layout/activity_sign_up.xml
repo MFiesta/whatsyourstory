@@ -41,11 +41,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Choose Your Username"
+                android:textColorHint="#a8a8a8"
                 android:ems="10"
                 android:padding="13dp"
                 android:inputType="text"
                 android:background="@drawable/text_rounded_corner_top"
                 android:autoText="false"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:paddingLeft="20dp"
                 android:layout_marginTop="40dp">
                 <requestFocus/>
@@ -59,11 +61,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_password"
+                android:textColorHint="#a8a8a8"
                 android:padding="13dp"
                 android:ems="10"
                 android:inputType="textPassword"
                 android:background="#FFFFFF"
                 android:autoText="false"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:paddingLeft="20dp"/>
 
             <View
@@ -76,9 +80,11 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="@string/prompt_password_confirmation"
+                android:textColorHint="#a8a8a8"
                 android:ems="10"
                 android:padding="13dp"
                 android:background="#FFFFFF"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:id="@+id/editText2" />
 
             <View
@@ -92,8 +98,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_email"
+                android:textColorHint="#a8a8a8"
                 android:padding="13dp"
                 android:background="@drawable/text_rounded_corner_bottom"
+                android:textCursorDrawable="@drawable/color_cursor"
                 android:paddingLeft="20dp"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
@@ -102,13 +110,17 @@
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="360dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_next_interests"
-                android:onClick="SignUpNext"
                 android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@drawable/button_text"
+                android:background= "@drawable/button_shape"
+                android:onClick="SignUpNext"
                 android:layout_gravity="center_horizontal" />
+
 
             <!-- on clicking Next, explicit intent
 
