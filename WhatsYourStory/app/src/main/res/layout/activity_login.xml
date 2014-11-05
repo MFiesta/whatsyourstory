@@ -138,7 +138,7 @@
                 android:id="@+id/SignUpText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up for Whats Your Story"
+                android:text="Sign Up for What's Your Story?"
                 android:textSize="16sp"
                 android:textColor="@drawable/text_link"
                 android:paddingBottom="25dp"
