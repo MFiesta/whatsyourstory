@@ -14,7 +14,7 @@ import android.os.Build;
 
 
 
-public class EditMyProfile extends android.support.v4.app.Fragment {
+    public class EditMyProfile extends android.support.v4.app.Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
