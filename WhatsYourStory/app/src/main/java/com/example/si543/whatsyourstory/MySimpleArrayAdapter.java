@@ -18,6 +18,9 @@ import java.util.ArrayList;
 /**
  * Created by chiahuihsieh on 10/29/14.
  */
+
+//Define the adapter to describe the process of converting the Java object to a View
+
 public class MySimpleArrayAdapter extends ArrayAdapter<FeedUserData> {
     private int mResource = 0;
 
@@ -30,12 +33,10 @@ public class MySimpleArrayAdapter extends ArrayAdapter<FeedUserData> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-//modify the id to match what you have in your xml file (passed when you use “new MySimpleArrayAdapter(context, layoutResourceId, values)”
-//fetch corresponding view
-
-
+        //fetch corresponding view
 
         View rowView = convertView;
+        // Check if an existing view is being reused, otherwise inflate the view
         if (rowView == null) {
             //Row inflation
             LayoutInflater inflater = ((Activity)getContext()).getLayoutInflater();
@@ -53,9 +54,11 @@ public class MySimpleArrayAdapter extends ArrayAdapter<FeedUserData> {
 
         //set data for the view
         FeedUserData user = getItem(position);
+
         nameTextView.setText(user.getName());
         careerTextView.setText(user.getCareer());
         locationTextView.setText(user.getLocation());
+
         String imagePath = user.getImagePath(); //assume image is under assets folder
         if (imagePath != null) {
 

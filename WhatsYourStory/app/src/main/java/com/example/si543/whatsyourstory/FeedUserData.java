@@ -3,6 +3,8 @@ package com.example.si543.whatsyourstory;
 /**
  * Created by chiahuihsieh on 10/29/14.
  */
+
+//Defining a model, given a Java object that has certain fields defined a FeedUserData class:
 public class FeedUserData {
     protected String name;
     protected String career;

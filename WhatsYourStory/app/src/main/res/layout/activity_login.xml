@@ -13,6 +13,7 @@
     tools:context=".LogInActivity"
     android:weightSum="1">
 
+
     <!-- Login progress -->
 
     <ProgressBar
@@ -24,13 +25,10 @@
         android:visibility="gone"/>
 
     <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
         <LinearLayout
-            android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -39,9 +37,36 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:src="@drawable/ic_launcher"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="44dp"
+                android:src="@drawable/applogo"
                 android:layout_gravity="center_horizontal|bottom" />
+
+            <TextView
+                android:id="@+id/LoginDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/title_text"
+                android:paddingBottom="30dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:onClick="SignUpText"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/LoginDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_tagline"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:paddingBottom="30dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:onClick="SignUpText"
+                android:clickable="true"/>
 
             <EditText
                 android:id="@+id/username"
@@ -56,8 +81,7 @@
                 android:autoText="false"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:paddingLeft="20dp"
-                android:layout_marginTop="40dp"
-                android:textSize="16dp">
+                android:textSize="16sp">
                 <requestFocus/>
             </EditText>
             <View
@@ -91,7 +115,7 @@
                 android:onClick="LogIn"
                 android:layout_gravity="center_horizontal"
                 android:background= "@drawable/button_shape"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:singleLine="false" />
 
             <!--
@@ -114,11 +138,11 @@
                 android:id="@+id/SignUpText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up for WhatsYourStory"
-                android:textSize="16dp"
+                android:text="Sign Up for Whats Your Story"
+                android:textSize="16sp"
                 android:textColor="@drawable/text_link"
                 android:paddingBottom="25dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="35dp"
                 android:layout_gravity="center_horizontal"
                 android:onClick="SignUpText"
                 android:clickable="true"/>
@@ -126,7 +150,6 @@
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
 
 

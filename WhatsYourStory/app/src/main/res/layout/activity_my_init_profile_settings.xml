@@ -1,41 +1,58 @@
 <!--Stephanie Wooten-->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/backrepeat"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ProfileSetting">
+    tools:context=".SetMyInitProfileActivity"
+    android:weightSum="1">
 
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:baselineAlignBottom="false"
-        android:layout_marginTop="61dp"
-        android:src="@drawable/ic_launcher"
-        android:layout_toStartOf="@+id/textView"
-        android:scaleType="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/default_picture"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_toLeftOf="@+id/textView" />
+        android:layout_gravity="center_horizontal|bottom"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Edit Picture"
-        android:id="@+id/textView"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:textColor="@drawable/text_link"
+        android:id="@+id/init_textView"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
 
     <!--Add code for editing picture functionality-->
 
@@ -48,12 +65,20 @@
         android:id="@+id/editText"
         android:textColorHint="#a8a8a8"
         android:padding="13dp"
+        android:textSize="16sp"
         android:background="@drawable/text_rounded_corner_top"
         android:autoText="false"
         android:textCursorDrawable="@drawable/color_cursor"
         android:paddingLeft="20dp"
         android:layout_above="@+id/editText2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true">
+        <requestFocus/>
+    </EditText>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#ffe8e8e8" />
 
     <EditText
         android:layout_width="match_parent"
@@ -69,10 +94,17 @@
         android:layout_alignEnd="@+id/editText"
         android:textColorHint="#a8a8a8"
         android:padding="13dp"
-        android:background="@drawable/text_rounded_corner_top"
+        android:textSize="16sp"
+        android:background="#FFFFFF"
         android:autoText="false"
         android:textCursorDrawable="@drawable/color_cursor"
-        android:paddingLeft="20dp"/>
+        android:paddingLeft="20dp">
+    </EditText>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#ffe8e8e8" />
 
     <EditText
         android:layout_width="match_parent"
@@ -88,10 +120,17 @@
         android:ems="10"
         android:padding="13dp"
         android:inputType="text"
-        android:background="@drawable/text_rounded_corner_top"
+        android:textSize="16sp"
         android:autoText="false"
+        android:background="#FFFFFF"
         android:textCursorDrawable="@drawable/color_cursor"
-        android:paddingLeft="20dp"/>
+        android:paddingLeft="20dp">
+    </EditText>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#ffe8e8e8" />
 
     <EditText
         android:layout_width="match_parent"
@@ -107,7 +146,8 @@
         android:ems="10"
         android:padding="13dp"
         android:inputType="text"
-        android:background="@drawable/text_rounded_corner_top"
+        android:textSize="16sp"
+        android:background="@drawable/text_rounded_corner_bottom"
         android:autoText="false"
         android:textCursorDrawable="@drawable/color_cursor"
         android:paddingLeft="20dp"/>
@@ -117,7 +157,7 @@
         android:layout_height="45dp"
         android:text="Next"
         android:id="@+id/MyInitProfileNext"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:layout_below="@+id/editText5"
         android:layout_centerHorizontal="true"
         android:onClick="MyInitProfileNext"
@@ -128,4 +168,6 @@
         android:background= "@drawable/button_shape"
         android:layout_gravity="center_horizontal"/>
 
-</RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

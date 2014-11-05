@@ -143,8 +143,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"/>
 
-<!-- Next, users will be taken to the Feed Activity page. -->
-
     <Button
         android:id="@+id/nextbutton"
         android:text="Next"
@@ -155,3 +153,5 @@
         android:onClick="interestsNext"/>
 
 </RelativeLayout>
+
+    <!-- Next, users will be taken to the Feed Activity page. -->

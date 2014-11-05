@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">WhatsYourStory</string>
+    <string name="app_name">What's Your Story</string>
 
     <!-- Login -->
     <string name="prompt_enter_username">Username</string>
@@ -13,16 +13,16 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="login_tagline">Hear about the career and personal experiences of others and share your own!</string>
 
     <!-- Signup -->
-    <string name="sign_up_title">Join the Whats Your Story Community!</string>
+    <string name="sign_up_title">Join Whats Your Story!</string>
     <string name="prompt_password_confirmation">Confirm Password</string>
     <string name="prompt_password">Choose Your Password</string>
     <string name="prompt_username">Choose Your Username</string>
     <string name="prompt_email">Enter Your Email</string>
     <string name="action_next_interests">Next</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="hello_world">Hello</string>
 
     <!-- Set My initial Profile -->
     <string name="action_my_init_profile_next">Next</string>
@@ -80,8 +80,7 @@
     <string name="descr_overflow_button">Menu</string>
     <string name="title_activity_feed_view">FeedView</string>
     <string name="action_feed_row_1">FeedRow1</string>
-    <string name="action_see_other_profile">See</string>
-
+    <string name="FeedDescription">People you may be interested in</string>
     <!-- Action Bar -->
     <string name="action_search">ActionBarSearch</string>
     <string name="action_important">ActionBarImportant</string>
