@@ -13,6 +13,7 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="login_tagline">Hear about the career and personal experiences of others and share your own!</string>
 
     <!-- Signup -->
     <string name="sign_up_title">Join Whats Your Story!</string>

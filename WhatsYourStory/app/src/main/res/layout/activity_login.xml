@@ -46,7 +46,7 @@
                 android:id="@+id/LoginDescription"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Login to find people that you might be interested in knowing their stories"
+                android:text="@string/login_tagline"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:paddingBottom="30dp"
