@@ -6,8 +6,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.content.SharedPreferences;
-import android.widget.ToggleButton;
+// import android.content.SharedPreferences;
+// import android.widget.ToggleButton;
 
 
 public class ChooseSkillsActivity extends Activity {
@@ -15,8 +15,8 @@ public class ChooseSkillsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_skills);
-        SharedPreferences sharedPrefs = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE);
-        toggle.setChecked(sharedPrefs.getBoolean("NameOfThingToSave", true));
+//        SharedPreferences sharedPrefs = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE);
+//        toggle.setChecked(sharedPrefs.getBoolean("Checked", true));
     }
 
     public void skillsNext(View view) {
@@ -24,23 +24,25 @@ public class ChooseSkillsActivity extends Activity {
         startActivity(ChooseSkillsActivity);
     }
 
-    private ToggleButton toggle;
+// Use SharedPreferences to save user toggle choices even if they navigate away from activity
 
-    public void onClick(View v)
-    {
-        if (toggle.isChecked())
-        {
-            SharedPreferences.Editor editor = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE).edit();
-            editor.putBoolean("Checked", true);
-            editor.commit();
-        }
-        else
-        {
-            SharedPreferences.Editor editor = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE).edit();
-            editor.putBoolean("Unchecked", false);
-            editor.commit();
-        }
-    }
+//    private ToggleButton toggle;
+
+//    public void onClick(View v)
+//    {
+//        if (toggle.isChecked())
+//        {
+//            SharedPreferences.Editor editor = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE).edit();
+//            editor.putBoolean("Checked", true);
+//            editor.commit();
+//        }
+//        else
+//        {
+//            SharedPreferences.Editor editor = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE).edit();
+//            editor.putBoolean("Unchecked", false);
+//            editor.commit();
+//        }
+//    }
 
     //Takes User to ChooseInterestsActivity after they select which skills they have
 
