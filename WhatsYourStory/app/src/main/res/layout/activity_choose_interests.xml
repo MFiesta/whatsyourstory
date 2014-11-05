@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/choose_interests_text"
         android:layout_alignParentStart="true"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Engineering"
         android:textOff="Engineering"/>
 
@@ -44,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/choose_interests_text"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Computer Science"
         android:textOff="Computer Science" />
 
@@ -54,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/button2_row1"
         android:layout_below="@+id/choose_interests_text"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Apple"
         android:textOff="Apple" />
 
@@ -63,6 +66,7 @@
         android:layout_below="@+id/button1_row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Watercolor"
         android:textOff="Watercolor" />
 
@@ -73,6 +77,7 @@
         android:layout_toRightOf="@+id/button1_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Windows"
         android:textOff="Windows" />
 
@@ -83,6 +88,7 @@
         android:layout_toRightOf="@+id/button2_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Dance"
         android:textOff="Dance" />
 
@@ -93,6 +99,7 @@
         android:layout_toRightOf="@id/button3_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="CSS"
         android:textOff="CSS" />
 
@@ -102,6 +109,7 @@
         android:layout_below="@+id/button1_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Knitting"
         android:textOff="Knitting" />
 
@@ -112,6 +120,7 @@
         android:layout_toRightOf="@+id/button1_row3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Craft beer"
         android:textOff="Craft beer" />
 
@@ -122,6 +131,7 @@
         android:layout_toRightOf="@id/button2_row3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/my_btn_toggle"
         android:textOn="Food"
         android:textOff="Food"/>
 
