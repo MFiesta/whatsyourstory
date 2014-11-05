@@ -37,21 +37,13 @@
                 android:text="@string/sign_up_title"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
-<<<<<<< HEAD
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:textSize="@dimen/title_text"
                 android:textColor="#FFFFFF"
-                />
-=======
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:gravity="center"
                 android:layout_marginTop="40dp"
                 android:layout_gravity="center_horizontal"/>
-
->>>>>>> app_style
 
             <EditText
                 android:id="@+id/editText"

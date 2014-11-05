@@ -128,22 +128,11 @@
 <!-- Users can add their own interests to the list. Eventually, what they
  add should turn into a button and add to the screen. -->
 
-    <TextView
-        android:id="@+id/add_interests_text"
-        android:text="Add your own interests:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/editText"
-        android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_above="@id/nextbutton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"/>
 
-<!-- Next, users will be taken to the Feed Activity page. -->
+
+
+
 
     <Button
         android:id="@+id/nextbutton"
@@ -153,5 +142,18 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:onClick="interestsNext"/>
-
+    <EditText
+        android:id="@+id/editText"
+        android:layout_above="@id/nextbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/add_interests_text"
+        android:text="Add your own interests:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editText"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
+    <!-- Next, users will be taken to the Feed Activity page. -->
