@@ -22,7 +22,6 @@
     <string name="prompt_email">Enter Your Email</string>
     <string name="action_next_interests">Next</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="hello_world">Hello</string>
 
     <!-- Set My initial Profile -->
     <string name="action_my_init_profile_next">Next</string>
