@@ -37,26 +37,24 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:layout_marginTop="44dp"
                 android:src="@drawable/applogo"
                 android:layout_gravity="center_horizontal|bottom" />
 
             <TextView
-                android:id="@+id/LoginDescription"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@+string/app_name"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/title_text"
-                android:paddingBottom="30dp"
+                android:paddingBottom="15dp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"
                 android:onClick="SignUpText"
                 android:clickable="true"/>
 
             <TextView
-                android:id="@+id/LoginDescription"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login_tagline"
