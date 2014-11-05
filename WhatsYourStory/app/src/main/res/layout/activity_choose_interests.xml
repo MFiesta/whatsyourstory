@@ -133,12 +133,12 @@
         android:text="Add your own interests:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/editText"
+        android:layout_above="@+id/editText"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_above="@id/nextbutton"
+        android:layout_above="@+id/nextbutton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"/>

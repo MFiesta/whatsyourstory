@@ -12,10 +12,11 @@ import android.widget.ToggleButton;
 
 public class ChooseSkillsActivity extends Activity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_skills);
+        SharedPreferences sharedPrefs = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE);
+        toggle.setChecked(sharedPrefs.getBoolean("NameOfThingToSave", true));
     }
 
     public void skillsNext(View view) {
@@ -25,28 +26,20 @@ public class ChooseSkillsActivity extends Activity {
 
     private ToggleButton toggle;
 
-    @Override
     public void onClick(View v)
     {
         if (toggle.isChecked())
         {
             SharedPreferences.Editor editor = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE).edit();
-            editor.putBoolean("NameOfThingToSave", true);
+            editor.putBoolean("Checked", true);
             editor.commit();
         }
         else
         {
             SharedPreferences.Editor editor = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE).edit();
-            editor.putBoolean("NameOfThingToSave", false);
+            editor.putBoolean("Unchecked", false);
             editor.commit();
         }
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        SharedPreferences sharedPrefs = getSharedPreferences("com.example.si543.whatsyourstory", MODE_PRIVATE);
-        toggle.setChecked(sharedPrefs.getBoolean("NameOfThingToSave", true));
     }
 
     //Takes User to ChooseInterestsActivity after they select which skills they have
