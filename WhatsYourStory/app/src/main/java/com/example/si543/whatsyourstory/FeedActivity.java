@@ -49,11 +49,20 @@ public class FeedActivity extends Activity
         // set adatper for this listview
         ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
-        FeedUserData user = new FeedUserData("Eytan Adar", "Professor at UM", "Ann Arbor", "adar_eytan.png");
+        //Add item to adapter
+        FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
         values.add(user);
-        user = new FeedUserData("Kelly Kowatch", "Faculty at UM", "Ann Arbor", "adar_eytan.png");
+        user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
         values.add(user);
-        user = new FeedUserData("Shevon Desai", "faculty at UM", "Detroit", "adar_eytan.png");
+        user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
+        values.add(user);
+        user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
+        values.add(user);
+        user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
+        values.add(user);
+        user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
+        values.add(user);
+        user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
         values.add(user);
 
 
