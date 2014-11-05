@@ -16,7 +16,7 @@
     <string name="login_tagline">Hear about the careers and personal experiences of others and share your own!</string>
 
     <!-- Signup -->
-    <string name="sign_up_title">Join What's Your Story!</string>
+    <string name="sign_up_title">Join What\'s Your Story!</string>
     <string name="prompt_password_confirmation">Confirm Password</string>
     <string name="prompt_password">Choose Your Password</string>
     <string name="prompt_username">Choose Your Username</string>
