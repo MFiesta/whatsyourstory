@@ -34,16 +34,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:weightSum="1">
 
 
             <!-- To be replaced by the app's logo -->
 
             <ImageView
-                android:layout_width="203dp"
+                android:layout_width="match_parent"
                 android:layout_height="104dp"
                 android:layout_marginBottom="20dp"
-                android:src="@drawable/wyslogo"
+                android:src="@drawable/whatsyourstoryfinal"
                 android:id="@+id/logo" />
 
             <AutoCompleteTextView
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_enter_username"
+                android:textColorHint="#05586B"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -61,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_enter_password"
+                android:textColorHint="#05586B"
                 android:imeActionId="@+id/login"
                 android:imeActionLabel="@string/action_log_in_short"
                 android:imeOptions="actionUnspecified"
@@ -75,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_log_in"
+                android:textColor="#D2D7D8"
                 android:textStyle="bold"
                 android:onClick="LogIn"
                 android:layout_gravity="center_horizontal" />
@@ -91,6 +95,7 @@ startActivity(FeedIntent)-->
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_up"
+                android:textColor="#D2D7D8"
                 android:textStyle="bold"
                 android:onClick="SignUp"
                 android:layout_gravity="center_horizontal" />
@@ -107,6 +112,13 @@ startActivity(SignupIntent)-->
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"></RelativeLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button" />
 
 </LinearLayout>
 
