@@ -46,6 +46,19 @@
                 android:id="@+id/LoginDescription"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/title_text"
+                android:paddingBottom="30dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:onClick="SignUpText"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/LoginDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/login_tagline"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
