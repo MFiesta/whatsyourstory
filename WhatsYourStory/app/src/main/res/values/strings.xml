@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">What's Your Story</string>
+    <string name="app_name">What\'s Your Story</string>
 
     <!-- Login -->
     <string name="prompt_enter_username">Username</string>
