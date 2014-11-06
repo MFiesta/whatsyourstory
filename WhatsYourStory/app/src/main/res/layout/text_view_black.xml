@@ -1,0 +1,14 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textblack"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#000"
+    android:text="Item"/>
+
+    <!--Java PseudoCode:
+    onClick of top left corner of screen, side navbar will appear
+    Call Adapter to fill in list with navigation options (My Profile, Messages, Log Out)
+    Each item on the Adapter list will be linked via onClick to appropriate page
+    Upon hitting the top left of the screen, the side navbar will disappear-->
+
