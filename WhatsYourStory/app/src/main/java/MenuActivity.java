@@ -35,7 +35,7 @@ public class MenuActivity extends Activity {
         initList();
 
         // adapters are what we use to associate the list variable and its contents with the list view
-        ListView optionsListView = (ListView) findViewById(R.id.favoritesListView);
+        ListView optionsListView = (ListView) findViewById(R.id.menuListView);
         //update the XML files referenced below
         SimpleAdapter simpleAdpt = new SimpleAdapter(this, menuList, android.R.layout.simple_list_item_1, new String[] {"menu option"}, new int[] {android.R.id.text1});
         optionsListView.setAdapter(simpleAdpt);
@@ -50,7 +50,7 @@ public class MenuActivity extends Activity {
         });
 
     }
-    // openTeamDetail is called whenever a list item is clicked on
+    // openMenuList is called whenever a list item is clicked on
     // it calls for an intent that starts up the team detail activity and sends the team's id over
     // to the activity with the message variable declared at the top of the activity
 
