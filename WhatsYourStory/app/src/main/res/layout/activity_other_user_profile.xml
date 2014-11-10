@@ -1,6 +1,7 @@
 <!-- Alice Rhee -->
+<!--Design: Stephanie -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profile_detail_container"
     android:layout_width="match_parent"
@@ -8,11 +9,6 @@
     android:background="@drawable/backrepeat"
     tools:context=".ProfileDetailActivity"
     tools:ignore="MergeRootFrame" >
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/placeholder">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -35,7 +31,6 @@
             android:textColor="@drawable/button_text"
             android:layout_gravity="center_horizontal|top"
             android:layout_below="@+id/textView"
-            android:layout_alignLeft="@+id/textView"
             android:layout_alignStart="@+id/textView" />
 
         <TextView
@@ -46,7 +41,7 @@
             android:textStyle="bold"
             android:id="@+id/textView"
             android:textColor="@drawable/button_text"
-            android:layout_gravity="right|top"
+            android:layout_gravity="end|top"
             android:layout_marginTop="32dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
@@ -59,26 +54,9 @@
             android:id="@+id/textView3"
             android:textColor="@drawable/button_text"
             android:layout_alignBottom="@+id/textView2"
-            android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2" />
 
-        <!-- onClicking Message
-                explicit intent - takes you to the message activity
 
-Intent messageIntent = newIntent(this(), MessageActivity.class);
-startActivity(messageIntent)
-
-         -->
-
-
-        <!-- onClicking Share Calendar
-                explicit intent - takes you to the calendar activity
-
-Intent calendarIntent = newIntent(this(), CalendarActivity.class);
-startActivity(messageIntent)
-
-This button will be hidden unless Eytan's approved you to see the calendar
-         -->
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,9 +68,9 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:layout_toStartOf="@+id/textView2"
             android:textColor="@drawable/button_text"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="34dp" />
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="34dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -104,7 +82,7 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:textColor="@drawable/button_text"
             android:layout_marginTop="43dp"
             android:layout_below="@+id/textView4"
-            android:layout_alignLeft="@+id/textView4" />
+            android:layout_alignStart="@+id/textView4" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -137,6 +115,7 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:layout_toEndOf="@+id/textView3"
             android:layout_below="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="10dp"
             android:onClick="Message"/>
 
         <Button
@@ -148,10 +127,8 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:layout_height="45dp"
             android:id="@+id/button"
             android:onClick="Favorite"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/textView3"
             android:layout_below="@+id/textView3" />
 
     </RelativeLayout>
-
-
-</FrameLayout>
