@@ -41,7 +41,7 @@ public class FeedActivity extends Activity
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
-                R.id.navigation_drawer,
+                R.id.drawer_layout,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
