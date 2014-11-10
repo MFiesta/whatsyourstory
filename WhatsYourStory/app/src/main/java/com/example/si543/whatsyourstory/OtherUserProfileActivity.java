@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.net.Uri;
 
 public class OtherUserProfileActivity extends Activity {
 
@@ -19,8 +20,8 @@ public class OtherUserProfileActivity extends Activity {
 
 
    public void Message (View view){
-        Intent messageIntent = new Intent (this, MessageActivity.class);
-        startActivity(messageIntent);
+       Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+       sendIntent.setData(Uri.parse("sms:"));
     }
 
     public void Favorite (View view){
