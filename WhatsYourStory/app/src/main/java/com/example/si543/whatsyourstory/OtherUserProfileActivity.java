@@ -22,6 +22,7 @@ public class OtherUserProfileActivity extends Activity {
    public void Message (View view){
        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
        sendIntent.setData(Uri.parse("sms:"));
+       startActivity(sendIntent);
     }
 
     public void Favorite (View view){

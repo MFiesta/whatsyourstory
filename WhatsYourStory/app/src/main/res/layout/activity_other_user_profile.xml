@@ -125,7 +125,8 @@ This button will be hidden unless Eytan's approved you to see the calendar
             android:id="@+id/button2"
             android:layout_toEndOf="@+id/textView3"
             android:layout_below="@+id/textView2"
-            android:layout_alignStart="@+id/textView2" />
+            android:layout_alignStart="@+id/textView2"
+            android:onClick="Message"/>
 
         <Button
             android:layout_width="wrap_content"
