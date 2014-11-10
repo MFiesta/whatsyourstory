@@ -21,7 +21,9 @@ public class OtherUserProfileActivity extends Activity {
 //Message Intent - calls sms messaging on phone - Stephanie Wooten
    public void Message (View view){
        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-       sendIntent.setData(Uri.parse("sms:"));
+       sendIntent.putExtra("address", "555-555-5555");
+       sendIntent.setType("vnd.android-dir/mms-sms");
+
        startActivity(sendIntent);
     }
 
