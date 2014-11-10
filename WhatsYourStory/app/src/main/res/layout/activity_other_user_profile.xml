@@ -17,21 +17,21 @@
             android:layout_gravity="center_vertical"
             android:clickable="false"
             android:id="@+id/userPicture"
-            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignBottom="@+id/textView_OtherUserCareer"
             android:layout_alignStart="@+id/textView4"
-            android:layout_alignTop="@+id/textView"
-            android:layout_toStartOf="@+id/textView2" />
+            android:layout_alignTop="@+id/textView_OtherUserName"
+            android:layout_toStartOf="@+id/textView_OtherUserCareer" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="41dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/title"
-            android:id="@+id/textView2"
+            android:id="@+id/textView_OtherUserCareer"
             android:textColor="@drawable/button_text"
             android:layout_gravity="center_horizontal|top"
-            android:layout_below="@+id/textView"
-            android:layout_alignStart="@+id/textView" />
+            android:layout_below="@+id/textView_OtherUserName"
+            android:layout_alignStart="@+id/textView_OtherUserName" />
 
         <TextView
             android:layout_width="129dp"
@@ -39,7 +39,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/username"
             android:textStyle="bold"
-            android:id="@+id/textView"
+            android:id="@+id/textView_OtherUserName"
             android:textColor="@drawable/button_text"
             android:layout_gravity="end|top"
             android:layout_marginTop="32dp"
@@ -51,10 +51,10 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/location"
-            android:id="@+id/textView3"
+            android:id="@+id/textView_OtherUserLocation"
             android:textColor="@drawable/button_text"
-            android:layout_alignBottom="@+id/textView2"
-            android:layout_alignStart="@+id/textView2" />
+            android:layout_alignBottom="@+id/textView_OtherUserCareer"
+            android:layout_alignStart="@+id/textView_OtherUserCareer" />
 
 
         <TextView
@@ -64,7 +64,7 @@
             android:text="@string/skills"
             android:textStyle="bold"
             android:id="@+id/textView4"
-            android:layout_toStartOf="@+id/textView2"
+            android:layout_toStartOf="@+id/textView_OtherUserCareer"
             android:textColor="@drawable/button_text"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
@@ -111,9 +111,9 @@
             android:background= "@drawable/button_shape"
             android:layout_width="100dp"
             android:layout_height="45dp"
-            android:layout_toEndOf="@+id/textView3"
-            android:layout_below="@+id/textView2"
-            android:layout_alignStart="@+id/textView2"
+            android:layout_toEndOf="@+id/textView_OtherUserLocation"
+            android:layout_below="@+id/textView_OtherUserCareer"
+            android:layout_alignStart="@+id/textView_OtherUserCareer"
             android:layout_marginTop="10dp"
             android:onClick="Message"/>
 
@@ -127,7 +127,7 @@
             android:id="@+id/button"
             android:onClick="Favorite"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/textView3"
-            android:layout_below="@+id/textView3" />
+            android:layout_toEndOf="@+id/textView_OtherUserLocation"
+            android:layout_below="@+id/textView_OtherUserLocation" />
 
     </RelativeLayout>
