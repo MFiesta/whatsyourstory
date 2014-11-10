@@ -18,13 +18,14 @@ public class OtherUserProfileActivity extends Activity {
         setContentView(R.layout.activity_other_user_profile);
     }
 
-
+//Message Intent - calls sms messaging on phone - Stephanie Wooten
    public void Message (View view){
        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
        sendIntent.setData(Uri.parse("sms:"));
        startActivity(sendIntent);
     }
 
+//Takes user to favorites list
     public void Favorite (View view){
         Intent favoriteIntent = new Intent (this, FavoritesActivity.class);
         startActivity(favoriteIntent);
