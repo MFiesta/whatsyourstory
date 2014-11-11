@@ -30,6 +30,7 @@
             android:textColor="@drawable/button_text"
             android:layout_marginLeft="25dp"
             android:layout_toEndOf="@+id/userPicture"
+            android:layout_toStartOf="@+id/imageButton"
             android:layout_marginTop="37dp"
             android:layout_alignTop="@+id/userPicture" />
 
@@ -39,10 +40,16 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/mytitle"
+
             android:id="@+id/userTitle"
             android:textColor="@drawable/button_text"
             android:layout_below="@+id/userFullName"
             android:layout_alignStart="@+id/userFullName" />
+
+
+            android:layout_below="@+id/textView_OtherUserLocation"
+            android:layout_alignLeft="@+id/textView_OtherUserLocation"
+            android:layout_alignStart="@+id/textView_OtherUserLocation" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -150,8 +157,13 @@
             android:text="@string/myinterests1"
             android:textColor="@drawable/button_text"
             android:id="@+id/multiAutoCompleteTextView4"
+
             android:layout_below="@+id/textView"
             android:layout_alignStart="@+id/textView" />
+
+            android:layout_below="@+id/textView_OtherUserName"
+            android:layout_alignLeft="@+id/textView_OtherUserName"
+            android:layout_alignStart="@+id/textView_OtherUserName" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -160,7 +172,7 @@
             android:layout_toEndOf="@+id/multiAutoCompleteTextView4"
             android:layout_below="@+id/multiAutoCompleteTextView3"
             android:layout_alignStart="@+id/imageButton2"
-            android:layout_alignBottom="@+id/textView" />
+            android:layout_alignBottom="@+id/textView_OtherUserName" />
 
         <Button
             android:text="@string/action_skills_next"
