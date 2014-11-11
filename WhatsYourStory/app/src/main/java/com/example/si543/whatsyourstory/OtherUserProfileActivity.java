@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.net.Uri;
 
 public class OtherUserProfileActivity extends Activity {
 
@@ -21,7 +20,9 @@ public class OtherUserProfileActivity extends Activity {
 //Message Intent - calls sms messaging on phone - Stephanie Wooten
    public void Message (View view){
        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-       sendIntent.setData(Uri.parse("sms:"));
+       sendIntent.putExtra("address", "555-555-5555");
+       sendIntent.setType("vnd.android-dir/mms-sms");
+
        startActivity(sendIntent);
     }
 
