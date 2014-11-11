@@ -81,6 +81,7 @@
     <string name="title_activity_feed_view">FeedView</string>
     <string name="action_feed_row_1">FeedRow1</string>
     <string name="FeedDescription">People you may be interested in</string>
+
     <!-- Action Bar -->
     <string name="action_search">ActionBarSearch</string>
     <string name="action_important">ActionBarImportant</string>
@@ -92,4 +93,10 @@
         <item>Eytan Adar</item>
         <item>Captain America</item>
     </string-array>
+
+    <!--Dialog-->
+    <string name="logoutyesbutton">Logout</string>
+    <string name="logoutnobutton">Cancel</string>
+    <string name="are_you_sure">Are you sure you want to log out?</string>
+
 </resources>

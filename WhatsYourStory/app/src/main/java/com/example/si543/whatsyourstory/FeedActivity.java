@@ -2,8 +2,11 @@ package com.example.si543.whatsyourstory;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.Fragment;
-import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -11,14 +14,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.app.FragmentManager;
+import android.widget.Button;
+import android.view.View.OnClickListener;
 
 import java.util.ArrayList;
 
 
 public class FeedActivity extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+    implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -29,6 +34,8 @@ public class FeedActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +53,7 @@ public class FeedActivity extends Activity
 
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
 
-        // set adatper for this listview
+        // set adapter for this listview
         ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
         //Add item to adapter
@@ -152,7 +159,36 @@ public class FeedActivity extends Activity
             super.onAttach(activity);
             ((FeedActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
+
         }
+        }
+
+    button = (Button) findViewById(R.id.logoutbutton);
+    button.setOnClickListener(new OnClickListener() {
+
+    public class LogoutFragment extends DialogFragment {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState){
+            // Use the Builder class for convenient dialog construction
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage(R.string.are_you_sure)
+                    .setPositiveButton(R.string.logoutyesbutton, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User clicked yes logout button
+                        }
+                    })
+                    .setNegativeButton(R.string.logoutnobutton, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User cancelled the dialog
+                        }
+                    });
+            // Create the AlertDialog object and return it
+            return builder.create();
+        }
+
     }
+}
 
 }
+

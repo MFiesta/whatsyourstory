@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/are_you_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to logout?" />
+
+    <Button
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:text="Yes, log me out"
+        android:id="@+id/logoutyesbutton"
+        android:onClick="BackToLogin" /> <!--call method that returns you to the log in page -->
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/logoutnobutton"
+        android:onClick="BackToFeed" /> <!--call method that returns you to the feed page-->
+
+
+</LinearLayout>
