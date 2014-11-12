@@ -92,4 +92,8 @@
         <item>Eytan Adar</item>
         <item>Captain America</item>
     </string-array>
+
+    <!--Logout Dialog-->
+    <string name="cancel">Cancel</string>
+    <string name="logout">Yes, logout</string>
 </resources>

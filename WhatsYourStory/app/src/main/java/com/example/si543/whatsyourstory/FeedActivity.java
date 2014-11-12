@@ -11,14 +11,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
 
 public class FeedActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    public void showLogoutDialog (View view) {
+        LogoutDialog logoutDialog=new LogoutDialog();
+        logoutDialog.show(getFragmentManager(),"Logout Dialog");
+    }
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -29,6 +32,10 @@ public class FeedActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
+
+    // set adatper for this listview
+    ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,40 +51,53 @@ public class FeedActivity extends Activity
                 R.id.drawer_layout,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
+        initList();
+        // adapters are what we use to associate the list variable and its contents with the list view
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
-
-        // set adatper for this listview
-        ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
-
-        //Add item to adapter
-        FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
-        values.add(user);
-        user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
-        values.add(user);
-        user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
-        values.add(user);
-        user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
-        values.add(user);
-        user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
-        values.add(user);
-        user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
-        values.add(user);
-        user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
-        values.add(user);
-
-
         MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this,R.layout.listitem_in_activity_feed, values);
         feedListView.setAdapter(adapter);
 
         //set listview onitemclicklistener
         feedListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openOtherUserDetail(id);
+                //startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
             }
         });
+    };
 
-    }
+
+        //copy teamivore
+        // openTeamDetail is called whenever a list item is clicked on
+        // it calls for an intent that starts up the team detail activity and sends the team's id over
+        // to the activity with the message variable declared at the top of the activity
+        public void openOtherUserDetail(long id) {
+            Intent intent = new Intent(this, OtherUserProfileActivity.class);
+            String message = String.valueOf(id);
+            intent.putExtra(EXTRA_MESSAGE, message);
+            startActivity(intent);
+        }
+
+        //Add item to adapter
+        private void initList() {
+            FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
+            values.add(user);
+            user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
+            values.add(user);
+            user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
+            values.add(user);
+            user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
+            values.add(user);
+            user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
+            values.add(user);
+            user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
+            values.add(user);
+            user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
+            values.add(user);
+        }
+
 
 
     @Override
