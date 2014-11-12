@@ -10,7 +10,7 @@ import android.content.Intent;
 import javax.security.auth.login.LoginException;
 
 /**
- * Created by mfiesta on 11/11/14.
+ * Created by mfiesta and alicerhee on 11/11/14.
  */
 
 public class LogoutDialog extends DialogFragment {
