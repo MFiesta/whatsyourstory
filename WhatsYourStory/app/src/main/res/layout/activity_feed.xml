@@ -56,12 +56,19 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="402dp"
         android:id="@+id/feedListView">
 
     </ListView>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/feedLogout"
+            android:layout_gravity="center_horizontal"
+            android:onClick="showLogoutDialog"/>
 
 
-</LinearLayout>
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>

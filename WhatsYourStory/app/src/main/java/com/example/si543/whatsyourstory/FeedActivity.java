@@ -11,14 +11,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
 
 public class FeedActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    public void showLogoutDialog (View view) {
+        LogoutDialog logoutDialog=new LogoutDialog();
+        logoutDialog.show(getFragmentManager(),"Logout Dialog");
+    }
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
