@@ -4,12 +4,15 @@ package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class OtherUserProfileActivity extends Activity {
@@ -30,15 +33,28 @@ public class OtherUserProfileActivity extends Activity {
         int id = (int) Long.parseLong(message);
 
         // Create the text view
-        //TextView textView = (TextView) findViewById(R.id.textView_OtherUserName);
-        //textView.setText(values.get(id));
+
+        ImageView imageViewUserPicture = (ImageView) findViewById(R.id.userPicture);
+        String imagePath = values.get(id).getImagePath();
+
+        if (imagePath != null) {
+
+            try {
+                imageViewUserPicture.setImageBitmap(BitmapFactory.decodeStream(getAssets().open(imagePath)));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        TextView textViewName = (TextView) findViewById(R.id.textView_OtherUserName);
+        textViewName.setText(values.get(id).getName());
 
 
-        //textView = (TextView) findViewById(R.id.textView_OtherUserCareer);
-        //textView.setText(values.get(id));
+        TextView textViewCareer = (TextView) findViewById(R.id.textView_OtherUserCareer);
+        textViewCareer.setText(values.get(id).getCareer());
 
-        //TextView textView = (TextView) findViewById(R.id.textView_OtherUserLocation);
-        //textView.setText(values.get(id));
+        TextView textViewLocation = (TextView) findViewById(R.id.textView_OtherUserLocation);
+        textViewLocation.setText(values.get(id).getLocation());
         }
 
         //Add item to adapter
