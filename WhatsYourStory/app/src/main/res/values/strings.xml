@@ -48,8 +48,7 @@
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
     <string name="eytanskills">Graphic Design</string>
 
-
-    <!--Edit my Profile-->
+    <!-- Edit my Profile -->
     <string name="interests">Interests:</string>
     <string name="myname">Steve Rogers</string>
     <string name="myinterests">Interests:</string>
@@ -88,15 +87,16 @@
     <string name="action_add_to_important">Add this person to your favorite</string>
     <string name="action_contact">Contact this person</string>
 
-    <!--Favorites-->
+    <!-- Favorites -->
     <string-array name="favorites_list">
         <item>Eytan Adar</item>
         <item>Captain America</item>
     </string-array>
 
-    <!--Dialog-->
+    <!-- Dialog -->
     <string name="logoutyesbutton">Logout</string>
     <string name="logoutnobutton">Cancel</string>
     <string name="are_you_sure">Are you sure you want to log out?</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

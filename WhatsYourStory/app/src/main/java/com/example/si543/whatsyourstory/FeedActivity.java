@@ -8,22 +8,25 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.app.FragmentManager;
 import android.widget.Button;
+import android.support.v4.app.FragmentActivity;
 import android.view.View.OnClickListener;
 
 import java.util.ArrayList;
 
 
 public class FeedActivity extends Activity
-    implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+    implements NavigationDrawerFragment.NavigationDrawerCallbacks, MyDialog.dialogDoneListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -41,6 +44,8 @@ public class FeedActivity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
+        Button button= (Button) findViewById(R.id.logoutbutton);
+        button.setOnClickListener(onclick);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -121,6 +126,16 @@ public class FeedActivity extends Activity
         actionBar.setTitle(mTitle);
     }
 
+    @Override
+    public void onDone(boolean state) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
 
     /**
      * A placeholder fragment containing a simple view.
@@ -162,33 +177,15 @@ public class FeedActivity extends Activity
 
         }
         }
-
-    button = (Button) findViewById(R.id.logoutbutton);
-    button.setOnClickListener(new OnClickListener() {
-
-    public class LogoutFragment extends DialogFragment {
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState){
-            // Use the Builder class for convenient dialog construction
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage(R.string.are_you_sure)
-                    .setPositiveButton(R.string.logoutyesbutton, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            // User clicked yes logout button
-                        }
-                    })
-                    .setNegativeButton(R.string.logoutnobutton, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            // User cancelled the dialog
-                        }
-                    });
-            // Create the AlertDialog object and return it
-            return builder.create();
-        }
+    View.OnClickListener onclick= new View.OnClickListener(){
+         @Override
+         public void onClick(View view){MyDialog myDiag=new MyDialog();
+                    myDiag.show(getFragmentManager(),"Diag");
+                }
+            };
 
     }
-}
 
-}
+
+
 
