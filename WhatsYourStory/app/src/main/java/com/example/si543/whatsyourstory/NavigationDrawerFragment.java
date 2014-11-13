@@ -32,12 +32,12 @@ import android.widget.Toast;
 public class NavigationDrawerFragment extends Fragment {
 
     /**
-     * Remember the position of the selected item.
+     * Remember the position of the selected item the last time the app was opened.
      */
     private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
 
     /**
-     * Per the design guidelines, you should show the drawer on launch until the user manually
+     * For usability purposes - show the drawer on launch until the user manually
      * expands it. This shared preference tracks this.
      */
     private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
@@ -87,7 +87,7 @@ public class NavigationDrawerFragment extends Fragment {
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
     }
-
+    //create list of options for nav drawer
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
