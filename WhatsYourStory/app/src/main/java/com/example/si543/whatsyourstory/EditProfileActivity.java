@@ -22,10 +22,4 @@ public class EditProfileActivity extends Activity {
         }
     }
 
-    public void EditMyProfileNext (View view) {
-        Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);
-        //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
-        startActivity(EditMyProfileActivity);
-    }
-
 }

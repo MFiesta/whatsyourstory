@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.view.Window;
 
 import java.util.ArrayList;
 import android.content.Intent;
@@ -44,7 +45,7 @@ public class FeedActivity extends Activity {
     private NavDrawerListAdapter adapter;
 
     // set adapter for feed's listview
-    //ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
+    ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
@@ -108,7 +109,7 @@ public class FeedActivity extends Activity {
 
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
-        /**initList();
+        initList();
         // adapters are what we use to associate the list variable and its contents with the list view
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
         MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this,R.layout.listitem_in_activity_feed, values);
@@ -122,14 +123,14 @@ public class FeedActivity extends Activity {
                 openOtherUserDetail(id);
                 //startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
             }
-        });**/
+        });
     }
 
         //copy teamivore
         // openTeamDetail is called whenever a list item is clicked on
         // it calls for an intent that starts up the team detail activity and sends the team's id over
         // to the activity with the message variable declared at the top of the activity
-        /**public void openOtherUserDetail(long id) {
+        public void openOtherUserDetail(long id) {
             Intent intent = new Intent(this, OtherUserProfileActivity.class);
             String message = String.valueOf(id);
             intent.putExtra(EXTRA_MESSAGE, message);
@@ -152,7 +153,7 @@ public class FeedActivity extends Activity {
             values.add(user);
             user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
             values.add(user);
-        }**/
+        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -262,6 +263,12 @@ public class FeedActivity extends Activity {
             Log.e("FeedActivity", "Error in creating fragment");
         }
 
+    }
+
+    public void EditMyProfileNext (View view) {
+        Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);
+        //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
+        startActivity(EditMyProfileActivity);
     }
 
 
