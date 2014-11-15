@@ -67,6 +67,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_side_menu">Side Menu</string>
     <string-array name="nav_drawer_items">
+        <item >Home</item>
         <item >My Profile</item>
         <item >Messages</item>
         <item >Favorites</item>

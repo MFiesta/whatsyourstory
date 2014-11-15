@@ -1,10 +1,12 @@
+//Created by chiahuihsieh & Stephanie Wooten
+
 package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
-import android.app.Fragment;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,9 +26,6 @@ public class FeedActivity extends Activity {
         logoutDialog.show(getFragmentManager(),"Logout Dialog");
     }
 
-    // set adatper for feed's listview
-    ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
-
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -37,13 +36,16 @@ public class FeedActivity extends Activity {
     //app title
     private CharSequence mTitle;
 
+
     //menu items
     private String[] navMenuTitles;
 
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
-    //Jessy - is this for your feed? Or is it unnecessary?
+    // set adapter for feed's listview
+    //ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
+
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
     @Override
@@ -51,7 +53,7 @@ public class FeedActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
 
-        mTitle = mDrawerTitle = getTitle();
+        mTitle = mDrawerTitle = "What's Your Story?";
 
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -62,24 +64,22 @@ public class FeedActivity extends Activity {
         navDrawerItems = new ArrayList<NavDrawerItem>();
 
         //adding nav drawer items to the array
-        //My Profile
+        //Home - Takes user back to feed page
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[0]));
+        //My Profile
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1]));
         //Messages - Need Counter
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], true, "3"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, "3"));
         //Favorites - Do we need a counter for this?
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2]));
-        //Log Out
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
+        //Log Out
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4]));
 
         //set the nav drawer list adapter
         adapter = new NavDrawerListAdapter(getApplicationContext(), navDrawerItems);
         mDrawerList.setAdapter(adapter);
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-        // enabling action bar app icon and behaving it as toggle button
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, //nav menu toggle icon
@@ -98,7 +98,9 @@ public class FeedActivity extends Activity {
                 invalidateOptionsMenu();
             }
         };
-
+        // enabling action bar app icon and behaving it as toggle button
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
         if (savedInstanceState == null) {
             // on first time display view for first nav item
             displayView(0);
@@ -106,7 +108,7 @@ public class FeedActivity extends Activity {
 
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
-        initList();
+        /**initList();
         // adapters are what we use to associate the list variable and its contents with the list view
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
         MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this,R.layout.listitem_in_activity_feed, values);
@@ -120,14 +122,14 @@ public class FeedActivity extends Activity {
                 openOtherUserDetail(id);
                 //startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
             }
-        });
+        });**/
     }
 
         //copy teamivore
         // openTeamDetail is called whenever a list item is clicked on
         // it calls for an intent that starts up the team detail activity and sends the team's id over
         // to the activity with the message variable declared at the top of the activity
-        public void openOtherUserDetail(long id) {
+        /**public void openOtherUserDetail(long id) {
             Intent intent = new Intent(this, OtherUserProfileActivity.class);
             String message = String.valueOf(id);
             intent.putExtra(EXTRA_MESSAGE, message);
@@ -150,7 +152,7 @@ public class FeedActivity extends Activity {
             values.add(user);
             user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
             values.add(user);
-        }
+        }**/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -222,14 +224,24 @@ public class FeedActivity extends Activity {
     private void displayView(int position) {
         Fragment fragment = null;
         switch (position) {
+            //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
             case 0:
+                fragment = new HomeFragment();
+                break;
+            //If user selects "My Profile" - Takes to Edit Profile fragment
+            case 1:
                 fragment = new EditProfileFragment();
                 break;
-            case 1:
-                break;
+            //If user selects "Messages" - Takes user to Message archive
             case 2:
+
                 break;
+            //If user selects "Favorites" - takes them to list of favorited contacts
             case 3:
+                break;
+            //If user selects "Log Out" - Takes them to log-out dialogue box
+            case 4:
+                fragment = new LogoutDialog();
                 break;
             default:
                 break;
