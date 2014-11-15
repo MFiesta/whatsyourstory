@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.view.Window;
+import android.support.v4.app.NavUtils;
 
 import java.util.ArrayList;
 import android.content.Intent;
@@ -45,7 +45,7 @@ public class FeedActivity extends Activity {
     private NavDrawerListAdapter adapter;
 
     // set adapter for feed's listview
-    ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
+    //ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
@@ -53,6 +53,10 @@ public class FeedActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
+
+        // enabling action bar app icon and behaving it as toggle button
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
 
         mTitle = mDrawerTitle = "What's Your Story?";
 
@@ -99,9 +103,7 @@ public class FeedActivity extends Activity {
                 invalidateOptionsMenu();
             }
         };
-        // enabling action bar app icon and behaving it as toggle button
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+
         if (savedInstanceState == null) {
             // on first time display view for first nav item
             displayView(0);
@@ -109,7 +111,7 @@ public class FeedActivity extends Activity {
 
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
-        initList();
+        /**initList();
         // adapters are what we use to associate the list variable and its contents with the list view
         ListView feedListView = (ListView) findViewById(R.id.feedListView);
         MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this,R.layout.listitem_in_activity_feed, values);
@@ -123,14 +125,14 @@ public class FeedActivity extends Activity {
                 openOtherUserDetail(id);
                 //startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
             }
-        });
+        });**/
     }
 
         //copy teamivore
         // openTeamDetail is called whenever a list item is clicked on
         // it calls for an intent that starts up the team detail activity and sends the team's id over
         // to the activity with the message variable declared at the top of the activity
-        public void openOtherUserDetail(long id) {
+        /**public void openOtherUserDetail(long id) {
             Intent intent = new Intent(this, OtherUserProfileActivity.class);
             String message = String.valueOf(id);
             intent.putExtra(EXTRA_MESSAGE, message);
@@ -153,7 +155,7 @@ public class FeedActivity extends Activity {
             values.add(user);
             user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
             values.add(user);
-        }
+        }**/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -170,6 +172,7 @@ public class FeedActivity extends Activity {
         //Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.action_settings:
+                NavUtils.navigateUpFromSameTask(this);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -180,7 +183,7 @@ public class FeedActivity extends Activity {
     //Called when invalidateOptionsMenu() is triggered - ??
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        //if nav drawer is opened, hide the action items
+        //hide action bar items when nav drawer is open
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
         menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
@@ -188,7 +191,7 @@ public class FeedActivity extends Activity {
     //set title on screen app title
     @Override
     public void setTitle(CharSequence title) {
-        mTitle = title;
+        mTitle = "What's Your Story";
         getActionBar().setTitle(mTitle);
     }
 
