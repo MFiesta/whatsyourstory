@@ -7,7 +7,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="402dp"
-        android:id="@+id/archived_msgs">
+        android:id="@android:id/list">
 
     </ListView>
 

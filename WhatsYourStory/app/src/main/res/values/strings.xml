@@ -62,6 +62,13 @@
     <string name="mylocation">Anytown, USA</string>
     <string name="mytitle">Captain America</string>
 
+    <!--Messages-->
+    <string-array name="messages">
+        <item >Eytan Adar</item>
+        <item >Tony Stark</item>
+        <item >Kelly Kowatch</item>
+    </string-array>
+
     <!-- Nav Drawer -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
