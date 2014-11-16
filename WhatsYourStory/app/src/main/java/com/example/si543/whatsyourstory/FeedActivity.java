@@ -238,7 +238,7 @@ public class FeedActivity extends Activity {
                 break;
             //If user selects "Messages" - Takes user to Message archive
             case 2:
-
+                fragment = new MessagesFragment();
                 break;
             //If user selects "Favorites" - takes them to list of favorited contacts
             case 3:
