@@ -73,7 +73,7 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.OtherUserProfileActivity"
-            android:label="WhatsYourStory"
+            android:label="@string/app_name"
             android:parentActivityName="com.example.si543.whatsyourstory.FeedActivity">
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -84,7 +84,7 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.FavoritesActivity"
-            android:label="Eytan Adar"
+            android:label="@string/app_name"
             android:parentActivityName="com.example.si543.whatsyourstory.OtherUserProfileActivity">
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
