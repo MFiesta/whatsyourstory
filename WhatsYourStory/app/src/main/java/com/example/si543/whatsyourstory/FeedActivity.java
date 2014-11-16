@@ -30,6 +30,7 @@ public class FeedActivity extends Activity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
+    private ListView feedList;
 
     //nav drawer title
     private CharSequence mDrawerTitle;
@@ -41,8 +42,7 @@ public class FeedActivity extends Activity {
     //menu items
     private String[] navMenuTitles;
 
-    private ArrayList<NavDrawerItem> navDrawerItems;
-    private NavDrawerListAdapter adapter;
+    public NavDrawerListAdapter adapter;
 
     // set adapter for feed's listview
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
@@ -65,8 +65,9 @@ public class FeedActivity extends Activity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.drawer_list);
+        feedList = (ListView) findViewById(R.id.feedListView);
 
-        navDrawerItems = new ArrayList<NavDrawerItem>();
+        ArrayList<NavDrawerItem> navDrawerItems = new ArrayList<NavDrawerItem>();
 
         //adding nav drawer items to the array
         //Home - Takes user back to feed page
@@ -113,19 +114,18 @@ public class FeedActivity extends Activity {
 
         initList();
         // adapters are what we use to associate the list variable and its contents with the list view
-        /**ListView feedListView = (ListView) findViewById(R.id.feedListView);
-        MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(this, R.layout.listitem_in_activity_feed, values);
-        feedListView.setAdapter(adapter);
+        MySimpleArrayAdapter feedAdapter = new MySimpleArrayAdapter(this, R.layout.listitem_in_activity_feed, values);
+        feedList.setAdapter(feedAdapter);
 
         //set listview onitemclicklistener
-        feedListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        feedList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
                 openOtherUserDetail(id);
                 //startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
             }
-        });**/
+        });
     }
 
         //copy teamivore
@@ -210,7 +210,7 @@ public class FeedActivity extends Activity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        // Pass any configuration change to the drawer toggls
+        // Pass any configuration change to the drawer toggle
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
@@ -267,6 +267,8 @@ public class FeedActivity extends Activity {
         }
 
     }
+
+
 
     public void EditMyProfileNext (View view) {
         Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);
