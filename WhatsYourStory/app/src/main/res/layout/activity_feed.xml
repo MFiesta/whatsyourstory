@@ -70,7 +70,7 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
         android:listSelector="@drawable/list_selector"
-        android:background="#ff2db3ff"
+        android:background="#FFFFFF"
         android:id="@+id/drawer_list"/>
 
 </android.support.v4.widget.DrawerLayout>
