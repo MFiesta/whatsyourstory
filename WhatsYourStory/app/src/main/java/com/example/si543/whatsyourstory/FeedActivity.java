@@ -234,7 +234,8 @@ public class FeedActivity extends Activity {
                 break;
             //If user selects "My Profile" - Takes to Edit Profile fragment
             case 1:
-                fragment = new EditProfileFragment();
+                Intent editProfile = Intent(FeedActivity.this, MyProfileActivity.class);
+                startActivity(editProfile);
                 break;
             //If user selects "Messages" - Takes user to Message archive
             case 2:
@@ -271,13 +272,6 @@ public class FeedActivity extends Activity {
 
     }
 
-
-
-    public void EditMyProfileNext (View view) {
-        Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);
-        //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
-        startActivity(EditMyProfileActivity);
-    }
 
 
 }
