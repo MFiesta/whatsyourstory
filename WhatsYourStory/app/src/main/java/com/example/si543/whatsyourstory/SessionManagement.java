@@ -4,11 +4,12 @@ package com.example.si543.whatsyourstory;
  * Created by alicerhee on 11/17/14.
  */
 
-import java.util.HashMap;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+
+import java.util.HashMap;
 
 
 public class SessionManagement {
@@ -36,6 +37,8 @@ public class SessionManagement {
 
     // Email address (make variable public to access from outside)
     public static final String KEY_PASSWORD = "password";
+
+
 
     // Constructor
 
