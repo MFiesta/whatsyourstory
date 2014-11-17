@@ -21,7 +21,7 @@ public class LogInActivity extends Activity {
         SharedPreferences spref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = spref.edit();
 
-        editor.putString("textUserName", "Steve Rogers");
+        editor.putString("textEntryValue", ""); //String key, default value
         editor.apply();
 
     }
