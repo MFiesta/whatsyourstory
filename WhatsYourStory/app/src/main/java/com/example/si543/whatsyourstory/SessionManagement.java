@@ -116,10 +116,10 @@ public class SessionManagement {
         user.put(KEY_TITLE, pref.getString(KEY_TITLE, null));
 
         // user company
-        user.put(KEY_COMPANY), pref.getString(KEY_COMPANY), null));
+        user.put(KEY_COMPANY, pref.getString(KEY_COMPANY, null));
 
         // user location
-        user.put(KEY_LOCATION), pref.getString(KEY_LOCATION, null));
+        user.put(KEY_LOCATION, pref.getString(KEY_LOCATION, null));
 
         // return user
         return user;
