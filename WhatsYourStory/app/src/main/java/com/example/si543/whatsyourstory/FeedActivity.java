@@ -281,9 +281,7 @@ public class FeedActivity extends Activity {
 
         List<String> msgList = new ArrayList<String>();
 
-        msgList.add("Message From: Eytan Adar");
-        msgList.add("Message From: Kelly Kowatch");
-        msgList.add("Message From: Tony Stark");
+        msgList.add("Message From: Eytan Adar;Message From: Kelly Kowatch;Message From: Tony Stark");
 
         SharedPreferencesUtility.putStringList(this, "messages",  msgList);
 
