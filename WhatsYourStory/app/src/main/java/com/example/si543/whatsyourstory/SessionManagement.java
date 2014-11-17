@@ -1,7 +1,8 @@
 package com.example.si543.whatsyourstory;
 
 /**
- * Created by alicerhee on 11/17/14.
+ * Created by Alice Rhee
+ * Updated by Michelle Fiesta
  */
 
 import android.content.Context;
