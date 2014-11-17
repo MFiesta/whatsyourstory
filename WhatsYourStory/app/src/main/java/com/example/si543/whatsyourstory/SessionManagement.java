@@ -109,6 +109,18 @@ public class SessionManagement {
         // user password
         user.put(KEY_PASSWORD, pref.getString(KEY_PASSWORD, null));
 
+        // full name
+        user.put(KEY_FULLNAME, pref.getString(KEY_FULLNAME, null));
+
+        // user title
+        user.put(KEY_TITLE, pref.getString(KEY_TITLE, null));
+
+        // user company
+        user.put(KEY_COMPANY), pref.getString(KEY_COMPANY), null));
+
+        // user location
+        user.put(KEY_LOCATION), pref.getString(KEY_LOCATION, null));
+
         // return user
         return user;
     }
