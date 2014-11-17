@@ -57,12 +57,13 @@
     <!--Add code for editing picture functionality-->
 
     <EditText
+        android:id="@+id/edit_full_name"
+        android:layout_above="@+id/edit_current_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="@string/prompt_name"
         android:ems="10"
-        android:id="@+id/editText"
         android:textColorHint="#a8a8a8"
         android:padding="13dp"
         android:textSize="@dimen/edit_text_account"
@@ -70,7 +71,6 @@
         android:autoText="false"
         android:textCursorDrawable="@drawable/color_cursor"
         android:paddingLeft="20dp"
-        android:layout_above="@+id/editText2"
         android:layout_centerHorizontal="true">
         <requestFocus/>
     </EditText>
@@ -81,17 +81,17 @@
         android:background="#ffe8e8e8" />
 
     <EditText
+        android:id="@+id/edit_current_title"
+        android:layout_alignLeft="@+id/edit_full_name"
+        android:layout_alignStart="@+id/edit_full_name"
+        android:layout_alignRight="@+id/edit_full_name"
+        android:layout_alignEnd="@+id/edit_full_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:hint="@string/prompt_title"
         android:ems="10"
-        android:id="@+id/editText2"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
         android:textColorHint="#a8a8a8"
         android:padding="13dp"
         android:textSize="@dimen/edit_text_account"
@@ -107,14 +107,14 @@
         android:background="#ffe8e8e8" />
 
     <EditText
+        android:id="@+id/edit_current_company"
+        android:layout_below="@+id/edit_current_title"
+        android:layout_alignLeft="@+id/edit_current_title"
+        android:layout_alignStart="@+id/edit_current_title"
+        android:layout_alignRight="@+id/edit_current_title"
+        android:layout_alignEnd="@+id/edit_current_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
-        android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
         android:hint="@string/prompt_company"
         android:textColorHint="#a8a8a8"
         android:ems="10"
@@ -133,14 +133,14 @@
         android:background="#ffe8e8e8" />
 
     <EditText
+        android:id="@+id/edit_current_location"
+        android:layout_below="@+id/editText4"
+        android:layout_alignLeft="@+id/edit_current_company"
+        android:layout_alignStart="@+id/edit_current_company"
+        android:layout_alignRight="@+id/edit_current_company"
+        android:layout_alignEnd="@+id/edit_current_company"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText5"
-        android:layout_below="@+id/editText4"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignStart="@+id/editText4"
-        android:layout_alignRight="@+id/editText4"
-        android:layout_alignEnd="@+id/editText4"
         android:hint="@string/prompt_location"
         android:textColorHint="#a8a8a8"
         android:ems="10"
@@ -153,12 +153,12 @@
         android:paddingLeft="20dp"/>
 
     <Button
+        android:id="@+id/MyInitProfileNext"
+        android:layout_below="@+id/edit_current_location"
         android:layout_width="360dp"
         android:layout_height="45dp"
         android:text="Next"
-        android:id="@+id/MyInitProfileNext"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/editText5"
         android:layout_centerHorizontal="true"
         android:onClick="MyInitProfileNext"
         style="?android:textAppearanceSmall"
