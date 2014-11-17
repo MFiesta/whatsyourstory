@@ -25,16 +25,12 @@ public class SharedPreferencesUtility {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString(key, "");
 
-        Log.i("MyActivity", "Getting" + listString);
-
 
         if(listString.length() != 0) {
 
             // string.split will create an array returning everything in between the provided "delimiter"
             // parameter
 
-            // example: if the string is hello;world;!, calling split(";") on it would return an array
-            // with 3 items: "hello", "world", and "!"
 
             String[] items = listString.split(";");
 
@@ -44,8 +40,6 @@ public class SharedPreferencesUtility {
             }
 
         }
-
-        Log.i("MyActivity", "Getting size " + list.size());
 
         return list;
 
