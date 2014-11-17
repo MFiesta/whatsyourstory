@@ -1,16 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Alice Rhee -->
+<!-- Add design elements: Stephanie & Jessy -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".EditProfile$PlaceholderFragment">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/profileedit"
+    android:background="@drawable/backrepeat"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true">
+
+    <ImageView
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:id="@+id/userPicture"
+        android:layout_gravity="bottom|start|top"
+        android:src="@drawable/default_picture"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/userSkills"
+        android:layout_marginTop="39dp" />
 
     <TextView
-        android:id="@+id/section_label"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/myname"
+        android:id="@+id/userFullName"
+        android:textColor="@drawable/button_text"
+        android:layout_marginLeft="25dp"
+        android:layout_toEndOf="@+id/userPicture"
+        android:layout_toStartOf="@+id/imageButton"
+        android:layout_marginTop="37dp"
+        android:layout_alignTop="@+id/userPicture" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/mytitle"
+
+        android:id="@+id/userTitle"
+        android:textColor="@drawable/button_text"
+        android:layout_below="@+id/userFullName"
+        android:layout_alignStart="@+id/userFullName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@drawable/button_text"
+        android:text="@string/mylocation"
+        android:id="@+id/userLocation"
+        android:layout_below="@+id/userTitle"
+        android:layout_alignStart="@+id/userTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/skills"
+        android:textStyle="bold"
+        android:id="@+id/userSkills"
+        android:textColor="@drawable/button_text"
+        android:layout_marginStart="44dp"
+        android:layout_below="@+id/userPicture"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp" />
+
+    <!-- Will be able to pull on database of existing skills and interests for auto complete -->
+
+    <MultiAutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myskills1"
+        android:id="@+id/multiAutoCompleteTextView"
+        android:textColor="@drawable/button_text"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignStart="@+id/userSkills" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/experiences"
+        android:textStyle="bold"
+        android:id="@+id/userExperience"
+        android:textColor="@drawable/button_text"
+        android:layout_below="@+id/multiAutoCompleteTextView"
+        android:layout_alignStart="@+id/userSkills" />
+
+    <MultiAutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myexperiences1"
+        android:id="@+id/multiAutoCompleteTextView2"
+        android:layout_below="@+id/userExperience"
+        android:textColor="@drawable/button_text"
+        android:layout_alignStart="@+id/multiAutoCompleteTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/interests"
+        android:textStyle="bold"
+        android:textColor="@drawable/button_text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/multiAutoCompleteTextView3"
+        android:layout_alignStart="@+id/multiAutoCompleteTextView3" />
+
+    <!-- All image buttons to be replaced by pencil icons
+
+     On clicking the icon
+        Allows user to edit the text fields
+     -->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_marginEnd="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/userSkills"
+        android:layout_alignBottom="@+id/userSkills" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:layout_toEndOf="@+id/userPicture"
+        android:layout_alignStart="@+id/imageButton"
+        android:layout_alignBottom="@+id/userExperience"
+        android:layout_alignEnd="@+id/imageButton"
+        android:layout_below="@+id/multiAutoCompleteTextView" />
+
+    <MultiAutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myexperiences2"
+        android:id="@+id/multiAutoCompleteTextView3"
+        android:textColor="@drawable/button_text"
+        android:layout_below="@+id/multiAutoCompleteTextView2"
+        android:layout_alignStart="@+id/multiAutoCompleteTextView2" />
+
+    <MultiAutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myinterests1"
+        android:textColor="@drawable/button_text"
+        android:id="@+id/multiAutoCompleteTextView4"
+
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton3"
+        android:layout_toEndOf="@+id/multiAutoCompleteTextView4"
+        android:layout_below="@+id/multiAutoCompleteTextView3"
+        android:layout_alignStart="@+id/imageButton2"
+        android:layout_alignBottom="@+id/textView_OtherUserName" />
+
+    <Button
+        android:text="@string/action_skills_next"
+        android:textStyle="bold"
+        android:textColor="@drawable/button_text"
+        android:background= "@drawable/button_shape"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:id="@+id/nextbutton"
+        android:onClick="EditMyProfileNext"
+        android:layout_below="@+id/multiAutoCompleteTextView4"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

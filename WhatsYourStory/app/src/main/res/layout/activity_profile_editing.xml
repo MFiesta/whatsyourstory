@@ -181,8 +181,8 @@
             android:background= "@drawable/button_shape"
             android:layout_width="100dp"
             android:layout_height="45dp"
-            android:id="@+id/nextbutton"
-            android:onClick="MyInitProfileNext"
+            android:id="@+id/editprofile_next"
+            android:onClick="EditMyProfileNext"
             android:layout_below="@+id/multiAutoCompleteTextView4"
             android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true" />
