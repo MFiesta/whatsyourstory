@@ -2,8 +2,10 @@ package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +18,11 @@ public class LogInActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        SharedPreferences spref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = spref.edit();
+
+        editor.putString("textEntryValue", ""); //String key, default value
+        editor.apply();
 
     }
     public void SignUpText(View view){
