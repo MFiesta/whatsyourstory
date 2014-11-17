@@ -10,11 +10,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-<<<<<<< HEAD
-public class SessionManager {
-=======
+
 public class SessionManagement {
->>>>>>> master
+
     // Shared Preferences
     SharedPreferences pref;
 
@@ -40,11 +38,9 @@ public class SessionManagement {
     public static final String KEY_EMAIL = "email";
 
     // Constructor
-<<<<<<< HEAD
-    public SessionManager(Context context){
-=======
+
     public SessionManagement(Context context){
->>>>>>> master
+
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
