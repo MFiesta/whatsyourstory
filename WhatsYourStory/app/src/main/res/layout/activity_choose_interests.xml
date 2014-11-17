@@ -48,7 +48,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tell_us_interests_text"
         android:layout_alignParentStart="true"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Engineering"
         android:textOff="Engineering"
         android:textColor="#FFFFFF"/>
@@ -60,7 +59,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tell_us_interests_text"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
         android:background="@drawable/my_btn_toggle"
+>>>>>>> login-sharedprefs
         android:textOn="Computer Science"
         android:textOff="Computer Science"
         android:textColor="#FFFFFF"/>
@@ -72,7 +77,13 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/button2_row1"
         android:layout_below="@+id/tell_us_interests_text"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
         android:background="@drawable/my_btn_toggle"
+>>>>>>> login-sharedprefs
         android:textOn="Apple"
         android:textOff="Apple"
         android:textColor="#FFFFFF"/>
@@ -83,7 +94,6 @@
         android:layout_below="@+id/button1_row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Watercolor"
         android:textOff="Watercolor"
         android:textColor="#FFFFFF"/>
@@ -95,9 +105,9 @@
         android:layout_toRightOf="@+id/button1_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Windows"
-        android:textOff="Windows" />
+        android:textOff="Windows"
+        android:textColor="#FFFFFF" />
 
     <ToggleButton
         android:id="@+id/button3_row2"
@@ -106,7 +116,6 @@
         android:layout_toRightOf="@+id/button2_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Dance"
         android:textOff="Dance"
         android:textColor="#FFFFFF"/>
@@ -118,7 +127,6 @@
         android:layout_toRightOf="@id/button3_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="CSS"
         android:textOff="CSS"
         android:textColor="#FFFFFF"/>
@@ -129,7 +137,6 @@
         android:layout_below="@+id/button1_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Knitting"
         android:textOff="Knitting"
         android:textColor="#FFFFFF"/>
@@ -141,7 +148,6 @@
         android:layout_toRightOf="@+id/button1_row3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Craft beer"
         android:textOff="Craft beer"
         android:textColor="#FFFFFF"/>
@@ -153,7 +159,6 @@
         android:layout_toRightOf="@id/button2_row3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_btn_toggle"
         android:textOn="Food"
         android:textOff="Food"
         android:textColor="#FFFFFF"/>

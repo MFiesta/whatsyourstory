@@ -64,6 +64,11 @@
             android:layout_gravity="center_horizontal" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> master
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="37dp"
@@ -77,6 +82,10 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 =======
+>>>>>>> master
+<<<<<<< HEAD
+=======
+>>>>>>> login-sharedprefs
 >>>>>>> master
 
         <TextView
@@ -153,6 +162,15 @@
             android:layout_alignStart="@+id/textView5" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+=======
+<<<<<<< HEAD
+>>>>>>> master
         <Button
             android:text="@string/action_message"
             android:textStyle="bold"
@@ -186,4 +204,8 @@
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
+>>>>>>> master
+<<<<<<< HEAD
+=======
+>>>>>>> login-sharedprefs
 >>>>>>> master

@@ -5,20 +5,20 @@ package com.example.si543.whatsyourstory;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.widget.DrawerLayout;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.NavUtils;
+import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.support.v4.app.NavUtils;
 
 import java.util.ArrayList;
-import android.content.Intent;
-import android.util.Log;
 
 public class FeedActivity extends Activity {
 
@@ -123,7 +123,7 @@ public class FeedActivity extends Activity {
             public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                     long id) {
                 openOtherUserDetail(id);
-                //startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
+                startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
             }
         });
     }
@@ -232,9 +232,10 @@ public class FeedActivity extends Activity {
             case 0:
                 fragment = new HomeFragment();
                 break;
-            //If user selects "My Profile" - Takes to Edit Profile fragment
+            //If user selects "My Profile" - Takes to My Profile Activity
             case 1:
-                fragment = new EditProfileFragment();
+                Intent editProfile = new Intent(FeedActivity.this, MyProfileActivity.class);
+                startActivity(editProfile);
                 break;
             //If user selects "Messages" - Takes user to Message archive
             case 2:
@@ -245,9 +246,10 @@ public class FeedActivity extends Activity {
                 Intent intent = new Intent(FeedActivity.this, FavoritesActivity.class);
                 startActivity(intent);
                 break;
-            //If user selects "Log Out" - Takes them to log-out dialogue box
+            //If user selects "Log Out" - Takes them to homepage
             case 4:
-                fragment = new LogoutDialog();
+                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                startActivity(logOut);
                 break;
             default:
                 break;
@@ -270,13 +272,6 @@ public class FeedActivity extends Activity {
 
     }
 
-
-
-    public void EditMyProfileNext (View view) {
-        Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);
-        //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
-        startActivity(EditMyProfileActivity);
-    }
 
 
 }
