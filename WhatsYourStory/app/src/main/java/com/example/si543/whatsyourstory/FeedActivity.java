@@ -232,9 +232,9 @@ public class FeedActivity extends Activity {
             case 0:
                 fragment = new HomeFragment();
                 break;
-            //If user selects "My Profile" - Takes to Edit Profile fragment
+            //If user selects "My Profile" - Takes to My Profile Activity
             case 1:
-                Intent editProfile = Intent(FeedActivity.this, MyProfileActivity.class);
+                Intent editProfile = new Intent(FeedActivity.this, MyProfileActivity.class);
                 startActivity(editProfile);
                 break;
             //If user selects "Messages" - Takes user to Message archive
