@@ -59,6 +59,17 @@
         </activity>
 
         <activity
+            android:name="com.example.si543.whatsyourstory.MessagesActivity"
+            android:label="Messages"
+            android:parentActivityName="com.example.si543.whatsyourstory.FeedActivity">
+            <!-- A child of the main activity -->
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.si543.whatsyourstory.FeedActivity" />
+        </activity>
+
+        <activity
 
             android:name="com.example.si543.whatsyourstory.ChooseSkillsActivity"
             android:label="Profile setting"
