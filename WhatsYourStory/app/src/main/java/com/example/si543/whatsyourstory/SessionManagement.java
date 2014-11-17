@@ -38,7 +38,17 @@ public class SessionManagement {
     // Email address (make variable public to access from outside)
     public static final String KEY_PASSWORD = "password";
 
+    //Full name
+    public static final String KEY_FULLNAME = "full name";
 
+    //Current title
+    public static final String KEY_TITLE = "title";
+
+    //Current company
+    public static final String KEY_COMPANY = "company";
+
+    //Current location
+    public static final String KEY_LOCATION = "location";
 
     // Constructor
 
