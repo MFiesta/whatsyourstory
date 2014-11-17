@@ -9,20 +9,37 @@ import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.EditText;
+import android.widget.Button;
 
 public class LogInActivity extends Activity {
+
+    // Email, password edittext
+    EditText username, password;
+
+    // login button
+    Button email_log_in_button;
+
+    // Session Management Class
+    SessionManagement session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        SharedPreferences spref = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = spref.edit();
+        // Session Management
+        session = new SessionManagement(getApplicationContext());
 
-        editor.putString("textEntryValue", ""); //String key, default value
-        editor.apply();
+        // Email, Password input text
+        username = (EditText) findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
+
+        //SharedPreferences spref = PreferenceManager.getDefaultSharedPreferences(this);
+        //SharedPreferences.Editor editor = spref.edit();
+
+        //editor.putString("textEntryValue", ""); //String key, default value
+        //editor.apply();
 
     }
     public void SignUpText(View view){
