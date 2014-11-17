@@ -245,9 +245,10 @@ public class FeedActivity extends Activity {
                 Intent intent = new Intent(FeedActivity.this, FavoritesActivity.class);
                 startActivity(intent);
                 break;
-            //If user selects "Log Out" - Takes them to log-out dialogue box
+            //If user selects "Log Out" - Takes them to homepage
             case 4:
-                fragment = new LogoutDialog();
+                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                startActivity(logOut);
                 break;
             default:
                 break;
