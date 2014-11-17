@@ -10,7 +10,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
+
 public class SessionManagement {
+
     // Shared Preferences
     SharedPreferences pref;
 
@@ -24,19 +26,21 @@ public class SessionManagement {
     int PRIVATE_MODE = 0;
 
     // Sharedpref file name
-    private static final String PREF_NAME = "AndroidHivePref";
+    private static final String PREF_NAME = "SharedPref";
 
     // All Shared Preferences Keys
     private static final String IS_LOGIN = "IsLoggedIn";
 
     // User name (make variable public to access from outside)
-    public static final String KEY_NAME = "name";
+    public static final String KEY_NAME = "username";
 
     // Email address (make variable public to access from outside)
-    public static final String KEY_EMAIL = "email";
+    public static final String KEY_EMAIL = "password";
 
     // Constructor
+
     public SessionManagement(Context context){
+
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
@@ -45,15 +49,15 @@ public class SessionManagement {
     /**
      * Create login session
      * */
-    public void createLoginSession(String name, String email){
+    public void createLoginSession(String username, String password){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
         // Storing name in pref
-        editor.putString(KEY_NAME, name);
+        editor.putString(KEY_NAME, username);
 
         // Storing email in pref
-        editor.putString(KEY_EMAIL, email);
+        editor.putString(KEY_EMAIL, password);
 
         // commit changes
         editor.commit();
@@ -91,7 +95,7 @@ public class SessionManagement {
         // user name
         user.put(KEY_NAME, pref.getString(KEY_NAME, null));
 
-        // user email id
+        // user password
         user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));
 
         // return user

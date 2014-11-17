@@ -28,6 +28,13 @@ public class LogInActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+<<<<<<< HEAD
+        SharedPreferences spref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = spref.edit();
+
+        editor.putString("textEntryValue", ""); //String key, default value
+        editor.apply();
+=======
         // Session Management
         session = new SessionManagement(getApplicationContext());
 
@@ -40,6 +47,7 @@ public class LogInActivity extends Activity {
 
         //editor.putString("textEntryValue", ""); //String key, default value
         //editor.apply();
+>>>>>>> master
 
     }
     public void SignUpText(View view){

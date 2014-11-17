@@ -61,6 +61,9 @@
         android:layout_below="@+id/tell_us_interests_text"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> master
         android:background="@drawable/my_btn_toggle"
 >>>>>>> login-sharedprefs
         android:textOn="Computer Science"
@@ -76,6 +79,9 @@
         android:layout_below="@+id/tell_us_interests_text"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> master
         android:background="@drawable/my_btn_toggle"
 >>>>>>> login-sharedprefs
         android:textOn="Apple"
