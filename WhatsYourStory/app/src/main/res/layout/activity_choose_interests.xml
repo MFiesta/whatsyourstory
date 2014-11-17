@@ -107,6 +107,7 @@
         android:layout_height="wrap_content"
         android:textOn="Windows"
         android:textOff="Windows"
+        android:background="@drawable/my_btn_toggle"
         android:textColor="#FFFFFF" />
 
     <ToggleButton

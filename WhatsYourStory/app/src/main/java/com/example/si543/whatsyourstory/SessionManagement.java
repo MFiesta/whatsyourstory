@@ -32,10 +32,10 @@ public class SessionManagement {
     private static final String IS_LOGIN = "IsLoggedIn";
 
     // User name (make variable public to access from outside)
-    public static final String KEY_NAME = "username";
+    public static final String KEY_USERNAME = "username";
 
     // Email address (make variable public to access from outside)
-    public static final String KEY_EMAIL = "password";
+    public static final String KEY_PASSWORD = "password";
 
     // Constructor
 
@@ -54,10 +54,10 @@ public class SessionManagement {
         editor.putBoolean(IS_LOGIN, true);
 
         // Storing name in pref
-        editor.putString(KEY_NAME, username);
+        editor.putString(KEY_USERNAME, username);
 
         // Storing email in pref
-        editor.putString(KEY_EMAIL, password);
+        editor.putString(KEY_PASSWORD, password);
 
         // commit changes
         editor.commit();
@@ -85,18 +85,16 @@ public class SessionManagement {
 
     }
 
-
-
     /**
      * Get stored session data
      * */
     public HashMap<String, String> getUserDetails(){
         HashMap<String, String> user = new HashMap<String, String>();
         // user name
-        user.put(KEY_NAME, pref.getString(KEY_NAME, null));
+        user.put(KEY_USERNAME, pref.getString(KEY_USERNAME, null));
 
         // user password
-        user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));
+        user.put(KEY_PASSWORD, pref.getString(KEY_PASSWORD, null));
 
         // return user
         return user;
