@@ -242,6 +242,8 @@ public class FeedActivity extends Activity {
                 break;
             //If user selects "Favorites" - takes them to list of favorited contacts
             case 3:
+                Intent intent = new Intent(FeedActivity.this, FavoritesActivity.class);
+                startActivity(intent);
                 break;
             //If user selects "Log Out" - Takes them to log-out dialogue box
             case 4:
