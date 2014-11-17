@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MessagesFragment extends Activity{
+public class MessagesActivity extends Activity{
 
     // the string variable we use for sending messages with intents
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
