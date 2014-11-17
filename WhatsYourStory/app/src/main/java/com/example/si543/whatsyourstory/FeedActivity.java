@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FeedActivity extends Activity {
 
@@ -59,6 +60,8 @@ public class FeedActivity extends Activity {
         getActionBar().setHomeButtonEnabled(true);
 
         mTitle = mDrawerTitle = "What's Your Story?";
+
+        initData();
 
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -270,6 +273,19 @@ public class FeedActivity extends Activity {
             //error in creating fragment
             Log.e("FeedActivity", "Error in creating fragment");
         }
+
+    }
+
+    //initialize the message list from a logged in user
+    private void initData() {
+
+        List<String> msgList = new ArrayList<String>();
+
+        msgList.add("Message From: Eytan Adar");
+        msgList.add("Message From: Kelly Kowatch");
+        msgList.add("Message From: Tony Stark");
+
+        SharedPreferencesUtility.putStringList(this, "messages",  msgList);
 
     }
 
