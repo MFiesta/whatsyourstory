@@ -31,7 +31,7 @@ public class SharedPreferencesUtility {
             // create an array returning everything in between the semicolons in the messages key
             String[] items = listString.split(";");
 
-            // a for loop that goes through the array and adds each separated string to the list 
+            // a for loop that goes through the array and adds each separated string to the list
             for (String i : items) {
                 list.add(i);
             }
