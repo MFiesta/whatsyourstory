@@ -63,15 +63,28 @@ public class SessionManagement {
     /**
      * Create login session
      * */
-    public void createLoginSession(String username, String password){
+    public void createLoginSession(String username, String password, String title, String fullname, String company,
+                                   String location){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
-        // Storing name in pref
+        // Storing username in pref
         editor.putString(KEY_USERNAME, username);
 
-        // Storing email in pref
+        // Storing password in pref
         editor.putString(KEY_PASSWORD, password);
+
+        // Storing full name in pref
+        editor.putString(KEY_FULLNAME, fullname);
+
+        // Storing title in pref
+        editor.putString(KEY_TITLE, title);
+
+        // Storing company in pref
+        editor.putString(KEY_COMPANY, company);
+
+        // Storing current location in pref
+        editor.putString(KEY_LOCATION, location);
 
         // commit changes
         editor.commit();
@@ -93,7 +106,7 @@ public class SessionManagement {
             // Add new Flag to start new Activity
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-            // Staring Login Activity
+            // Starting Login Activity
             _context.startActivity(i);
         }
 
