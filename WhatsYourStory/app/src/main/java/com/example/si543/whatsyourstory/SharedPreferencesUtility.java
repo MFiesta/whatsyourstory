@@ -16,26 +16,28 @@ import java.util.List;
 
 public class SharedPreferencesUtility {
 
+    //method to getStringList for messages
 
     public static List<String> getStringList(Activity activity, String key) {
 
         List<String> list = new ArrayList<String>();
 
-        // grab the preferences associated with the activity passed into this method
+
+        // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString(key, "");
 
 
         if(listString.length() != 0) {
 
-<<<<<<< HEAD
             // string.split will create an array returning everything in between the provided "delimiter"
             // parameter
 
-
+            // loop through the array and add it to a list so we can give it back to the method caller
+            // create an array returning everything in between the semicolons in the messages key
             String[] items = listString.split(";");
 
-            // loop through the array and add it to a list so we can give it back to the method caller
+            // a for loop that goes through the array and adds each separated string to the list
             for (String i : items) {
                 list.add(i);
             }
