@@ -17,12 +17,18 @@ import java.util.List;
 public class SharedPreferencesUtility {
 
     //method to getStringList for messages
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     public static List<String> getStringList(Activity activity, String key) {
 
         List<String> list = new ArrayList<String>();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString(key, "");
@@ -30,10 +36,13 @@ public class SharedPreferencesUtility {
 
         if(listString.length() != 0) {
 
+<<<<<<< HEAD
             // string.split will create an array returning everything in between the provided "delimiter"
             // parameter
 
             // loop through the array and add it to a list so we can give it back to the method caller
+=======
+>>>>>>> master
             // create an array returning everything in between the semicolons in the messages key
             String[] items = listString.split(";");
 
