@@ -109,7 +109,7 @@ public class OtherUserProfileActivity extends Activity {
         //    return true;
         //}
         //return super.onOptionsItemSelected(item);
-    //}
+    }
 //visibility contingent on user's approval to see their calendar
 
 //    public void ViewCalendar (View view){
@@ -124,4 +124,3 @@ public class OtherUserProfileActivity extends Activity {
     // private void initlist(){
     //   List.add(createskill("skiing")
     // }
-}
