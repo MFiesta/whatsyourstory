@@ -28,6 +28,7 @@ public class SharedPreferencesUtility {
 
         if(listString.length() != 0) {
 
+<<<<<<< HEAD
             // string.split will create an array returning everything in between the provided "delimiter"
             // parameter
 
