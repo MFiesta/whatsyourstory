@@ -127,9 +127,9 @@ public class FeedActivity extends Activity {
         }
         //Handle action bar actions click
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
+            //case R.id.action_settings:
+            //    NavUtils.navigateUpFromSameTask(this);
+            //    return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -141,7 +141,7 @@ public class FeedActivity extends Activity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         //hide action bar items when nav drawer is open
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+        //menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
     //set title on screen app title
