@@ -30,7 +30,6 @@ public class FeedActivity extends Activity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
-    private ListView feedList;
 
     //nav drawer title
     private CharSequence mDrawerTitle;
@@ -43,9 +42,6 @@ public class FeedActivity extends Activity {
     private String[] navMenuTitles;
 
     public NavDrawerListAdapter adapter;
-
-    // set adapter for feed's listview
-    ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
@@ -65,7 +61,6 @@ public class FeedActivity extends Activity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.drawer_list);
-        feedList = (ListView) findViewById(R.id.feedListView);
 
         ArrayList<NavDrawerItem> navDrawerItems = new ArrayList<NavDrawerItem>();
 
@@ -112,50 +107,8 @@ public class FeedActivity extends Activity {
 
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
-        initList();
-        // adapters are what we use to associate the list variable and its contents with the list view
-        MySimpleArrayAdapter feedAdapter = new MySimpleArrayAdapter(this, R.layout.listitem_in_activity_feed, values);
-        feedList.setAdapter(feedAdapter);
-
-        //set listview onitemclicklistener
-        feedList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
-                                    long id) {
-                openOtherUserDetail(id);
-                startActivity(new Intent(FeedActivity.this, OtherUserProfileActivity.class));
-            }
-        });
     }
 
-        //copy teamivore
-        // openTeamDetail is called whenever a list item is clicked on
-        // it calls for an intent that starts up the team detail activity and sends the team's id over
-        // to the activity with the message variable declared at the top of the activity
-        public void openOtherUserDetail(long id) {
-            Intent intent = new Intent(this, OtherUserProfileActivity.class);
-            String message = String.valueOf(id);
-            intent.putExtra(EXTRA_MESSAGE, message);
-            startActivity(intent);
-        }
-
-        //Add item to adapter
-        private void initList() {
-            FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
-            values.add(user);
-            user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
-            values.add(user);
-            user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
-            values.add(user);
-            user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
-            values.add(user);
-            user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
-            values.add(user);
-            user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
-            values.add(user);
-            user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
-            values.add(user);
-        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
