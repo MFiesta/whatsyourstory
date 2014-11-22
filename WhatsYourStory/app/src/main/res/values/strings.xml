@@ -62,13 +62,6 @@
     <string name="mylocation">Anytown, USA</string>
     <string name="mytitle">Captain America</string>
 
-    <!--Messages-->
-    <string-array name="messages">
-        <item >Eytan Adar</item>
-        <item >Tony Stark</item>
-        <item >Kelly Kowatch</item>
-    </string-array>
-
     <!-- Nav Drawer -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -76,8 +69,8 @@
     <string-array name="nav_drawer_items">
         <item >Home</item>
         <item >My Profile</item>
-        <item >Messages</item>
-        <item >Favorites</item>
+        <item >My Messages</item>
+        <item >My Favorites</item>
         <item >Log Out</item>
     </string-array>
 
