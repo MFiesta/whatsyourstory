@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LogInActivity extends Activity {
 
     // Email, password edittext
@@ -67,6 +70,8 @@ public class LogInActivity extends Activity {
                         startActivity(i);
                         finish();
 
+                        initData();
+
                     }
                     else{
                         // username / password doesn't match
@@ -103,6 +108,17 @@ public class LogInActivity extends Activity {
     }
 
     //SignUp if user does not already have un, password.  Takes user to SignUpActivity
+
+    //initialize the message list from a logged in user
+    private void initData() {
+
+        List<String> msgList = new ArrayList<String>();
+
+        msgList.add("Message From: Eytan Adar;Message From: Kelly Kowatch;Message From: Tony Stark");
+
+        SharedPreferencesUtility.putStringList(this, "messages",  msgList);
+
+    }
 
     }
 
