@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -86,7 +85,7 @@ public class OtherUserProfileActivity extends Activity {
     }
 
 //Takes user to favorites list
-    public void Favorite (View view){
+    public void addToFavorite (View view){
         Intent favoriteIntent = new Intent (this, FavoritesActivity.class);
         startActivity(favoriteIntent);
     }

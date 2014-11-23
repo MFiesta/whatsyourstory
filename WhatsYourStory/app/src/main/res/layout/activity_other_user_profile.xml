@@ -28,7 +28,7 @@
         android:layout_height="fill_parent">
 
 
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
@@ -73,27 +73,37 @@
             android:gravity="center"
             android:layout_gravity="center_horizontal"  />
 
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
             <Button
+                android:id="@+id/sendMessage"
                 android:text="@string/action_message"
                 android:textStyle="bold"
-                android:id="@+id/button2"
                 android:textColor="@drawable/button_text"
                 android:background= "@drawable/button_shape"
-                android:layout_width="100dp"
+                android:layout_width="0.0dip"
                 android:layout_height="45dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:onClick="Message"/>
 
             <Button
+                android:id="@+id/addToFavorite"
                 android:text="@string/action_favorite"
                 android:textStyle="bold"
                 android:textColor="@drawable/button_text"
                 android:background= "@drawable/button_shape"
-                android:layout_width="100dp"
+                android:layout_width="0.0dip"
                 android:layout_height="45dp"
-                android:id="@+id/button"
-                android:onClick="Favorite"
-                android:layout_marginTop="10dp" />
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="addToFavorite"/>
+    </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
