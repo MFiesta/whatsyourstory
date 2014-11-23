@@ -1,5 +1,9 @@
 package com.example.si543.whatsyourstory;
 
+/**
+ * Created by alicerhee with modification by Stephanie Wooten.
+ */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
