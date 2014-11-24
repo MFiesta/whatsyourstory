@@ -1,6 +1,5 @@
-/**
- * Created by Stephanie Wooten on 11/14/14.
- */
+//Created by Stephanie Wooten on 11/14/14.
+
 
 package com.example.si543.whatsyourstory;
 
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
     public HomeFragment(){}
-    private ListView feedList;
 
     // set adapter for feed's listview
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
