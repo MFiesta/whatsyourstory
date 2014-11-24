@@ -6,7 +6,7 @@ package com.example.si543.whatsyourstory;
 public class NavDrawerItem {
 
     private String title;
-    private int count = 0;
+    private String count = "0";
     // boolean to set visiblity of the counter
     private boolean isCounterVisible = false;
 
@@ -16,7 +16,7 @@ public class NavDrawerItem {
         this.title = title;
     }
 
-    public NavDrawerItem(String title, boolean isCounterVisible, int count){
+    public NavDrawerItem(String title, boolean isCounterVisible, String count){
         this.title = title;
         this.isCounterVisible = isCounterVisible;
         this.count = count;
@@ -26,7 +26,7 @@ public class NavDrawerItem {
         return this.title;
     }
 
-    public int getCount(){
+    public String getCount(){
         return this.count;
     }
 
@@ -38,7 +38,7 @@ public class NavDrawerItem {
         this.title = title;
     }
 
-    public void setCount(int count){
+    public void setCount(String count){
         this.count = count;
     }
 

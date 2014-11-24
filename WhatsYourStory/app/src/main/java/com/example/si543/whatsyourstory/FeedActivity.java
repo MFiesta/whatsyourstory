@@ -57,6 +57,8 @@ public class FeedActivity extends Activity {
 
         mTitle = mDrawerTitle = "What's Your Story?";
 
+        initData();
+
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
@@ -71,8 +73,8 @@ public class FeedActivity extends Activity {
         //My Profile
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1]));
         //Messages - Need Counter
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, 3));
-        //Favorites
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, "3"));
+        //Favorites - Do we need a counter for this?
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
         //Log Out
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4]));
@@ -225,6 +227,16 @@ public class FeedActivity extends Activity {
 
     }
 
+    //initialize the message list from a logged in user
+    private void initData() {
+
+        List<String> msgList = new ArrayList<String>();
+
+        msgList.add("Message From: Eytan Adar;Message From: Kelly Kowatch;Message From: Tony Stark");
+
+        SharedPreferencesUtility.putStringList(this, "messages",  msgList);
+
+    }
 
 
 
