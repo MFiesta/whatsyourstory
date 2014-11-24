@@ -50,6 +50,9 @@ public class MessagesActivity extends Activity{
     }
 
     private void initList() {
+
+        //This is where we need to implement SharedPrefs with the login activity
+
         //pulls out the "messages"/key strings from the msgList in initData method & adds them to the list
         List<String> messages = SharedPreferencesUtility.getStringList(this, "messages");
 
