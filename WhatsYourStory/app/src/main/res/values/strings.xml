@@ -23,6 +23,7 @@
     <string name="prompt_email">Enter Your Email</string>
     <string name="action_next_interests">Next</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="sign_up_tagline">Find out more about life experiences you are interested in</string>
 
     <!-- Set My initial Profile -->
     <string name="action_my_init_profile_next">Next</string>
@@ -30,6 +31,8 @@
     <string name="prompt_name">Your Full Name</string>
     <string name="prompt_company">Enter Your Current Company</string>
     <string name="prompt_location">Current Location (City, State/Country)</string>
+    <string name="init_profile_title">Who are you?</string>
+    <string name="init_profile_tagline">See personalized career and experience recommendations</string>
 
     <!-- Choose your skills -->
     <string name="action_skills_next">Next</string>

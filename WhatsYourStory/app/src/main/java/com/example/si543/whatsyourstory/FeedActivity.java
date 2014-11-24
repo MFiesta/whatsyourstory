@@ -22,10 +22,6 @@ import java.util.List;
 
 public class FeedActivity extends Activity {
 
-    public void showLogoutDialog (View view) {
-        LogoutDialog logoutDialog=new LogoutDialog();
-        logoutDialog.show(getFragmentManager(),"Logout Dialog");
-    }
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;

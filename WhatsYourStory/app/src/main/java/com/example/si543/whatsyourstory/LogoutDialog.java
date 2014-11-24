@@ -1,18 +1,9 @@
 package com.example.si543.whatsyourstory;
 
-import android.app.AlertDialog;
-import android.app.DialogFragment;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.os.Bundle;
-import android.content.Intent;
-
-import javax.security.auth.login.LoginException;
-
 /**
  * Created by mfiesta and alicerhee on 11/11/14.
  */
-
+/**
 public class LogoutDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -38,3 +29,4 @@ public class LogoutDialog extends DialogFragment {
         return dialog;
     }
 }
+ **/
