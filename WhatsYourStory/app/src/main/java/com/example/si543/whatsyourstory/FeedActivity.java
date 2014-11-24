@@ -68,7 +68,7 @@ public class FeedActivity extends Activity {
         //My Profile
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1]));
         //Messages - Need Counter
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, "3"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, "1"));
         //Favorites - Do we need a counter for this?
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
         //Log Out
@@ -227,7 +227,7 @@ public class FeedActivity extends Activity {
 
         List<String> msgList = new ArrayList<String>();
 
-        msgList.add("Message From: Eytan Adar;Message From: Kelly Kowatch;Message From: Tony Stark");
+        msgList.add("Message From: What's Your Story");
 
         SharedPreferencesUtility.putStringList(this, "messages",  msgList);
 
