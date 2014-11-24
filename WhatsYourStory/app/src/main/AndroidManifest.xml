@@ -12,7 +12,8 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.LogInActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +39,7 @@
 
         <activity
             android:name="com.example.si543.whatsyourstory.SetMyInitProfileActivity"
-            android:label="Sign Up"
+            android:label="Profile Setting"
             android:parentActivityName="com.example.si543.whatsyourstory.SignUpActivity">
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
