@@ -63,6 +63,8 @@ public class LogInActivity extends Activity {
                     // password = test
                     if(username.equals("test") && password.equals("test")){
 
+                        initData();
+
                         // Creating user login session
                         // For testing purposes we are storing the name and email as follows
                         // Use user real data
@@ -73,8 +75,6 @@ public class LogInActivity extends Activity {
                         Intent i = new Intent(getApplicationContext(), FeedActivity.class);
                         startActivity(i);
                         finish();
-
-                        initData();
 
                     }
                     else{
