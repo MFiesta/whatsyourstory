@@ -107,7 +107,7 @@
 
     <!--Choose Skills-->
     <string name="chooseskills">Choose your skills</string>
-    <string name="tellusskills">Tell us what you\ 're great at!</string>
+    <string name="tellusskills">Tell us what you\'re great at!</string>
     <string name="button1_row1text">Engineering</string>
     <string name="button2_row1text">Computer Science</string>
     <string name="button3_row1text">Apple</string>
@@ -120,7 +120,24 @@
     <string name="button3_row3text">Food</string>
     <string name="addskillstext">Add your own skills:</string>
     <string name="addskillsbuttontext">Add</string>
-    <string name="nextbutton">Next</string>
+    <string name="nextbuttonskills">Next</string>
+
+    <!--Choose Interests-->
+    <string name="chooseinterests">Choose your interests</string>
+    <string name="tellusinterests">What are you interested in learning more about?</string>
+    <string name="button1_row1textinterests">Engineering</string>
+    <string name="button2_row1textinterests">Computer Science</string>
+    <string name="button3_row1textinterests">Apple</string>
+    <string name="button1_row2textinterests">Watercolor</string>
+    <string name="button2_row2textinterests">Windows</string>
+    <string name="button3_row2textinterests">Dance</string>
+    <string name="button4_row2textinterests">CSS</string>
+    <string name="button1_row3textinterests">Knitting</string>
+    <string name="button2_row3textinterests">Craft beer</string>
+    <string name="button3_row3textinterests">Food</string>
+    <string name="addintereststext">Add your own interests:</string>
+    <string name="addinterestsbuttontext">Add</string>
+    <string name="nextbuttoninterests">Next</string>
 
     <!-- Message Activity -->
     <string name="title_activity_message">MessageActivity</string>
