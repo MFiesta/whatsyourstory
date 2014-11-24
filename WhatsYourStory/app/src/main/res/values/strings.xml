@@ -51,8 +51,7 @@
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
     <string name="eytanskills">Graphic Design</string>
 
-
-    <!--Edit my Profile-->
+    <!-- Edit my Profile -->
     <string name="interests">Interests:</string>
     <string name="myname">Steve Rogers</string>
     <string name="myinterests">Interests:</string>
@@ -69,12 +68,13 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_side_menu">Side Menu</string>
+
     <string-array name="nav_drawer_items">
-        <item >Home</item>
-        <item >My Profile</item>
-        <item >My Messages</item>
-        <item >My Favorites</item>
-        <item >Log Out</item>
+        <item>Home</item>
+        <item>My Profile</item>
+        <item>My Messages</item>
+        <item>My Favorites</item>
+        <item>Log Out</item>
     </string-array>
 
     <!-- Feed -->
@@ -90,13 +90,21 @@
     <string name="action_settings">Add this person to your favorite</string>
     <string name="action_contact">Contact this person</string>
 
-    <!--Favorites-->
+    <!-- Favorites -->
     <string-array name="favorites_list">
         <item>Eytan Adar</item>
         <item>Captain America</item>
     </string-array>
 
-    <!--Logout Dialog-->
+    <!-- Favorites -->
+    <string name="welcome_message">Welcome to What\'s Your Story! Search for individuals in your area who have
+        skills and interests that you would like to learn more about. Message them to find a time to meet.
+        Favorite those you would like to reach out to at a later date. Share your story!</string>
+
+    <!-- Logout Dialog -->
     <string name="cancel">Cancel</string>
     <string name="logout">Yes, logout</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
