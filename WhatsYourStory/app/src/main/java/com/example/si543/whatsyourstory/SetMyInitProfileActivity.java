@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 //Stephanie Wooten
-//Michelle Fiesta added SharedPreferences stuff
+//Michelle Fiesta added SharedPreferences functionality
 
 public class SetMyInitProfileActivity extends Activity {
 
