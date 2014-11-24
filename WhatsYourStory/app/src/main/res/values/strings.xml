@@ -107,7 +107,7 @@
 
     <!--Choose Skills-->
     <string name="chooseskills">Choose your skills</string>
-    <string name="tellusskills">Tell us what you're great at!</string>
+    <string name="tellusskills">Tell us what you\ 're great at!</string>
     <string name="button1_row1text">Engineering</string>
     <string name="button2_row1text">Computer Science</string>
     <string name="button3_row1text">Apple</string>
