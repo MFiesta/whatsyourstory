@@ -53,7 +53,7 @@ public class ChooseSkillsActivity extends Activity {
         editor.putBoolean("button2_row3", true);
         editor.putBoolean("button3_row3", true);
 
-        editor.commit();
+        editor.apply();
 
         Intent ChooseSkillsActivity = new Intent(this, ChooseInterestsActivity.class);
         startActivity(ChooseSkillsActivity);

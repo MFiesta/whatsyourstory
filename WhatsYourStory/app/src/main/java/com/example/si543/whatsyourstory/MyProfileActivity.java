@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 /**
  * Created by chiahuihsieh on 10/27/14

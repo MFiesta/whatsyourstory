@@ -7,14 +7,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 //Stephanie Wooten
-//Michelle Fiesta added SharedPreferences functionality
+//Michelle Fiesta - SharedPreferences functionality 11/23
 
 public class SetMyInitProfileActivity extends Activity {
 
-    //Full name, title, company, location edittext
+    //Full name, title, company, location EditText
     EditText edit_full_name;
     EditText edit_current_title;
     EditText edit_current_company;
@@ -33,6 +32,7 @@ public class SetMyInitProfileActivity extends Activity {
     }
 
     public void MyInitProfileNext(View view) {
+        //Putting SharedPreferences for full name, title, company, and location
         SharedPreferences sharedPreferences=getSharedPreferences("ProfActData", Context.MODE_MULTI_PROCESS);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("fullname", edit_full_name.getText().toString());
@@ -40,9 +40,11 @@ public class SetMyInitProfileActivity extends Activity {
         editor.putString("company", edit_current_company.getText().toString());
         editor.putString("location", edit_current_location.getText().toString());
 
-        editor.commit();
+        //Committing SharedPreferences
+        editor.apply();
 
         Intent SetMyInitProfileActivity = new Intent(this, ChooseSkillsActivity.class);
+
         //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
         startActivity(SetMyInitProfileActivity);
 
