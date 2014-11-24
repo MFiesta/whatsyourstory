@@ -1,130 +1,191 @@
 <!-- Michelle Fiesta -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/backrepeat"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.si543.whatsyourstory.ChooseSkillsActivity">
-
-    <TextView android:text="Choose your skills" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/choose_skills"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <!-- Users will be able to select multiple buttons with
-     skills that they have, or add their own skills. -->
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Engineering"
-        android:id="@+id/button"
-        android:layout_below="@+id/choose_skills"
-        android:layout_alignParentStart="true" />
+    tools:context="com.example.si543.whatsyourstory.ChooseSkillsActivity"
+    android:id="@+id/rl_outer">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:text="Choose your skills"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add your own skills:"
-        android:id="@+id/textView"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/choose_skills_text"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="109dp" />
+        android:textSize="25dp"
+        android:gravity="center"/>
 
-    <EditText
+    <TextView
+        android:text="Tell us what you're great at!"
+        android:layout_width="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:id="@+id/tell_us_skills_text"
+        android:textSize="16dp"
+        android:layout_below="@id/choose_skills_text"
+        android:gravity="center"/>
+
+    <!-- Users will be able to select multiple buttons with
+     skills that they have. Toggle will turn on to indicate a button is selected.
+     Ideally, these initial buttons would be populated with content that is popular
+     among users of the app. For purposes of this course, it will initally populate with
+     pre-selected buttons. -->
+
+    <ToggleButton
+        android:id="@+id/button1_row1"
+        android:text="Engineering"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignTop="@+id/textView"
+        android:layout_below="@+id/tell_us_skills_text"
+        android:layout_alignParentStart="true"
+        android:textOn="Engineering"
+        android:textOff="Engineering"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button2_row1"
+        android:text="Computer Science"
+        android:layout_toRightOf="@id/button1_row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tell_us_skills_text"
+        android:textOn="Computer Science"
+        android:textOff="Computer Science"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button3_row1"
+        android:text="Apple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button2_row1"
+        android:layout_below="@+id/tell_us_skills_text"
+        android:textOn="Apple"
+        android:textOff="Apple"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button1_row2"
+        android:text="Watercolor"
+        android:layout_below="@+id/button1_row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Watercolor"
+        android:textOff="Watercolor"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button2_row2"
+        android:text="Windows"
+        android:layout_below="@+id/button2_row1"
+        android:layout_toRightOf="@+id/button1_row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Windows"
+        android:textOff="Windows"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button3_row2"
+        android:text="Dance"
+        android:layout_below="@+id/button2_row1"
+        android:layout_toRightOf="@+id/button2_row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Dance"
+        android:textOff="Dance"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button4_row2"
+        android:text="CSS"
+        android:layout_below="@+id/button3_row1"
+        android:layout_toRightOf="@id/button3_row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="CSS"
+        android:textOff="CSS"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button1_row3"
+        android:text="Knitting"
+        android:layout_below="@+id/button1_row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Knitting"
+        android:textOff="Knitting"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button2_row3"
+        android:text="Craft beer"
+        android:layout_below="@+id/button2_row2"
+        android:layout_toRightOf="@+id/button1_row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Craft beer"
+        android:textOff="Craft beer"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button3_row3"
+        android:text="Food"
+        android:layout_below="@+id/button2_row2"
+        android:layout_toRightOf="@id/button2_row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Food"
+        android:textOff="Food"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Users can add their own skills to the list. Eventually, what they
+     add should turn into a button and add to the screen. -->
+
+    <TextView
+        android:id="@+id/add_skills_text"
+        android:text="Add your own skills:"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editText"
+        android:textSize="16dp"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_above="@id/nextbutton"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Next, users will be taken to the Choose Interests page. -->
+
+    <Button
         android:id="@+id/nextbutton"
-        android:onClick="selectInterests" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Computer Science"
-        android:id="@+id/button2"
-        android:layout_above="@+id/button3"
-        android:layout_toEndOf="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apple"
-        android:id="@+id/button3"
-        android:layout_toStartOf="@+id/textView"
-        android:layout_below="@+id/button"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Watercolor"
-        android:id="@+id/button5"
-        android:layout_toEndOf="@+id/button"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignStart="@+id/choose_interests" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Windows"
-        android:id="@+id/button6"
-        android:layout_toEndOf="@+id/button5"
-        android:layout_alignTop="@+id/button5" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dance"
-        android:id="@+id/button7"
-        android:layout_toStartOf="@+id/button5"
-        android:layout_below="@+id/button3" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CSS"
-        android:id="@+id/button10"
-        android:layout_toStartOf="@+id/button5"
-        android:layout_alignTop="@+id/button7"
-        android:layout_alignEnd="@+id/editText" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Knitting"
-        android:id="@+id/button11"
-        android:layout_toStartOf="@+id/button5"
-        android:layout_below="@+id/button7"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Craft beer"
-        android:id="@+id/button13"
-        android:layout_toStartOf="@+id/button6"
-        android:layout_below="@+id/button10" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Food"
-        android:id="@+id/button14"
-        android:layout_toStartOf="@+id/button10"
-        android:layout_below="@+id/button11"
-        android:layout_alignStart="@+id/button7" />
+        android:text="Next"
+        style="?android:textAppearanceSmall"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@drawable/button_text"
+        android:background= "@drawable/button_shape"
+        android:onClick="skillsNext"/>
 
 </RelativeLayout>

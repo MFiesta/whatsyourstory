@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Alice Rhee -->
+<!-- Add design elements: Stephanie & Jessy -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/profileedit"
+    android:background="@drawable/backrepeat"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/profileedit"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <QuickContactBadge
+        <ImageView
             android:layout_width="119dp"
             android:layout_height="119dp"
-            android:id="@+id/quickContactBadge"
-            android:layout_gravity="bottom|left|top"
+            android:id="@+id/userPicture"
+            android:layout_gravity="bottom|start|top"
+            android:src="@drawable/default_picture"
             android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/textView4"
-            android:layout_alignStart="@+id/textView4"
+            android:layout_alignStart="@+id/userSkills"
             android:layout_marginTop="39dp" />
 
         <TextView
@@ -28,33 +26,40 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/myname"
-            android:id="@+id/textView3"
+            android:id="@+id/userFullName"
+            android:textColor="@drawable/button_text"
+            android:layout_marginLeft="25dp"
+            android:layout_toEndOf="@+id/userPicture"
             android:layout_toStartOf="@+id/imageButton"
-            android:layout_toEndOf="@+id/quickContactBadge"
             android:layout_marginTop="37dp"
-            android:layout_alignTop="@+id/quickContactBadge"
-            android:layout_toLeftOf="@+id/imageButton" />
-            //android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
+            android:layout_alignTop="@+id/userPicture" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/mytitle"
-            android:id="@+id/textView6"
-            android:layout_below="@+id/textView3"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_alignStart="@+id/textView3" />
+
+            android:id="@+id/userTitle"
+            android:textColor="@drawable/button_text"
+            android:layout_below="@+id/userFullName"
+            android:layout_alignStart="@+id/userFullName" />
+
+
+            android:layout_below="@+id/textView_OtherUserLocation"
+            android:layout_alignLeft="@+id/textView_OtherUserLocation"
+            android:layout_alignStart="@+id/textView_OtherUserLocation" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@drawable/button_text"
             android:text="@string/mylocation"
-            android:id="@+id/textView7"
-            android:layout_below="@+id/textView6"
-            android:layout_alignLeft="@+id/textView6"
-            android:layout_alignStart="@+id/textView6" />
+            android:id="@+id/userLocation"
+            android:layout_below="@+id/userTitle"
+            android:layout_alignStart="@+id/userTitle" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,10 +67,10 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/skills"
             android:textStyle="bold"
-            android:id="@+id/textView4"
-            android:layout_marginLeft="44dp"
-            android:layout_below="@+id/quickContactBadge"
-            android:layout_alignParentLeft="true"
+            android:id="@+id/userSkills"
+            android:textColor="@drawable/button_text"
+            android:layout_marginStart="44dp"
+            android:layout_below="@+id/userPicture"
             android:layout_alignParentStart="true"
             android:layout_marginTop="48dp" />
 
@@ -76,10 +81,10 @@
             android:layout_height="wrap_content"
             android:text="@string/myskills1"
             android:id="@+id/multiAutoCompleteTextView"
+            android:textColor="@drawable/button_text"
             android:layout_toStartOf="@+id/imageButton2"
             android:layout_below="@+id/imageButton"
-            android:layout_alignLeft="@+id/textView4"
-            android:layout_alignStart="@+id/textView4" />
+            android:layout_alignStart="@+id/userSkills" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,19 +92,18 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/experiences"
             android:textStyle="bold"
-            android:id="@+id/textView5"
-            android:layout_toStartOf="@+id/button2"
+            android:id="@+id/userExperience"
+            android:textColor="@drawable/button_text"
             android:layout_below="@+id/multiAutoCompleteTextView"
-            android:layout_alignLeft="@+id/textView4"
-            android:layout_alignStart="@+id/textView4" />
+            android:layout_alignStart="@+id/userSkills" />
 
         <MultiAutoCompleteTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/myexperiences1"
             android:id="@+id/multiAutoCompleteTextView2"
-            android:layout_below="@+id/textView5"
-            android:layout_alignLeft="@+id/multiAutoCompleteTextView"
+            android:layout_below="@+id/userExperience"
+            android:textColor="@drawable/button_text"
             android:layout_alignStart="@+id/multiAutoCompleteTextView" />
 
         <TextView
@@ -108,10 +112,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/interests"
             android:textStyle="bold"
+            android:textColor="@drawable/button_text"
             android:id="@+id/textView"
-            android:layout_toStartOf="@+id/button2"
             android:layout_below="@+id/multiAutoCompleteTextView3"
-            android:layout_alignLeft="@+id/multiAutoCompleteTextView3"
             android:layout_alignStart="@+id/multiAutoCompleteTextView3" />
 
         <!-- All image buttons to be replaced by pencil icons
@@ -124,21 +127,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:layout_marginRight="32dp"
-            android:layout_alignParentRight="true"
+            android:layout_marginEnd="32dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/textView4"
-            android:layout_alignBottom="@+id/textView4" />
+            android:layout_alignTop="@+id/userSkills"
+            android:layout_alignBottom="@+id/userSkills" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:layout_toEndOf="@+id/quickContactBadge"
-            android:layout_alignLeft="@+id/imageButton"
+            android:layout_toEndOf="@+id/userPicture"
             android:layout_alignStart="@+id/imageButton"
-            android:layout_alignBottom="@+id/textView5"
-            android:layout_alignRight="@+id/imageButton"
+            android:layout_alignBottom="@+id/userExperience"
             android:layout_alignEnd="@+id/imageButton"
             android:layout_below="@+id/multiAutoCompleteTextView" />
 
@@ -147,18 +147,23 @@
             android:layout_height="wrap_content"
             android:text="@string/myexperiences2"
             android:id="@+id/multiAutoCompleteTextView3"
+            android:textColor="@drawable/button_text"
             android:layout_below="@+id/multiAutoCompleteTextView2"
-            android:layout_alignLeft="@+id/multiAutoCompleteTextView2"
             android:layout_alignStart="@+id/multiAutoCompleteTextView2" />
 
         <MultiAutoCompleteTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/myinterests1"
+            android:textColor="@drawable/button_text"
             android:id="@+id/multiAutoCompleteTextView4"
+
             android:layout_below="@+id/textView"
-            android:layout_alignLeft="@+id/textView"
             android:layout_alignStart="@+id/textView" />
+
+            android:layout_below="@+id/textView_OtherUserName"
+            android:layout_alignLeft="@+id/textView_OtherUserName"
+            android:layout_alignStart="@+id/textView_OtherUserName" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -166,10 +171,20 @@
             android:id="@+id/imageButton3"
             android:layout_toEndOf="@+id/multiAutoCompleteTextView4"
             android:layout_below="@+id/multiAutoCompleteTextView3"
-            android:layout_alignLeft="@+id/imageButton2"
             android:layout_alignStart="@+id/imageButton2"
-            android:layout_alignBottom="@+id/textView" />
+            android:layout_alignBottom="@+id/textView_OtherUserName" />
 
-    </RelativeLayout>
+        <Button
+            android:text="@string/action_skills_next"
+            android:textStyle="bold"
+            android:textColor="@drawable/button_text"
+            android:background= "@drawable/button_shape"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:id="@+id/editprofile_next"
+            android:onClick="EditMyProfileNext"
+            android:layout_below="@+id/multiAutoCompleteTextView4"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

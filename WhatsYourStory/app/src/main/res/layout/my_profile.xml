@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Alice Rhee -->
+<!-- Add design elements: Stephanie & Jessy -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/profileedit"
+    android:background="@drawable/backrepeat"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:clickable="false">
+
+    <ImageView
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:id="@+id/userPicture"
+        android:layout_gravity="bottom|start|top"
+        android:src="@drawable/default_picture"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/userSkills"
+        android:layout_marginTop="39dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/myname"
+        android:id="@+id/userFullName"
+        android:textColor="@drawable/button_text"
+        android:layout_marginLeft="25dp"
+        android:layout_toEndOf="@+id/userPicture"
+        android:layout_marginTop="37dp"
+        android:layout_alignTop="@+id/userPicture" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/mytitle"
+
+        android:id="@+id/userTitle"
+        android:textColor="@drawable/button_text"
+        android:layout_below="@+id/userFullName"
+        android:layout_alignStart="@+id/userFullName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@drawable/button_text"
+        android:text="@string/mylocation"
+        android:id="@+id/userLocation"
+        android:layout_below="@+id/userTitle"
+        android:layout_alignStart="@+id/userTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/skills"
+        android:textStyle="bold"
+        android:id="@+id/userSkills"
+        android:textColor="@drawable/button_text"
+        android:layout_marginStart="44dp"
+        android:layout_below="@+id/userPicture"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp" />
+
+    <!-- Will be able to pull on database of existing skills and interests for auto complete -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myskills1"
+        android:id="@+id/multiAutoCompleteTextView"
+        android:textColor="@drawable/button_text"
+        android:layout_toStartOf="@+id/userLocation"
+        android:layout_below="@+id/userSkills"
+        android:layout_alignStart="@+id/userSkills" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/interests"
+        android:textStyle="bold"
+        android:textColor="@drawable/button_text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/multiAutoCompleteTextView"
+        android:layout_alignStart="@+id/multiAutoCompleteTextView" />
+
+    <!-- All image buttons to be replaced by pencil icons
+
+     On clicking the icon
+        Allows user to edit the text fields
+     -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myinterests1"
+        android:textColor="@drawable/button_text"
+        android:id="@+id/multiAutoCompleteTextView4"
+
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+</RelativeLayout>
