@@ -118,6 +118,8 @@ public class LogInActivity extends Activity {
 
         List<String> msgList = new ArrayList<String>();
 
+        //fairly certain the if/else goes here - if login works, then add a specific string, if not, add a different string - maybe?
+
         msgList.add("Message From: Eytan Adar;Message From: Kelly Kowatch;Message From: Tony Stark");
 
         SharedPreferencesUtility.putStringList(this, "messages",  msgList);
