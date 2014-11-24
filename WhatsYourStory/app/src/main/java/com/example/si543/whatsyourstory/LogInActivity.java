@@ -1,5 +1,9 @@
 package com.example.si543.whatsyourstory;
 
+/**
+ * Created by alicerhee with modification by Stephanie Wooten.
+ */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LogInActivity extends Activity {
 
@@ -55,6 +62,8 @@ public class LogInActivity extends Activity {
                     // username = test
                     // password = test
                     if(username.equals("test") && password.equals("test")){
+
+                        initData();
 
                         // Creating user login session
                         // For testing purposes we are storing the name and email as follows
@@ -103,6 +112,19 @@ public class LogInActivity extends Activity {
     }
 
     //SignUp if user does not already have un, password.  Takes user to SignUpActivity
+
+    //initialize the message list from a logged in user
+    private void initData() {
+
+        List<String> msgList = new ArrayList<String>();
+
+        //fairly certain the if/else goes here - if login works, then add a specific string, if not, add a different string - maybe?
+
+        msgList.add("Message From: Eytan Adar;Message From: Kelly Kowatch;Message From: Tony Stark");
+
+        SharedPreferencesUtility.putStringList(this, "messages",  msgList);
+
+    }
 
     }
 

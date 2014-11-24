@@ -17,6 +17,7 @@ import java.util.List;
 public class SharedPreferencesUtility {
 
     //method to getStringList for messages
+
     public static List<String> getStringList(Activity activity, String key) {
 
         List<String> list = new ArrayList<String>();
@@ -27,6 +28,11 @@ public class SharedPreferencesUtility {
 
 
         if(listString.length() != 0) {
+
+            // string.split will create an array returning everything in between the provided "delimiter"
+            // parameter
+
+            // loop through the array and add it to a list so we can give it back to the method caller
 
             // create an array returning everything in between the semicolons in the messages key
             String[] items = listString.split(";");

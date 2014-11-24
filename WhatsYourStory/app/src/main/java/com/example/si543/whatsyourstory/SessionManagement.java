@@ -2,7 +2,7 @@ package com.example.si543.whatsyourstory;
 
 /**
  * Created by Alice Rhee
- * Updated by Michelle Fiesta
+ * Updated by Michelle Fiesta & Stephanie Wooten
  */
 
 import android.content.Context;
@@ -10,10 +10,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import java.util.HashMap;
 
 
-public class SessionManagement {
+public class SessionManagement{
 
     // Shared Preferences
     SharedPreferences pref;
@@ -50,6 +53,9 @@ public class SessionManagement {
 
     //Current location
     public static final String KEY_LOCATION = "location";
+
+    //Archived messages
+    public static final String MY_MESSAGES = "messages";
 
     // Constructor
 
@@ -138,6 +144,7 @@ public class SessionManagement {
         // return user
         return user;
     }
+
 
     /**
      * Clear session details

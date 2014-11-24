@@ -50,6 +50,7 @@ public class MessagesActivity extends Activity{
     }
 
     private void initList() {
+
         //pulls out the "messages"/key strings from the msgList in initData method & adds them to the list
         List<String> messages = SharedPreferencesUtility.getStringList(this, "messages");
 
