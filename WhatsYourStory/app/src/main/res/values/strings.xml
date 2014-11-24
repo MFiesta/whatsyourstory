@@ -107,6 +107,7 @@
 
     <!--Choose Skills-->
     <string name="chooseskills">Choose your skills</string>
+<<<<<<< Updated upstream
     <string name="tellusskills">Tell us what you're great at!</string>
     <string name="button1_row1textskills">Engineering</string>
     <string name="button2_row1textskills">Computer Science</string>
@@ -118,6 +119,19 @@
     <string name="button1_row3textskills">Knitting</string>
     <string name="button2_row3textskills">Craft beer</string>
     <string name="button3_row3textskills">Food</string>
+=======
+    <string name="tellusskills">Tell us what you\'re great at!</string>
+    <string name="button1_row1text">Engineering</string>
+    <string name="button2_row1text">Computer Science</string>
+    <string name="button3_row1text">Apple</string>
+    <string name="button1_row2text">Watercolor</string>
+    <string name="button2_row2text">Windows</string>
+    <string name="button3_row2text">Dance</string>
+    <string name="button4_row2text">CSS</string>
+    <string name="button1_row3text">Knitting</string>
+    <string name="button2_row3text">Craft beer</string>
+    <string name="button3_row3text">Food</string>
+>>>>>>> Stashed changes
     <string name="addskillstext">Add your own skills:</string>
     <string name="addskillsbuttontext">Add</string>
     <string name="nextbuttonskills">Next</string>
