@@ -12,7 +12,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-// let's us use a list of string names for the message archive - code adapted from Teamivore
+// lets us use a list of string names for the message archive - code adapted from Teamivore
 
 public class SharedPreferencesUtility {
 
