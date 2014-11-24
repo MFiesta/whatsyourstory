@@ -5,6 +5,8 @@ package com.example.si543.whatsyourstory;
  */
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -20,6 +22,7 @@ public class MessagesActivity extends Activity{
     // the string variable we use for sending messages with intents
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
+
     // a list class type must be used when using a list view
     // list items are added to a list view programatically and not through xml
     List<Map<String, String>> msgList = new ArrayList<Map<String,String>>();
@@ -28,6 +31,18 @@ public class MessagesActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_messages);
+
+
+        /**
+         * Check login method wil check user login status
+         * If false it will redirect user to login page, else won't do anything
+         * */
+    //public void checkLogin(){
+        // Check login status
+        //if(!this.isLoggedIn()){
+        //TODO: add calling the SharedPrefs if needed
+
+
 
         // we call this initList function to fill in our list class variable with our messages
         initList();
