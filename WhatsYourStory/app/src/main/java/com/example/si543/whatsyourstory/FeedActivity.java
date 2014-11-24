@@ -52,7 +52,9 @@ public class FeedActivity extends Activity {
 
         mTitle = mDrawerTitle = "What's Your Story?";
 
-        initData();
+        initDataMessage();
+
+        initDataFavorite();
 
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -223,13 +225,24 @@ public class FeedActivity extends Activity {
     }
 
     //initialize the message list from a logged in user
-    private void initData() {
+    private void initDataMessage() {
 
         List<String> msgList = new ArrayList<String>();
 
         msgList.add("Message From: What's Your Story");
 
         SharedPreferencesUtility.putStringList(this, "messages",  msgList);
+
+    }
+
+    //initialize the favorite list from a logged in user
+    private void initDataFavorite() {
+
+        List<FavoriteUserData> favList = new ArrayList<FavoriteUserData>();
+
+        favList.add(new FavoriteUserData("", "", ""));
+
+        SharedPreferencesUtility.putTeamList(this, "favorites", favList);
 
     }
 

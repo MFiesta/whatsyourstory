@@ -42,6 +42,59 @@ public class SharedPreferencesUtility {
 
     }
 
+    public static void putTeamList(Activity activity, String key, List<FavoriteUserData> list) {
+
+        List<String> tempList = new ArrayList<String>();
+
+        for(FavoriteUserData t: list) {
+
+            String tempTeamString = t.getName() + ";" +
+                    t.getCareer();
+
+            tempList.add(tempTeamString);
+
+        }
+
+        String listString = TextUtils.join(";;", tempList);
+
+        myPutString(activity, key, listString);
+
+    }
+
+
+    //method to getStringList for favorites
+    public static List<FavoriteUserData> getFavoriteList(Activity activity, String key) {
+
+        List<FavoriteUserData> list = new ArrayList<FavoriteUserData>();
+
+        // grab the preferences associated with messages activity
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        String listString = preferences.getString(key, "");
+
+
+        if(listString.length() != 0) {
+
+            // create an array returning everything in between the semicolons in the messages key
+            String[] favorites = listString.split(";");
+
+            // a for loop that goes through the array and adds each separated string to the list
+            for (String f : favorites) {
+                String[] teamAttributes = f.split(";");
+
+                String name = teamAttributes[0];
+                String career = teamAttributes[1];
+                String location = teamAttributes[2];
+                FavoriteUserData newTeam = new FavoriteUserData(name, career, location);
+
+                list.add(newTeam);
+            }
+
+        }
+
+        return list;
+
+    }
+
     public static void putStringList(Activity activity, String key, List<String> list) {
 
         // for each string in the list, we want to add it to a new variable and separate the strings
@@ -56,6 +109,16 @@ public class SharedPreferencesUtility {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, listString);
+        editor.apply();
+
+    }
+
+    // utility that wraps together the sharedpreferences call into one method
+    private static void myPutString(Activity activity, String key, String value) {
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(key, value);
         editor.apply();
 
     }

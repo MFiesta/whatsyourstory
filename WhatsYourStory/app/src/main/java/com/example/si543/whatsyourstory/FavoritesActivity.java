@@ -2,6 +2,7 @@ package com.example.si543.whatsyourstory;
 
 /**
  * Created by alicerhee on 10/25/14. Following Teamivore code
+ * Updated by Stephanie on 11/24 - Add SharedPrefs
  */
 
 import android.app.Activity;
@@ -17,14 +18,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FavoritesActivity extends Activity { //should it be extending ListActivity?
+public class FavoritesActivity extends Activity {
 
         // the string variable we use for sending messages with intents - no idea what this means yet
         public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
         // a list class type must be used when using a list view
         // list items are added to a list view programatically and not through xml
-        List<Map<String, String>> favoriteUsersList = new ArrayList<Map<String,String>>();
+        List<Map<String, String>> favList = new ArrayList<Map<String,String>>();
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class FavoritesActivity extends Activity { //should it be extending ListA
             // adapters are what we use to associate the list variable and its contents with the list view
             ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
             //update the XML files referenced below
-            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favoriteUsersList, android.R.layout.simple_list_item_1, new String[] {"favorited user"}, new int[] {android.R.id.text1});
+            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favList, android.R.layout.simple_list_item_1, new String[] {"favorites"}, new int[] {android.R.id.text1});
             favoriteUsersListView.setAdapter(simpleAdpt);
 
             // setOnItemClickListener tells the activity what to do when a list item is clicked on
@@ -61,25 +62,24 @@ public class FavoritesActivity extends Activity { //should it be extending ListA
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-        // initList simply adds our team names to the list variable
-        // in a real app, this would be where we query our database to retrieve the list of teams, but
-        // for the sake of our demo, this hard-coded data is sufficient
+        // initList simply adds our favorites to the list
         private void initList() {
-            favoriteUsersList.add(createTeam("favorited user", "Eytan Adar"));
-            favoriteUsersList.add(createTeam("favorited user", "Mark Newman"));
-            favoriteUsersList.add(createTeam("favorited user", "Joyojeet Pal"));
-            favoriteUsersList.add(createTeam("favorited user", "Steve Rogers"));
-            favoriteUsersList.add(createTeam("favorited user", "Deadpool"));
-            favoriteUsersList.add(createTeam("favorited user", "Batman"));
-            favoriteUsersList.add(createTeam("favorited user", "Aquaman"));
+
+            //gets the favorite list to add new favot
+            List<String> favorites = SharedPreferencesUtility.getStringList(this, "favorites");
+
+            for(String f: favorites) {
+
+                favList.add(createFav("favorites", f));
+            }
         }
 
         // this method helps us minimize the amount of repeat calls we need to make in initList to place
         // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
-        private HashMap<String, String> createTeam(String key, String name) {
-            HashMap<String, String> team = new HashMap<String, String>();
-            team.put(key, name);
-            return team;
+        private HashMap<String, String> createFav(String key, String name) {
+            HashMap<String, String> fav = new HashMap<String, String>();
+            fav.put(key, name);
+            return fav;
         }
 
     }

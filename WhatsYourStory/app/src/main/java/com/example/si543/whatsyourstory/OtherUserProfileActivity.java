@@ -9,16 +9,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class OtherUserProfileActivity extends Activity {
 
+    // the string variable we use for sending messages with intents - no idea what this means yet
+    public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
+
+    List<Map<String, String>> favList = new ArrayList<Map<String, String>>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,9 +64,9 @@ public class OtherUserProfileActivity extends Activity {
 
         TextView textViewLocation = (TextView) findViewById(R.id.textView_OtherUserLocation);
         textViewLocation.setText(values.get(id).getLocation());
-        }
+    }
 
-        //Add item to adapter
+    //Add item to adapter
     private void initList() {
         FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
         values.add(user);
@@ -76,22 +85,45 @@ public class OtherUserProfileActivity extends Activity {
 
     }
 
-//Message Intent - calls sms messaging on phone - Stephanie Wooten
-   public void Message (View view){
-       Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-       sendIntent.putExtra("address", "555-555-5555");
-       sendIntent.setType("vnd.android-dir/mms-sms");
+    //Message Intent - calls sms messaging on phone - Stephanie Wooten
+    public void Message(View view) {
+        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+        sendIntent.putExtra("address", "555-555-5555");
+        sendIntent.setType("vnd.android-dir/mms-sms");
 
-       startActivity(sendIntent);
+        startActivity(sendIntent);
     }
 
-//Takes user to favorites list
-    public void Favorite (View view){
-        Intent favoriteIntent = new Intent (this, FavoritesActivity.class);
-        startActivity(favoriteIntent);
+    //Adds profile to favorites list
+    public void addFavorite(View view) {
+
+        // add favorite
+
+        List<String> favorites = SharedPreferencesUtility.getStringList(this, "favorites");
+
+        for (String f : favorites) {
+
+            favList.add(createFav("favorites", f));
+        }
+
+        SharedPreferencesUtility.putStringList(this, "favorites", favorites);
+        // toast message long
+
+        Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
+                Toast.LENGTH_LONG).show();
+
     }
 
-//Action Bar - star
+    // this method helps us minimize the amount of repeat calls we need to make in initList to place
+    // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
+    private HashMap<String, String> createFav(String key, String name) {
+        HashMap<String, String> fav = new HashMap<String, String>();
+        fav.put(key, name);
+        return fav;
+    }
+
+
+    //Action Bar - star
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -99,28 +131,17 @@ public class OtherUserProfileActivity extends Activity {
         return true;
     }
 
-    //@Override
-    //public boolean onOptionsItemSelected(MenuItem item) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        //int id = item.getItemId();
-        //if (id == R.id.action_settings) {
-        //    return true;
-        //}
-        //return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
-//visibility contingent on user's approval to see their calendar
 
-//    public void ViewCalendar (View view){
-//        Intent calendarIntent = new Intent (this, CalendarActivity.class);
-//        startActivity(calendarIntent);
-//    }
-    //fill in list items from the other user's Choose interests Activity screen
-    //List-set up 2 lists here for the skills and experience of the user
-    //skills list = new ArrayList<~>();
-    //  initList();
-    //   ListView skillsListView = (Listview)
-    // private void initlist(){
-    //   List.add(createskill("skiing")
-    // }
+}
+
