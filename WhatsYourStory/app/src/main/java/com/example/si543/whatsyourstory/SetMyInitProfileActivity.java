@@ -42,8 +42,6 @@ public class SetMyInitProfileActivity extends Activity {
 
         editor.commit();
 
-        Toast.makeText(this,"Information saved successfully", Toast.LENGTH_LONG).show();
-
         Intent SetMyInitProfileActivity = new Intent(this, ChooseSkillsActivity.class);
         //Read Name, Title, Corporation, and Location to verify when "Next" button is clicked
         startActivity(SetMyInitProfileActivity);
