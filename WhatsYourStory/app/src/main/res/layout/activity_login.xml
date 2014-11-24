@@ -79,7 +79,8 @@
                 android:autoText="false"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:paddingLeft="20dp"
-                android:textSize="@dimen/edit_text_account">
+                android:textSize="@dimen/edit_text_account"
+                android:textColor="#c8000000">
                 <requestFocus/>
             </EditText>
             <View
@@ -99,7 +100,8 @@
                 android:padding="13dp"
                 android:background="@drawable/text_rounded_corner_bottom"
                 android:paddingLeft="20dp"
-                android:textSize="@dimen/edit_text_account"/>
+                android:textSize="@dimen/edit_text_account"
+                android:textColor="#c8000000" />
 
             <Button
                 android:id="@+id/email_log_in_button"
