@@ -40,9 +40,7 @@ public class MessagesActivity extends Activity{
     //public void checkLogin(){
         // Check login status
         //if(!this.isLoggedIn()){
-        //TODO: add calling the SharedPrefs if needed
-
-
+        //this would call SharedPrefs with the Messages API 
 
         // we call this initList function to fill in our list class variable with our messages
         initList();
