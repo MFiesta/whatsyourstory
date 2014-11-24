@@ -190,7 +190,7 @@ public class FeedActivity extends Activity {
                 break;
             //If user selects "Messages" - Takes user to Message archive
             case 2:
-                Intent viewMsgs = new Intent(FeedActivity.this, MessagesActivity.class);
+                Intent viewMsgs = new Intent(FeedActivity.this, MessagesListActivity.class);
                 startActivity(viewMsgs);
                 break;
             //If user selects "Favorites" - takes them to list of favorited contacts
