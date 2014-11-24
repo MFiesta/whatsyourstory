@@ -1,15 +1,16 @@
 package com.example.si543.whatsyourstory;
 
-/**
- * Created by Stephanie Wooten on 11/16/14.
- */
+//Created by Stephanie Wooten on 11/16/14.
+
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.AdapterView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MessagesActivity extends Activity{
+public class MessagesListActivity extends Activity{
 
     // the string variable we use for sending messages with intents
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
@@ -30,7 +31,7 @@ public class MessagesActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_messages);
+        setContentView(R.layout.activity_messagelist);
 
 
         /**
@@ -52,14 +53,21 @@ public class MessagesActivity extends Activity{
         messagesListView.setAdapter(simpleAdpt);
 
         // setOnItemClickListener tells the activity what to do when a list item is clicked on
-        //favoriteUsersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        messagesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            //public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
-                                    //long id) {
-                //openFavoriteUserDetail(id);
-            //}
-        //});
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openMessage(id);
+            }
+        });
 
+    }
+
+    public void openMessage(long id) {
+        Intent intent = new Intent(this, MessageActivity.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
     private void initList() {

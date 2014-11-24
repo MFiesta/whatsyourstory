@@ -31,8 +31,8 @@
     <string name="prompt_name">Your Full Name</string>
     <string name="prompt_company">Enter Your Current Company</string>
     <string name="prompt_location">Current Location (City, State/Country)</string>
-    <string name="init_profile_title">Who are you?</string>
-    <string name="init_profile_tagline">See personalized career and experience recommendations</string>
+    <string name="init_profile_title">About You</string>
+    <string name="init_profile_tagline">Help us match with people you are interested in</string>
 
     <!-- Choose your skills -->
     <string name="action_skills_next">Next</string>
@@ -51,8 +51,7 @@
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
     <string name="eytanskills">Graphic Design</string>
 
-
-    <!--Edit my Profile-->
+    <!-- Edit my Profile -->
     <string name="interests">Interests:</string>
     <string name="myname">Steve Rogers</string>
     <string name="myinterests">Interests:</string>
@@ -69,12 +68,13 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_side_menu">Side Menu</string>
+
     <string-array name="nav_drawer_items">
-        <item >Home</item>
-        <item >My Profile</item>
-        <item >My Messages</item>
-        <item >My Favorites</item>
-        <item >Log Out</item>
+        <item>Home</item>
+        <item>My Profile</item>
+        <item>My Messages</item>
+        <item>My Favorites</item>
+        <item>Log Out</item>
     </string-array>
 
     <!-- Feed -->
@@ -90,13 +90,40 @@
     <string name="action_settings">Add this person to your favorite</string>
     <string name="action_contact">Contact this person</string>
 
-    <!--Favorites-->
+    <!-- Favorites -->
     <string-array name="favorites_list">
         <item>Eytan Adar</item>
         <item>Captain America</item>
     </string-array>
 
-    <!--Logout Dialog-->
+    <!-- Favorites -->
+    <string name="welcome_message">Welcome to What\'s Your Story! Search for individuals in your area who have
+        skills and interests that you would like to learn more about. Message them to find a time to meet.
+        Favorite those you would like to reach out to at a later date. Share your story!</string>
+
+    <!-- Logout Dialog -->
     <string name="cancel">Cancel</string>
     <string name="logout">Yes, logout</string>
+
+    <!--Choose Skills-->
+    <string name="chooseskills">Choose your skills</string>
+    <string name="tellusskills">Tell us what you're great at!</string>
+    <string name="button1_row1text">Engineering</string>
+    <string name="button2_row1text">Computer Science</string>
+    <string name="button3_row1text">Apple</string>
+    <string name="button1_row2text">Watercolor</string>
+    <string name="button2_row2text">Windows</string>
+    <string name="button3_row2text">Dance</string>
+    <string name="button4_row2text">CSS</string>
+    <string name="button1_row3text">Knitting</string>
+    <string name="button2_row3text">Craft beer</string>
+    <string name="button3_row3text">Food</string>
+    <string name="addskillstext">Add your own skills:</string>
+    <string name="addskillsbuttontext">Add</string>
+    <string name="nextbutton">Next</string>
+
+    <!-- Message Activity -->
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
