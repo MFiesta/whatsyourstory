@@ -71,7 +71,7 @@ public class FeedActivity extends Activity {
         //My Profile
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1]));
         //Messages - Need Counter
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, "3"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, 3));
         //Favorites
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
         //Log Out
