@@ -116,6 +116,12 @@
                 android:value="com.example.si543.whatsyourstory.FavoritesActivity" />
         </activity>
 
+        <!-- To access camera hardware -->
+        <uses-feature android:name="android.hardware.camera" />
+
+        <!-- Permission to access memory -->
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     </application>
 
 </manifest>
