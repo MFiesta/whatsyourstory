@@ -42,26 +42,6 @@ public class SharedPreferencesUtility {
 
     }
 
-    public static void putTeamList(Activity activity, String key, List<FavoriteUserData> list) {
-
-        List<String> tempList = new ArrayList<String>();
-
-        for(FavoriteUserData t: list) {
-
-            String tempTeamString = t.getName() + ";" +
-                    t.getCareer();
-
-            tempList.add(tempTeamString);
-
-        }
-
-        String listString = TextUtils.join(";;", tempList);
-
-        myPutString(activity, key, listString);
-
-    }
-
-
     //method to getStringList for favorites
     public static List<FavoriteUserData> getFavoriteList(Activity activity, String key) {
 
@@ -83,10 +63,9 @@ public class SharedPreferencesUtility {
 
                 String name = teamAttributes[0];
                 String career = teamAttributes[1];
-                String location = teamAttributes[2];
-                FavoriteUserData newTeam = new FavoriteUserData(name, career, location);
+                FavoriteUserData newFav = new FavoriteUserData(name, career);
 
-                list.add(newTeam);
+                list.add(newFav);
             }
 
         }
@@ -94,6 +73,26 @@ public class SharedPreferencesUtility {
         return list;
 
     }
+
+    public static void putFavoriteList(Activity activity, String key, List<FavoriteUserData> list) {
+
+        List<String> tempList = new ArrayList<String>();
+
+        for(FavoriteUserData f: list) {
+
+            String tempFavString = f.getName() + ";" +
+                    f.getCareer();
+
+            tempList.add(tempFavString);
+
+        }
+
+        String listString = TextUtils.join(";;", tempList);
+
+        myPutString(activity, key, listString);
+
+    }
+
 
     public static void putStringList(Activity activity, String key, List<String> list) {
 

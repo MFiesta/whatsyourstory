@@ -66,6 +66,45 @@ public class OtherUserProfileActivity extends Activity {
         textViewLocation.setText(values.get(id).getLocation());
     }
 
+    //Message Intent - calls sms messaging on phone - Stephanie Wooten
+    public void Message(View view) {
+        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+        sendIntent.putExtra("address", "555-555-5555");
+        sendIntent.setType("vnd.android-dir/mms-sms");
+
+        startActivity(sendIntent);
+    }
+
+    //Adds profile to favorites list
+    public void addFavorite(View view) {
+
+        // add favorite
+
+        List<FavoriteUserData> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
+        for(FavoriteUserData f: favorites) {
+
+            String name = f.getName();
+
+            favList.add(createFav("favorites", name));
+        }
+
+        SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
+        // toast message long
+
+        Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
+                Toast.LENGTH_LONG).show();
+
+    }
+
+    // this method helps us minimize the amount of repeat calls we need to make in initList to place
+    // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
+    private HashMap<String, String> createFav(String key, String name) {
+        HashMap<String, String> fav = new HashMap<String, String>();
+        fav.put(key, name);
+        return fav;
+    }
+
     //Add item to adapter
     private void initList() {
         FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
@@ -84,44 +123,6 @@ public class OtherUserProfileActivity extends Activity {
         values.add(user);
 
     }
-
-    //Message Intent - calls sms messaging on phone - Stephanie Wooten
-    public void Message(View view) {
-        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-        sendIntent.putExtra("address", "555-555-5555");
-        sendIntent.setType("vnd.android-dir/mms-sms");
-
-        startActivity(sendIntent);
-    }
-
-    //Adds profile to favorites list
-    public void addFavorite(View view) {
-
-        // add favorite
-
-        List<String> favorites = SharedPreferencesUtility.getStringList(this, "favorites");
-
-        for (String f : favorites) {
-
-            favList.add(createFav("favorites", f));
-        }
-
-        SharedPreferencesUtility.putStringList(this, "favorites", favorites);
-        // toast message long
-
-        Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
-                Toast.LENGTH_LONG).show();
-
-    }
-
-    // this method helps us minimize the amount of repeat calls we need to make in initList to place
-    // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
-    private HashMap<String, String> createFav(String key, String name) {
-        HashMap<String, String> fav = new HashMap<String, String>();
-        fav.put(key, name);
-        return fav;
-    }
-
 
     //Action Bar - star
     @Override

@@ -65,12 +65,14 @@ public class FavoritesActivity extends Activity {
         // initList simply adds our favorites to the list
         private void initList() {
 
-            //gets the favorite list to add new favot
-            List<String> favorites = SharedPreferencesUtility.getStringList(this, "favorites");
+            //gets the favorite list to add new favorite
+            List<FavoriteUserData> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-            for(String f: favorites) {
+            for(FavoriteUserData f: favorites) {
 
-                favList.add(createFav("favorites", f));
+                String name = f.getName();
+
+                favList.add(createFav("favorites", name));
             }
         }
 

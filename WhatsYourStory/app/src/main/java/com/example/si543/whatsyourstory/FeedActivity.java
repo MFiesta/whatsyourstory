@@ -240,9 +240,9 @@ public class FeedActivity extends Activity {
 
         List<FavoriteUserData> favList = new ArrayList<FavoriteUserData>();
 
-        favList.add(new FavoriteUserData("", "", ""));
+        favList.add(new FavoriteUserData("", ""));
 
-        SharedPreferencesUtility.putTeamList(this, "favorites", favList);
+        SharedPreferencesUtility.putFavoriteList(this, "favorites", favList);
 
     }
 
