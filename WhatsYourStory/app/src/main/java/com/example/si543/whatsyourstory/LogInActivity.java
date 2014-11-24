@@ -1,5 +1,7 @@
 package com.example.si543.whatsyourstory;
 
+//Alice Rhee with modifications by Stephanie Wooten
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
