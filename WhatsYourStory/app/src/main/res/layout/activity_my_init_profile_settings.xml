@@ -69,27 +69,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Edit Picture"
             android:textColor="@drawable/text_link"
-<<<<<<< HEAD
             android:id="@+id/init_textView"
             android:layout_toRightOf="@id/default_picture"
-=======
-<<<<<<< HEAD
-            android:paddingBottom="10dp"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/edit_picture"
-            android:onClick="EditPicture"
-            android:clickable="true"></TextView>
-=======
-            android:id="@+id/edit_picture"
-            android:onClick="EditPicture"
-            android:clickable="true"
-            android:layout_gravity="center_horizontal"/>
->>>>>>> adding-pictures-branch
->>>>>>> master
 
             android:layout_gravity="bottom"/>
         </LinearLayout>
