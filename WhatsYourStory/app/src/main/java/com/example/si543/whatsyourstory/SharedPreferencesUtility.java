@@ -47,7 +47,7 @@ public class SharedPreferencesUtility {
 
         //List<String> fav = new ArrayList<String>();
 
-        List<Integer> favIDs = new ArrayList<Integer>();
+        List<Integer> list = new ArrayList<Integer>();
 
         // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
@@ -60,19 +60,19 @@ public class SharedPreferencesUtility {
             // loop through teams
             for (String t : favorites) {
 
-                favIDs.add(Integer.parseInt(t));
+                list.add(Integer.parseInt(t));
 
             }
 
         }
 
-        return favIDs;
+        return list;
 
     }
 
 
     public static void putFavoriteList(Activity activity, String key, List<Integer> list) {
-
+        
         List<String> fav = new ArrayList<String>();
 
         for (Integer myInt : list) {
