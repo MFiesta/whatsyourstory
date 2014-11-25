@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +60,7 @@ public class SharedPreferencesUtility {
             // loop through teams
             for (String t : favorites) {
 
-                list.add(Integer.valueOf(t));
+                list.add(Integer.parseInt(t));
 
             }
 
@@ -79,7 +80,7 @@ public class SharedPreferencesUtility {
         }
 
 
-        String listString = TextUtils.join(";", list);
+        String listString = TextUtils.join(";", fav);
 
         myPutString(activity, key, listString);
 
