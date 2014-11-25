@@ -62,11 +62,7 @@ public class LogInActivity extends Activity {
                     // password = test
                     if(username.equals("test") && password.equals("test")){
 
-                        // Creating user login session
-                        // For testing purposes we are storing the name and email as follows
-                        // Use user real data
-                        //TODO: Figure out how to make this accept real people from saved user data post Sign Up
-                       // session.createLoginSession("Steve Rogers", "steverogers@gmail.com");
+                        //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
 
                         // Starting the next Activity
                         Intent i = new Intent(getApplicationContext(), FeedActivity.class);
