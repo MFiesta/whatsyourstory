@@ -120,6 +120,10 @@
     <string name="button1_row3textskills">Knitting</string>
     <string name="button2_row3textskills">Craft beer</string>
     <string name="button3_row3textskills">Food</string>
+<<<<<<< HEAD
+=======
+
+>>>>>>> adding-pictures-branch
     <string name="addskillstext">Add your own skills:</string>
     <string name="addskillsbuttontext">Add</string>
     <string name="nextbuttonskills">Next</string>

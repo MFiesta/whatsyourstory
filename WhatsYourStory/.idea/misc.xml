@@ -4,6 +4,7 @@
     <disable_hints />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
@@ -12,6 +13,8 @@
 >>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
+=======
+>>>>>>> adding-pictures-branch
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
