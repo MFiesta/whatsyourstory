@@ -43,29 +43,28 @@ public class SharedPreferencesUtility {
     }
 
     //method to getStringList for favorites
-    public static List<FavoriteUserData> getFavoriteList(Activity activity, String key) {
+    public static List<Integer> getFavoriteList(Activity activity, String key) {
 
-        List<FavoriteUserData> list = new ArrayList<FavoriteUserData>();
+        List<Integer> list = new ArrayList<Integer>();
 
         // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString(key, "");
 
-
         if(listString.length() != 0) {
 
-            // create an array returning everything in between the semicolons in the messages key
-            String[] favorites = listString.split(";");
+            String[] teams = listString.split(";;");
 
-            // a for loop that goes through the array and adds each separated string to the list
-            for (String f : favorites) {
-                String[] teamAttributes = f.split(";");
+            // loop through teams
+            for (String t : teams) {
+
+                String[] teamAttributes = t.split(";");
 
                 String name = teamAttributes[0];
-                String career = teamAttributes[1];
-                FavoriteUserData newFav = new FavoriteUserData(name, career);
+                Team newTeam = new Team(name, description);
 
-                list.add(newFav);
+                list.add(newTeam);
+
             }
 
         }
@@ -74,18 +73,9 @@ public class SharedPreferencesUtility {
 
     }
 
-    public static void putFavoriteList(Activity activity, String key, List<FavoriteUserData> list) {
+    public static void putFavoriteList(Activity activity, String key, List<Integer> list) {
 
-        List<String> tempList = new ArrayList<String>();
-
-        for(FavoriteUserData f: list) {
-
-            String tempFavString = f.getName() + ";" +
-                    f.getCareer();
-
-            tempList.add(tempFavString);
-
-        }
+        List<Integer> tempList = new ArrayList<Integer>();
 
         String listString = TextUtils.join(";;", tempList);
 

@@ -19,6 +19,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class FeedActivity extends Activity {
 
@@ -53,8 +54,6 @@ public class FeedActivity extends Activity {
         mTitle = mDrawerTitle = "What's Your Story?";
 
         initDataMessage();
-
-        initDataFavorite();
 
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -232,17 +231,6 @@ public class FeedActivity extends Activity {
         msgList.add("Message From: What's Your Story");
 
         SharedPreferencesUtility.putStringList(this, "messages",  msgList);
-
-    }
-
-    //initialize the favorite list from a logged in user
-    private void initDataFavorite() {
-
-        List<FavoriteUserData> favList = new ArrayList<FavoriteUserData>();
-
-        favList.add(new FavoriteUserData("", ""));
-
-        SharedPreferencesUtility.putFavoriteList(this, "favorites", favList);
 
     }
 

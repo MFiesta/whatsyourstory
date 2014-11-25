@@ -27,6 +27,10 @@ public class FavoritesActivity extends Activity {
         // list items are added to a list view programatically and not through xml
         List<Map<String, String>> favList = new ArrayList<Map<String,String>>();
 
+        ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
+
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -34,6 +38,8 @@ public class FavoritesActivity extends Activity {
 
             // we call this initList function to fill in our list class variable with our team names
             initList();
+
+            initFeedList();
 
             // adapters are what we use to associate the list variable and its contents with the list view
             ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
@@ -46,7 +52,7 @@ public class FavoritesActivity extends Activity {
 
                 public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
                                         long id) {
-                    openFavoriteUserDetail(id);
+                    openFavoriteUserDetail(position);
                 }
             });
 
@@ -55,10 +61,11 @@ public class FavoritesActivity extends Activity {
     // it calls for an intent that starts up the team detail activity and sends the team's id over
     // to the activity with the message variable declared at the top of the activity
 
-    //Alice says: how to figure out a way to make this a parameter so it all just doesn't go to Eytan?
-    public void openFavoriteUserDetail(long id) {
+    public void openFavoriteUserDetail(int position) {
+
+        int temp = favorites.get(position);
         Intent intent = new Intent(this, OtherUserProfileActivity.class);
-        String message = String.valueOf(id);
+        String message = String.valueOf(temp);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
@@ -66,22 +73,41 @@ public class FavoritesActivity extends Activity {
         private void initList() {
 
             //gets the favorite list to add new favorite
-            List<FavoriteUserData> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+            List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-            for(FavoriteUserData f: favorites) {
+            for(int f: favorites) {
 
-                String name = f.getName();
+                FeedUserData user = values.get(f);
+                user.getName();
 
-                favList.add(createFav("favorites", name));
             }
         }
 
         // this method helps us minimize the amount of repeat calls we need to make in initList to place
-        // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
+        // a team name into out list.
         private HashMap<String, String> createFav(String key, String name) {
             HashMap<String, String> fav = new HashMap<String, String>();
             fav.put(key, name);
             return fav;
         }
+
+    //Add item to adapter
+    private void initFeedList() {
+        FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
+        values.add(user);
+        user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
+        values.add(user);
+        user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
+        values.add(user);
+        user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
+        values.add(user);
+        user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
+        values.add(user);
+        user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
+        values.add(user);
+        user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
+        values.add(user);
+
+    }
 
     }

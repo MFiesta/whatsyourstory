@@ -27,7 +27,7 @@ public class OtherUserProfileActivity extends Activity {
 
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
-    List<Map<String, String>> favList = new ArrayList<Map<String, String>>();
+    int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class OtherUserProfileActivity extends Activity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(FeedActivity.EXTRA_MESSAGE);
 
-        int id = (int) Long.parseLong(message);
+        id = (int) Long.parseLong(message);
 
         // Create the text view
 
@@ -80,14 +80,9 @@ public class OtherUserProfileActivity extends Activity {
 
         // add favorite
 
-        List<FavoriteUserData> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-        for(FavoriteUserData f: favorites) {
-
-            String name = f.getName();
-
-            favList.add(createFav("favorites", name));
-        }
+        favorites.add(id);
 
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
         // toast message long
@@ -95,14 +90,6 @@ public class OtherUserProfileActivity extends Activity {
         Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
                 Toast.LENGTH_LONG).show();
 
-    }
-
-    // this method helps us minimize the amount of repeat calls we need to make in initList to place
-    // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
-    private HashMap<String, String> createFav(String key, String name) {
-        HashMap<String, String> fav = new HashMap<String, String>();
-        fav.put(key, name);
-        return fav;
     }
 
     //Add item to adapter
