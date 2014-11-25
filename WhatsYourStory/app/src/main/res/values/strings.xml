@@ -48,8 +48,8 @@
     <string name="location">Ann Arbor, MI</string>
     <string name="action_message">MESSAGE</string>
     <string name="action_favorite">FAVORITE</string>
-    <string name="skills">Skills:</string>
-    <string name="experiences">Experience:</string>
+    <string name="skills">Skills</string>
+    <string name="experiences">Experience</string>
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
     <string name="eytanskills">Graphic Design</string>
 
@@ -57,7 +57,7 @@
     <string name="interests">Interests:</string>
     <string name="myname">Steve Rogers</string>
     <string name="myinterests">Interests:</string>
-    <string name="myinterests1">Teaming up to fight evil</string>
+    <string name="myinterests1">Teaming up to fight evil</string>S
     <string name="myexperiences">Experience:</string>
     <string name="myexperiences1">Leader of the Avengers</string>
     <string name="myexperiences2">Darling of America</string>
@@ -85,7 +85,7 @@
     <string name="descr_overflow_button">Menu</string>
     <string name="title_activity_feed_view">FeedView</string>
     <string name="action_feed_row_1">FeedRow1</string>
-    <string name="FeedDescription">People you may be interested in</string>
+    <string name="FeedDescription">People You May Be Interested In</string>
     <!-- Action Bar -->
     <string name="action_search">ActionBarSearch</string>
     <string name="action_important">ActionBarImportant</string>

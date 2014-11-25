@@ -36,7 +36,7 @@
             <!--Blue Background -->
             <ImageView
                 android:layout_width="fill_parent"
-                android:layout_height="230dp"
+                android:layout_height="210dp"
                 android:id="@+id/userPicBackground"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/otheruser_background"
@@ -49,7 +49,7 @@
                 android:clickable="false"
                 android:id="@+id/otheruser_white_circle"
                 android:src="@drawable/otheruser_white_circle"
-                android:layout_marginBottom="45dp"
+                android:layout_marginBottom="37dp"
                 android:layout_gravity="center" />
 
             <!--profile pic-->
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:id="@+id/userPicture"
-                android:layout_marginBottom="45dp"
+                android:layout_marginBottom="37dp"
                 android:layout_gravity="center" />
 
             <!--name-->
@@ -92,7 +92,7 @@
                     android:id="@+id/textView_OtherUserLocation"
                     android:textColor="@drawable/button_text"
                     android:textSize="15sp"
-                    android:layout_marginTop="90dp"
+                    android:layout_marginTop="80dp"
                     android:layout_gravity="center"/>
 
             </FrameLayout>
@@ -168,9 +168,9 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/skills"
-                android:textStyle="bold"
                 android:layout_marginLeft="10dp"
                 android:textSize="18dp"
+                android:textStyle="bold"
                 android:textColor="@color/otheruser_text_color"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -217,8 +217,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/experiences"
-                android:textStyle="bold"
                 android:textSize="18dp"
+                android:textStyle="bold"
                 android:id="@+id/OtherUserProfileExperience"
                 android:textColor="@color/otheruser_text_color"/>
 
