@@ -45,8 +45,8 @@
     <string name="username">Eytan Adar</string>
     <string name="title">UMSI Faculty</string>
     <string name="location">Ann Arbor, MI</string>
-    <string name="action_message">Message</string>
-    <string name="action_favorite">Favorite</string>
+    <string name="action_message">MESSAGE</string>
+    <string name="action_favorite">FAVORITE</string>
     <string name="skills">Skills:</string>
     <string name="experiences">Experience:</string>
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
