@@ -9,6 +9,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="6dp"
+    android:background="@color/white"
     tools:context=".MyActivity">
 
     <ImageView
@@ -22,10 +23,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginRight="15dp"
         android:scaleType="fitCenter"
-
         android:contentDescription="TODO"
-
-
         android:src="@drawable/ic_launcher" />
 
 

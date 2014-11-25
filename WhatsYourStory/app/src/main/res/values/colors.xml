@@ -3,5 +3,6 @@
     <color name ="semitransparent_white">#70FFFFFF</color>
     <color name ="bg_grey">#F2F2F2</color>
     <color name ="white">#FFFFFF</color>
-    <color name="otheruser_text_color">#494949</color>
+    <color name="otheruser_text_color">#595959</color>
+    <color name="feed_title_text_color">#595959</color>
 </resources>
