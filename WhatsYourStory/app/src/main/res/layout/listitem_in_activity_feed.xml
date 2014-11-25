@@ -15,17 +15,14 @@
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="70dp"
-        android:maxHeight="70dp"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="15dp"
-        android:scaleType="fitCenter"
-
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:contentDescription="TODO"
-
-
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="20dp"
         android:src="@drawable/ic_launcher" />
 
 

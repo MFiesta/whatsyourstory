@@ -47,7 +47,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.SignUpActivity" />
         </activity>
-
         <activity
             android:name=".MyProfileActivity"
             android:label="My Profile"
@@ -125,7 +124,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.si543.whatsyourstory.FavoritesActivity" />
         </activity>
-
     </application>
 
 </manifest>

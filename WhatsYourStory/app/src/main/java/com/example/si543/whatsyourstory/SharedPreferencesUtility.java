@@ -54,7 +54,7 @@ public class SharedPreferencesUtility {
 
         if (listString.length() != 0) {
 
-            String[] favorites = listString.split(";;");
+            String[] favorites = listString.split(";");
 
             // loop through teams
             for (String t : favorites) {
@@ -79,7 +79,7 @@ public class SharedPreferencesUtility {
         }
 
 
-        String listString = TextUtils.join(";;", list);
+        String listString = TextUtils.join(";", list);
 
         myPutString(activity, key, listString);
 

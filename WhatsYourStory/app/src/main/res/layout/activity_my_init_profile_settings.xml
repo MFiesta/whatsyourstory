@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bgblue"
+    android:background="@drawable/bgorange"
     android:gravity="center_horizontal"
     android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -54,14 +54,17 @@
                 android:paddingBottom="20dp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"/>
-
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/default_picture"
-            android:paddingBottom="10dp"
-            android:src="@drawable/default_picture"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_marginLeft="130dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/default_picture"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,12 +72,11 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Edit Picture"
             android:textColor="@drawable/text_link"
-            android:paddingBottom="10dp"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/edit_picture"
-            android:onClick="EditPicture"
-            android:clickable="true"></TextView>
+            android:id="@+id/init_textView"
+            android:layout_toRightOf="@id/default_picture"
 
+            android:layout_gravity="bottom"/>
+        </LinearLayout>
 
         <!--Add code for editing picture functionality-->
 
@@ -179,7 +181,7 @@
         android:layout_below="@+id/edit_current_location"
         android:layout_width="360dp"
         android:layout_height="45dp"
-        android:text="@string/action_next_myInitProfile"
+        android:text="Next"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:onClick="MyInitProfileNext"

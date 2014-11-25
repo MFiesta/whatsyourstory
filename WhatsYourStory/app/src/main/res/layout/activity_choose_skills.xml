@@ -1,7 +1,6 @@
 <!-- Michelle Fiesta -->
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,29 +11,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.si543.whatsyourstory.ChooseSkillsActivity"
-    android:id="@+id/relativelayout" >
+    android:id="@+id/rl_outer">
 
     <TextView
-        android:id="@+id/choose_skills_text"
-        android:text="@string/chooseskills"
+        android:text="Choose your skills"
         android:textColor="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/choose_skills_text"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"
+        android:textSize="25dp"
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/tell_us_skills_text"
-        android:text="@string/tellusskills"
+        android:text="Tell us what you're great at!"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/choose_skills_text"
-        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:layout_height="wrap_content"
+        android:id="@+id/tell_us_skills_text"
+        android:textSize="16dp"
+        android:layout_below="@id/choose_skills_text"
+        android:gravity="center"/>
 
     <!-- Users will be able to select multiple buttons with
      skills that they have. Toggle will turn on to indicate a button is selected.
@@ -44,110 +43,110 @@
 
     <ToggleButton
         android:id="@+id/button1_row1"
-        android:text="@string/button1_row1textskills"
+        android:text="Engineering"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tell_us_skills_text"
         android:layout_alignParentStart="true"
-        android:textOn="@string/button1_row1textskills"
-        android:textOff="@string/button1_row1textskills"
+        android:textOn="Engineering"
+        android:textOff="Engineering"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button2_row1"
-        android:text="@string/button2_row1textskills"
-        android:layout_toEndOf="@id/button1_row1"
+        android:text="Computer Science"
+        android:layout_toRightOf="@id/button1_row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tell_us_skills_text"
-        android:textOn="@string/button2_row1textskills"
-        android:textOff="@string/button2_row1textskills"
+        android:textOn="Computer Science"
+        android:textOff="Computer Science"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button3_row1"
-        android:text="@string/button3_row1textskills"
+        android:text="Apple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/button2_row1"
+        android:layout_toRightOf="@id/button2_row1"
         android:layout_below="@+id/tell_us_skills_text"
-        android:textOn="@string/button3_row1textskills"
-        android:textOff="@string/button3_row1textskills"
+        android:textOn="Apple"
+        android:textOff="Apple"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button1_row2"
-        android:text="@string/button1_row2textskills"
+        android:text="Watercolor"
         android:layout_below="@+id/button1_row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button1_row2textskills"
-        android:textOff="@string/button1_row2textskills"
+        android:textOn="Watercolor"
+        android:textOff="Watercolor"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button2_row2"
-        android:text="@string/button2_row2textskills"
+        android:text="Windows"
         android:layout_below="@+id/button2_row1"
-        android:layout_toEndOf="@+id/button1_row2"
+        android:layout_toRightOf="@+id/button1_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button2_row2textskills"
-        android:textOff="@string/button2_row2textskills"
+        android:textOn="Windows"
+        android:textOff="Windows"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button3_row2"
-        android:text="@string/button3_row2textskills"
+        android:text="Dance"
         android:layout_below="@+id/button2_row1"
-        android:layout_toEndOf="@+id/button2_row2"
+        android:layout_toRightOf="@+id/button2_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button3_row2textskills"
-        android:textOff="@string/button3_row2textskills"
+        android:textOn="Dance"
+        android:textOff="Dance"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button4_row2"
-        android:text="@string/button4_row2textskills"
+        android:text="CSS"
         android:layout_below="@+id/button3_row1"
-        android:layout_toEndOf="@id/button3_row2"
+        android:layout_toRightOf="@id/button3_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button4_row2textskills"
-        android:textOff="@string/button4_row2textskills"
+        android:textOn="CSS"
+        android:textOff="CSS"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button1_row3"
-        android:text="@string/button1_row3textskills"
+        android:text="Knitting"
         android:layout_below="@+id/button1_row2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button1_row3textskills"
-        android:textOff="@string/button1_row3textskills"
+        android:textOn="Knitting"
+        android:textOff="Knitting"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button2_row3"
-        android:text="@string/button2_row3textskills"
+        android:text="Craft beer"
         android:layout_below="@+id/button2_row2"
-        android:layout_toEndOf="@+id/button1_row3"
+        android:layout_toRightOf="@+id/button1_row3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button2_row3textskills"
-        android:textOff="@string/button2_row3textskills"
+        android:textOn="Craft beer"
+        android:textOff="Craft beer"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
         android:id="@+id/button3_row3"
-        android:text="@string/button3_row3textskills"
+        android:text="Food"
         android:layout_below="@+id/button2_row2"
-        android:layout_toEndOf="@id/button2_row3"
+        android:layout_toRightOf="@id/button2_row3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button3_row3textskills"
-        android:textOff="@string/button3_row3textskills"
+        android:textOn="Food"
+        android:textOff="Food"
         android:textColor="#FFFFFF"/>
 
     <!-- Users can add their own skills to the list. Eventually, what they
@@ -155,54 +154,38 @@
 
     <TextView
         android:id="@+id/add_skills_text"
-        android:text="@string/addskillstext"
+        android:text="Add your own skills:"
         android:textColor="#FFFFFF"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/editText"
-        android:textSize="16sp"
+        android:textSize="16dp"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/editText"
-        android:labelFor="@+id/editText"
         android:layout_above="@id/nextbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="fill_horizontal"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/add_skills_button"
-        android:text="@string/addskillsbuttontext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/editText"
-        android:layout_above="@id/nextbutton"
-        android:layout_below="@id/add_skills_text"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textColor="#FFFFFF"/>
 
     <!-- Next, users will be taken to the Choose Interests page. -->
 
     <Button
         android:id="@+id/nextbutton"
-        android:text="@string/nextbuttonskills"
+        android:text="Next"
         style="?android:textAppearanceSmall"
-        android:layout_width="360sp"
-        android:layout_height="45sp"
-        android:layout_marginTop="16sp"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="@drawable/button_text"
         android:background= "@drawable/button_shape"
-        android:singleLine="false"
         android:onClick="skillsNext"/>
 
 </RelativeLayout>
