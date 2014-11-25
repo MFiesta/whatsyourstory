@@ -60,16 +60,13 @@ public class LogInActivity extends Activity {
 
                     if(username.equals("test") && password.equals("test")){
 
-<<<<<<< HEAD
                         //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
-=======
                         //if (sharedpreferences.contains(name)) == true && (sharedpreferences.contains(pass) == true)
 
                         //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
                         //TODO: requestfocus?
                         //Try contains(String key) Accorting to the Javadocs,
                         //Checks whether the preferences contains a preference. Returns true if the preference exists in the preferences, otherwise false.
->>>>>>> adding-pictures-branch
 
                         // Starting the next Activity
                         Intent i = new Intent(getApplicationContext(), FeedActivity.class);
