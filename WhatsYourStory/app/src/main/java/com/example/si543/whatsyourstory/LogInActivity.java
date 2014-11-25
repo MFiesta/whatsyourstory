@@ -43,23 +43,18 @@ public class LogInActivity extends Activity {
         usernameinput = (EditText) findViewById(R.id.username);
         passwordinput = (EditText) findViewById(R.id.password);
 
-        SharedPreferences sharedPreferences=getSharedPreferences("CheckLogin", Context.MODE_MULTI_PROCESS);
-        SharedPreferences.Editor editor=sharedPreferences.edit();
-        editor.putBoolean(IS_LOGGEDIN, true);
-        editor.apply();
-
         email_log_in_button = (Button) findViewById(R.id.email_log_in_button);
         email_log_in_button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
 
+                String username = usernameinput.getText().toString();
+                String password = passwordinput.getText().toString();
 
                 // Check if username, password is filled
                 if(username.trim().length() > 0 && password.trim().length() > 0){
-                    // For testing purpose username, password is checked with sample data
-                    // username = test
-                    // password = test
+
                     if(username.equals("test") && password.equals("test")){
 
                         //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
@@ -67,6 +62,13 @@ public class LogInActivity extends Activity {
                         // Starting the next Activity
                         Intent i = new Intent(getApplicationContext(), FeedActivity.class);
                         startActivity(i);
+
+                        SharedPreferences sharedPreferences=getSharedPreferences("CheckLogin", Context.MODE_MULTI_PROCESS);
+                        SharedPreferences.Editor editor=sharedPreferences.edit();
+
+                        editor.putBoolean(IS_LOGGEDIN, true);
+                        editor.apply();
+
                         finish();
 
                     }
