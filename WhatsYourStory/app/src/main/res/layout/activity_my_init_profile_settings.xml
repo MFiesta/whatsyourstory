@@ -179,7 +179,7 @@
         android:layout_below="@+id/edit_current_location"
         android:layout_width="360dp"
         android:layout_height="45dp"
-        android:text="Next"
+        android:text="@string/action_next_myInitProfile"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:onClick="MyInitProfileNext"
