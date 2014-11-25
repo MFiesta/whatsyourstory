@@ -6,9 +6,9 @@
     <!-- Login -->
     <string name="prompt_enter_username">Username</string>
     <string name="prompt_enter_password">Password</string>
-    <string name="action_log_in">Log In</string>
-    <string name="action_sign_up">Sign Up</string>
-    <string name="action_log_in_short">Log In</string>
+    <string name="action_log_in">LOG IN</string>
+    <string name="action_sign_up">SIGN UP</string>
+    <string name="action_log_in_short">LOG IN</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -21,7 +21,7 @@
     <string name="prompt_password">Choose Your Password</string>
     <string name="prompt_username">Choose Your Username</string>
     <string name="prompt_email">Enter Your Email</string>
-    <string name="action_next_interests">Next</string>
+    <string name="action_next_interests">NEXT</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="sign_up_tagline">Find out more about life experiences you are interested in</string>
 
@@ -31,21 +31,23 @@
     <string name="prompt_name">Your Full Name</string>
     <string name="prompt_company">Enter Your Current Company</string>
     <string name="prompt_location">Current Location (City, State/Country)</string>
-    <string name="init_profile_title">Who are you?</string>
-    <string name="init_profile_tagline">See personalized career and experience recommendations</string>
+    <string name="init_profile_title">About You</string>
+    <string name="init_profile_tagline">Help us match with people you are interested in</string>
+    <string name="action_next_myInitProfile">NEXT</string>
 
     <!-- Choose your skills -->
-    <string name="action_skills_next">Next</string>
+    <string name="action_skills_next">Choose Your Interests</string>
+
 
     <!-- Choose your interests -->
-    <string name="action_interests_next">Next</string>
+    <string name="action_interests_next">See</string>
 
     <!-- Profileview -->
     <string name="username">Eytan Adar</string>
     <string name="title">UMSI Faculty</string>
     <string name="location">Ann Arbor, MI</string>
-    <string name="action_message">Message</string>
-    <string name="action_favorite">Favorite</string>
+    <string name="action_message">MESSAGE</string>
+    <string name="action_favorite">FAVORITE</string>
     <string name="skills">Skills:</string>
     <string name="experiences">Experience:</string>
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
@@ -104,6 +106,42 @@
     <!-- Logout Dialog -->
     <string name="cancel">Cancel</string>
     <string name="logout">Yes, logout</string>
+
+    <!--Choose Skills-->
+    <string name="chooseskills">Choose your skills</string>
+    <string name="tellusskills">Tell us what you\'re great at!</string>
+    <string name="button1_row1textskills">Engineering</string>
+    <string name="button2_row1textskills">Computer Science</string>
+    <string name="button3_row1textskills">Apple</string>
+    <string name="button1_row2textskills">Watercolor</string>
+    <string name="button2_row2textskills">Windows</string>
+    <string name="button3_row2textskills">Dance</string>
+    <string name="button4_row2textskills">CSS</string>
+    <string name="button1_row3textskills">Knitting</string>
+    <string name="button2_row3textskills">Craft beer</string>
+    <string name="button3_row3textskills">Food</string>
+    <string name="addskillstext">Add your own skills:</string>
+    <string name="addskillsbuttontext">Add</string>
+    <string name="nextbuttonskills">Next</string>
+
+    <!--Choose Interests-->
+    <string name="chooseinterests">Choose your interests</string>
+    <string name="tellusinterests">What are you interested in learning more about?</string>
+    <string name="button1_row1textinterests">Engineering</string>
+    <string name="button2_row1textinterests">Computer Science</string>
+    <string name="button3_row1textinterests">Apple</string>
+    <string name="button1_row2textinterests">Watercolor</string>
+    <string name="button2_row2textinterests">Windows</string>
+    <string name="button3_row2textinterests">Dance</string>
+    <string name="button4_row2textinterests">CSS</string>
+    <string name="button1_row3textinterests">Knitting</string>
+    <string name="button2_row3textinterests">Craft beer</string>
+    <string name="button3_row3textinterests">Food</string>
+    <string name="addintereststext">Add your own interests:</string>
+    <string name="addinterestsbuttontext">Add</string>
+    <string name="nextbuttoninterests">Next</string>
+
+    <!-- Message Activity -->
     <string name="title_activity_message">MessageActivity</string>
     <string name="hello_world">Hello world!</string>
 
