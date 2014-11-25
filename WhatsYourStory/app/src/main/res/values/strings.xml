@@ -35,10 +35,11 @@
     <string name="init_profile_tagline">Help us match with people you are interested in</string>
 
     <!-- Choose your skills -->
-    <string name="action_skills_next">Next</string>
+    <string name="action_skills_next">Choose Your Interests</string>
+
 
     <!-- Choose your interests -->
-    <string name="action_interests_next">Next</string>
+    <string name="action_interests_next">See</string>
 
     <!-- Profileview -->
     <string name="username">Eytan Adar</string>

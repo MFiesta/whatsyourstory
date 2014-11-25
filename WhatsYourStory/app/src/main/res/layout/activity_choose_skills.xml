@@ -186,6 +186,7 @@
         android:textSize="18sp"
         android:textColor="@drawable/button_text"
         android:background= "@drawable/button_shape"
+        android:singleLine="false"
         android:onClick="skillsNext"/>
 
 </RelativeLayout>
