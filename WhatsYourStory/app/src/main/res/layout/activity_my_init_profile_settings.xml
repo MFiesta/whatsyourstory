@@ -69,16 +69,11 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Edit Picture"
             android:textColor="@drawable/text_link"
-<<<<<<< HEAD
-            android:id="@+id/init_textView"
             android:paddingBottom="10dp"
-            android:layout_gravity="center_horizontal"/>
-=======
+            android:layout_gravity="center_horizontal"
             android:id="@+id/edit_picture"
-            android:layout_toRightOf="@id/default_picture"
             android:onClick="EditPicture"
-            android:clickable="true"
->>>>>>> FETCH_HEAD
+            android:clickable="true"></TextView>
 
 
         <!--Add code for editing picture functionality-->

@@ -3,10 +3,13 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
 <<<<<<< HEAD
+<<<<<<< HEAD
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+=======
+>>>>>>> FETCH_HEAD
 =======
 >>>>>>> FETCH_HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
