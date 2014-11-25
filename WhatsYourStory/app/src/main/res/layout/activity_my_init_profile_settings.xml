@@ -70,18 +70,11 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Edit Picture"
             android:textColor="@drawable/text_link"
-<<<<<<< HEAD
-            android:paddingBottom="10dp"
+
             android:layout_gravity="center_horizontal"
             android:id="@+id/edit_picture"
             android:onClick="EditPicture"
-            android:clickable="true"></TextView>
-=======
-            android:id="@+id/edit_picture"
-            android:onClick="EditPicture"
-            android:clickable="true"
-            android:layout_gravity="center_horizontal"/>
->>>>>>> adding-pictures-branch
+            android:clickable="true"/>
 
 
         <!--Add code for editing picture functionality-->
