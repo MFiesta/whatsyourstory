@@ -55,9 +55,17 @@ public class LogInActivity extends Activity {
                 // Check if username, password is filled
                 if(username.trim().length() > 0 && password.trim().length() > 0){
 
+                    //insert Shared prefs manager here?
+                    //SharedPreferences sharedPreferences=getSharedPreferences("CheckSignUp", Context.MODE_PRIVATE);
+
                     if(username.equals("test") && password.equals("test")){
 
+                        //if (sharedpreferences.contains(name)) == true && (sharedpreferences.contains(pass) == true)
+
                         //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
+                        //TODO: requestfocus?
+                        //Try contains(String key) Accorting to the Javadocs,
+                        //Checks whether the preferences contains a preference. Returns true if the preference exists in the preferences, otherwise false.
 
                         // Starting the next Activity
                         Intent i = new Intent(getApplicationContext(), FeedActivity.class);
