@@ -29,7 +29,7 @@ public class FavoritesActivity extends Activity {
 
         ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
-        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+        public int id;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,22 @@ public class FavoritesActivity extends Activity {
     // it calls for an intent that starts up the team detail activity and sends the team's id over
     // to the activity with the message variable declared at the top of the activity
 
+    // initList simply adds our favorites to the list
+    private void initList() {
+
+        //gets the favorite list
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
+        for(int f: favorites) {
+
+            FeedUserData user = values.get(f);
+            user.getName();
+
+        }
+    }
+
+    List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
     public void openFavoriteUserDetail(int position) {
 
         int temp = favorites.get(position);
@@ -69,19 +85,6 @@ public class FavoritesActivity extends Activity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-        // initList simply adds our favorites to the list
-        private void initList() {
-
-            //gets the favorite list to add new favorite
-            List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
-
-            for(int f: favorites) {
-
-                FeedUserData user = values.get(f);
-                user.getName();
-
-            }
-        }
 
         // this method helps us minimize the amount of repeat calls we need to make in initList to place
         // a team name into out list.

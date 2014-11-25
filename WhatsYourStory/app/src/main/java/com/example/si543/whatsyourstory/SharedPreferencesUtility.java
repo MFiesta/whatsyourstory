@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,25 +44,22 @@ public class SharedPreferencesUtility {
     //method to getStringList for favorites
     public static List<Integer> getFavoriteList(Activity activity, String key) {
 
+        //List<String> fav = new ArrayList<String>();
+
         List<Integer> list = new ArrayList<Integer>();
 
         // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString(key, "");
 
-        if(listString.length() != 0) {
+        if (listString.length() != 0) {
 
-            String[] teams = listString.split(";;");
+            String[] favorites = listString.split(";;");
 
             // loop through teams
-            for (String t : teams) {
+            for (String t : favorites) {
 
-                String[] teamAttributes = t.split(";");
-
-                String name = teamAttributes[0];
-                Team newTeam = new Team(name, description);
-
-                list.add(newTeam);
+                list.add(Integer.valueOf(t));
 
             }
 
@@ -73,11 +69,17 @@ public class SharedPreferencesUtility {
 
     }
 
+
     public static void putFavoriteList(Activity activity, String key, List<Integer> list) {
 
-        List<Integer> tempList = new ArrayList<Integer>();
+        List<String> fav = new ArrayList<String>(list.size());
 
-        String listString = TextUtils.join(";;", tempList);
+        for (Integer myInt : list) {
+            fav.add(String.valueOf(myInt));
+        }
+
+
+        String listString = TextUtils.join(";;", list);
 
         myPutString(activity, key, listString);
 
