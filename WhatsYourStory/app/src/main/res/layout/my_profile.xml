@@ -6,211 +6,7 @@
 
 <!-- Alice Rhee -->
 <!--Design: Stephanie -->
-<!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/profileedit"
-    android:background="@drawable/bgblue"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentStart="true"
-    android:clickable="false">
 
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone"/>
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-
-            <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-
-
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="130dp"
-                    android:id="@+id/userPicBackground"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/otheruser_background"
-                    android:scaleType="fitXY"/>
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:id="@+id/otheruser_white_circle"
-                    android:src="@drawable/otheruser_white_circle"
-                    android:layout_marginTop="45dp"
-                    android:layout_gravity="center" />
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="false"
-                    android:id="@+id/userPicture"
-                    android:src="@drawable/default_picture"
-                    android:layout_marginTop="45dp"
-                    android:layout_gravity="center" />
-
-            </FrameLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/profile_upper_dropshadow">
-
-
-                <Button
-                    android:id="@+id/otheruser_message"
-                    android:text="@string/action_message"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:layout_width="160dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/otheruser_button"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="22dp"
-                    android:layout_marginRight="10dp"
-                    android:onClick="Message"
-                    android:layout_gravity="center"
-                    />
-
-                <Button
-                    android:id="@+id/otheruser_favorite"
-                    android:text="@string/action_favorite"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:layout_width="160dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/otheruser_button"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="10dp"
-                    android:onClick="Favorite"
-                    android:layout_gravity="center"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/card_dropshadow"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="6dp"
-                android:padding="20dp"
-                android:orientation="vertical" >
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/skills_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clickable="false"
-                        android:src="@drawable/skills_icon"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:id="@+id/OtherUserProfileSkills"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/skills"
-                        android:layout_marginLeft="10dp"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/otheruser_text_color"
-                        android:layout_gravity="center"/>
-                </LinearLayout>
-
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/eytanskills"
-                    android:textSize="16dp"
-                    android:textColor="@color/otheruser_text_color"/>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/card_dropshadow"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="6dp"
-                android:padding="20dp"
-                android:orientation="vertical" >
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/experience_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clickable="false"
-                        android:src="@drawable/experience_icon"
-                        android:layout_gravity="center"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="@string/experiences"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:id="@+id/OtherUserProfileExperience"
-                        android:textColor="@color/otheruser_text_color"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/eytanexperiences"
-                    android:textSize="16dp"
-                    android:textColor="@color/otheruser_text_color"/>
-
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
--->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -273,17 +69,9 @@
     </FrameLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/card_dropshadow"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="6dp"
-                android:padding="20dp"
-                android:orientation="vertical" >
 
-    <!--
+
+
     <TextView
         android:id="@+id/userFullNameSharedPrefs"
         android:layout_width="wrap_content"
@@ -312,42 +100,86 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@drawable/button_text"/>
--->
-    <TextView
-        android:id="@+id/userSkills"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/skills"
-        android:textStyle="bold"
-        android:textColor="@color/myprofile_text_color" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myskills1"
-        android:id="@+id/multiAutoCompleteTextView"
-        android:textColor="@color/myprofile_text_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_dropshadow"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:padding="20dp"
+            android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/interests"
-        android:textStyle="bold"
-        android:textColor="@color/myprofile_text_color"
-        android:id="@+id/textView"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <ImageView
+                    android:id="@+id/skills_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:src="@drawable/skills_icon"
+                    android:layout_gravity="center"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myinterests1"
-        android:textColor="@color/myprofile_text_color"
-        android:id="@+id/multiAutoCompleteTextView4"/>
+                <TextView
+                    android:id="@+id/userSkills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/skills"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/myprofile_text_color" />
+            </LinearLayout>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/multiAutoCompleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/myskills1"
+            android:textColor="@color/myprofile_text_color"
+            android:textSize="16dp"/>
         </LinearLayout>
-            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_dropshadow"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:padding="20dp"
+                android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/interests"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/myprofile_text_color"
+/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myinterests1"
+            android:textColor="@color/myprofile_text_color"
+            android:id="@+id/multiAutoCompleteTextView4"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
