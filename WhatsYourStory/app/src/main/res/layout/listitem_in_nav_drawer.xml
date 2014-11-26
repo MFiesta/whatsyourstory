@@ -14,9 +14,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textStyle="bold"
         android:paddingTop="8dp"
-        android:textColor="#000000"/>
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="10dp"/>
 
     <TextView android:id="@+id/counter"
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="8dp"
-        android:textColor="#000000"/>
+        android:textColor="@color/text_color"/>
 
 
 </RelativeLayout>

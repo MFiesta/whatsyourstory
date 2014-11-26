@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+        android:background="#4DD0E1">
+
+        <ImageView
+            android:id="@+id/feed_list_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:clickable="false"
+            android:src="@drawable/message_icon"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/FeedDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myMessage"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="402dp"

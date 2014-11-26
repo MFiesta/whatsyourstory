@@ -149,5 +149,6 @@
     <!-- Message Activity -->
     <string name="title_activity_message">MessageActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="myMessage">My Messages</string>
 
 </resources>
