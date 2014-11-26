@@ -65,7 +65,10 @@
     <string name="myskills1">CSS, Craft beer</string>
     <string name="mylocation">Anytown, USA</string>
     <string name="mytitle">Captain America</string>
-
+    <string name="myprofile_name_title">Name</string>
+    <string name="myprofile_career_title">Title</string>
+    <string name="myprofile_company_title">Company</string>
+    <string name="myprofile_location_title">Current Location</string>
     <!-- Nav Drawer -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

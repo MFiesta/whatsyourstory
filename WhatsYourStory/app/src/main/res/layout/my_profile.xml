@@ -70,24 +70,68 @@
 
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_dropshadow"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="3dp"
+            android:padding="20dp"
+            android:orientation="vertical" >
 
+            <TextView
+                android:id="@+id/myprofile_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/myprofile_name_title"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/myprofile_text_color" />
 
-    <TextView
-        android:id="@+id/userFullNameSharedPrefs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="9dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/myprofile_text_color"/>
+            <TextView
+                android:id="@+id/userFullNameSharedPrefs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/myprofile_text_color"/>
 
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/userTitleSharedPrefs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="9dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/myprofile_text_color" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_dropshadow"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="3dp"
+            android:padding="20dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/myprofile_career_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/myprofile_career_title"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/myprofile_text_color" />
+
+            <TextView
+                android:id="@+id/userTitleSharedPrefs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/myprofile_text_color" />
+            </LinearLayout>
 
     <TextView
         android:id="@+id/userLocationSharedPrefs"
@@ -103,7 +147,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="9dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/myprofile_text_color"/>
+        android:textColor="@color/myprofile_text_color"
+        android:textSize="16dp"/>
 
 
         <LinearLayout
