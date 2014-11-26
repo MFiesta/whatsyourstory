@@ -9,14 +9,12 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="6dp"
-    android:background="@color/white"
     tools:context=".MyActivity">
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -25,16 +23,6 @@
         android:paddingBottom="4dp"
         android:paddingLeft="16dp"
         android:paddingRight="20dp"
-=======
-        android:maxWidth="70dp"
-        android:maxHeight="70dp"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="15dp"
-        android:scaleType="fitCenter"
-        android:contentDescription="TODO"
->>>>>>> master
         android:src="@drawable/ic_launcher" />
 
 

@@ -19,8 +19,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/choose_interests_text"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="10dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="25dp"
@@ -35,8 +33,7 @@
         android:id="@+id/tell_us_interests_text"
         android:textSize="16dp"
         android:layout_below="@id/choose_interests_text"
-        android:gravity="center"
-        android:paddingBottom="20dp"/>
+        android:gravity="center"/>
 
     <!-- Users will be able to select multiple buttons with
      interests that they have. Toggle will turn on to indicate a button is selected.
@@ -153,7 +150,6 @@
         android:textOff="Food"
         android:textColor="#FFFFFF"/>
 
-<<<<<<< HEAD
 <!-- Users can add their own interests to the list. Eventually, what they
  add should turn into a button and add to the screen. -->
 
@@ -183,15 +179,6 @@
         android:layout_width="360dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
-=======
-    <Button
-        android:id="@+id/nextbutton"
-        android:text="@string/nextbuttoninterests"
-        style="?android:textAppearanceSmall"
-        android:layout_width="360dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="16sp"
->>>>>>> master
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:textStyle="bold"

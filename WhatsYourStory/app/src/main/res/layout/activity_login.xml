@@ -104,7 +104,7 @@
             <Button
                 android:id="@+id/email_log_in_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="352dp"
+                android:layout_width="360dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_log_in"
@@ -115,7 +115,6 @@
                 android:background= "@drawable/button_shape"
                 android:textSize="18sp"
                 android:singleLine="false" />
-
 
             <!--
             <Button
@@ -145,6 +144,7 @@
                 android:layout_gravity="center_horizontal"
                 android:onClick="SignUpText"
                 android:clickable="true"/>
+
 
         </LinearLayout>
     </ScrollView>

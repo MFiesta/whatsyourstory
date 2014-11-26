@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -8,60 +7,29 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
-=======
-
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
->>>>>>> master
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:orientation="horizontal"
-            android:background="#4DD0E1">
+            android:orientation="horizontal" >
 
-            <ImageView
-                android:id="@+id/feed_list_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="false"
-                android:src="@drawable/feed_list_icon"
-                android:layout_gravity="center"/>
 
             <TextView
                 android:id="@+id/FeedDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/FeedDescription"
-<<<<<<< HEAD
                 android:textSize="16dp"
                 android:textColor="#757575"
                 android:padding="16dp"/>
-=======
-                android:textColor="@color/white"
-                android:textSize="16dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"/>
->>>>>>> master
 
         </LinearLayout>
 
         <ListView
             android:layout_width="match_parent"
-<<<<<<< HEAD
             android:layout_height="402dp"
             android:id="@+id/feedListView">
-=======
-            android:layout_height="fill_parent"
-            android:id="@+id/feedListView"
-            android:paddingRight="14dp"
-            android:paddingLeft="14dp">
->>>>>>> master
 
         </ListView>
 

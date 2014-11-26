@@ -21,25 +21,12 @@
         android:id="@+id/choose_skills_text"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-<<<<<<< HEAD
         android:textSize="25dp"
-=======
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="25sp"
->>>>>>> master
         android:gravity="center"/>
 
     <TextView
         android:text="Tell us what you're great at!"
         android:layout_width="fill_parent"
-<<<<<<< HEAD
-=======
-        android:layout_height="wrap_content"
-        android:layout_below="@id/choose_skills_text"
-        android:gravity="center"
-        android:paddingBottom="20dp"
->>>>>>> master
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#FFFFFF"
         android:layout_height="wrap_content"
@@ -162,7 +149,6 @@
         android:textOff="Food"
         android:textColor="#FFFFFF"/>
 
-<<<<<<< HEAD
     <!-- Users can add their own skills to the list. Eventually, what they
      add should turn into a button and add to the screen. -->
 
@@ -185,8 +171,6 @@
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"/>
 
-=======
->>>>>>> master
     <!-- Next, users will be taken to the Choose Interests page. -->
 
     <Button
@@ -195,11 +179,7 @@
         style="?android:textAppearanceSmall"
         android:layout_width="360dp"
         android:layout_height="45dp"
-<<<<<<< HEAD
         android:layout_marginTop="16dp"
-=======
-        android:layout_marginTop="16sp"
->>>>>>> master
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:textStyle="bold"

@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <color name="semitransparent_white">#70FFFFFF</color>
-=======
-    <color name ="semitransparent_white">#70FFFFFF</color>
-    <color name ="bg_grey">#F2F2F2</color>
-    <color name ="white">#FFFFFF</color>
-    <color name="text_color">#424242</color>
-
-
->>>>>>> master
 </resources>
