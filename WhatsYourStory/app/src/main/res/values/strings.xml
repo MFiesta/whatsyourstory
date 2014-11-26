@@ -75,7 +75,7 @@
         <item>Home</item>
         <item>My Profile</item>
         <item>My Messages</item>
-        <item>My Favorites</item>
+        <!--<item>My Favorites</item>-->
         <item>Log Out</item>
     </string-array>
 
