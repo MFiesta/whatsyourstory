@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,14 +54,22 @@ public class SharedPreferencesUtility {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString(key, "");
 
+        Log.d("get fav liststring", listString);
+
         if (listString.length() != 0) {
 
             String[] favorites = listString.split(";");
 
+            Log.d("favorites list", listString);
+
             // loop through teams
             for (String t : favorites) {
 
+                Log.d("t first time", t);
+
                 list.add(Integer.parseInt(t));
+
+                Log.d("t after turn into int", t);
 
             }
 
@@ -72,7 +81,7 @@ public class SharedPreferencesUtility {
 
 
     public static void putFavoriteList(Activity activity, String key, List<Integer> list) {
-        
+
         List<String> fav = new ArrayList<String>();
 
         for (Integer myInt : list) {
@@ -84,6 +93,7 @@ public class SharedPreferencesUtility {
 
         myPutString(activity, key, listString);
 
+        Log.d("put fav", listString);
     }
 
 
