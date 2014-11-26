@@ -164,29 +164,6 @@
         android:textSize="16sp"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:labelFor="@+id/editText"
-        android:layout_above="@id/nextbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill_horizontal"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/add_skills_button"
-        android:text="@string/addskillsbuttontext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/editText"
-        android:layout_above="@id/nextbutton"
-        android:layout_below="@id/add_skills_text"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
     <!-- Next, users will be taken to the Choose Interests page. -->
 
     <Button

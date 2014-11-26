@@ -152,26 +152,6 @@
 <!-- Users can add their own interests to the list. Eventually, what they
  add should turn into a button and add to the screen. -->
 
-    <TextView
-        android:id="@+id/add_skills_text"
-        android:text="@string/addintereststext"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText"
-        android:textSize="16sp"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:labelFor="@+id/editText"
-        android:layout_above="@+id/nextbutton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"/>
-
     <Button
         android:id="@+id/nextbutton"
         android:text="@string/addinterestsbuttontext"
