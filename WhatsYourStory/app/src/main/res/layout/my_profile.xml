@@ -231,14 +231,22 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone"/>
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="180dp">
+        android:layout_height="fill_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="220dp">
 
         <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="130dp"
+            android:layout_height="110dp"
             android:id="@+id/userPicBackground"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/myprofile_background"
@@ -251,7 +259,6 @@
             android:clickable="false"
             android:id="@+id/otheruser_white_circle"
             android:src="@drawable/otheruser_white_circle"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center" />
 
 
@@ -261,11 +268,14 @@
             android:clickable="false"
             android:id="@+id/userPicture"
             android:src="@drawable/default_picture"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center" />
 
     </FrameLayout>
 
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
     <TextView
         android:id="@+id/userFullNameSharedPrefs"
         android:layout_width="wrap_content"
@@ -282,7 +292,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@drawable/button_text"
+        android:textColor="@color/myprofile_text_color"
         android:layout_below="@+id/userFullNameSharedPrefs"
         android:layout_alignStart="@+id/userFullNameSharedPrefs" />
 
@@ -291,7 +301,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@drawable/button_text"
+        android:textColor="@color/myprofile_text_color"
         android:layout_below="@+id/userTitleSharedPrefs"
         android:layout_alignStart="@+id/userTitleSharedPrefs" />
 
@@ -309,7 +319,7 @@
         android:text="@string/skills"
         android:textStyle="bold"
         android:id="@+id/userSkills"
-        android:textColor="@drawable/button_text"
+        android:textColor="@color/myprofile_text_color"
         android:layout_below="@+id/userPicture" />
 
 
@@ -318,7 +328,7 @@
         android:layout_height="wrap_content"
         android:text="@string/myskills1"
         android:id="@+id/multiAutoCompleteTextView"
-        android:textColor="@drawable/button_text"/>
+        android:textColor="@color/myprofile_text_color"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -326,7 +336,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/interests"
         android:textStyle="bold"
-        android:textColor="@drawable/button_text"
+        android:textColor="@color/myprofile_text_color"
         android:id="@+id/textView"/>
 
 
@@ -334,10 +344,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/myinterests1"
-        android:textColor="@drawable/button_text"
-        android:id="@+id/multiAutoCompleteTextView4"
-
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
+        android:textColor="@color/myprofile_text_color"
+        android:id="@+id/multiAutoCompleteTextView4"/>
+</LinearLayout>
+        </LinearLayout>
+            </ScrollView>
 </LinearLayout>
