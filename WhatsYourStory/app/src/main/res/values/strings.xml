@@ -127,7 +127,7 @@
 
     <string name="addskillstext">Add your own skills:</string>
     <string name="addskillsbuttontext">Add</string>
-    <string name="nextbuttonskills">Next</string>
+    <string name="nextbuttonskills">NEXT</string>
 
     <!--Choose Interests-->
     <string name="chooseinterests">Choose your interests</string>
@@ -144,7 +144,7 @@
     <string name="button3_row3textinterests">Food</string>
     <string name="addintereststext">Add your own interests:</string>
     <string name="addinterestsbuttontext">Add</string>
-    <string name="nextbuttoninterests">Next</string>
+    <string name="nextbuttoninterests">NEXT</string>
 
     <!-- Message Activity -->
     <string name="title_activity_message">MessageActivity</string>

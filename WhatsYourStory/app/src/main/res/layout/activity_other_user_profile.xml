@@ -172,7 +172,7 @@
                 android:layout_marginLeft="10dp"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="@color/otheruser_text_color"
+                android:textColor="@color/text_color"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
@@ -185,7 +185,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/eytanskills"
             android:textSize="16dp"
-            android:textColor="@color/otheruser_text_color"/>
+            android:textColor="@color/text_color"/>
         </LinearLayout>
 
 
@@ -221,7 +221,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:id="@+id/OtherUserProfileExperience"
-                android:textColor="@color/otheruser_text_color"/>
+                android:textColor="@color/text_color"/>
 
         </LinearLayout>
 
@@ -233,7 +233,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/eytanexperiences"
                     android:textSize="16dp"
-                    android:textColor="@color/otheruser_text_color"/>
+                    android:textColor="@color/text_color"/>
 
         </LinearLayout>
         </LinearLayout>

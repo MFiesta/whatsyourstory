@@ -90,7 +90,7 @@
                 android:text="@string/myprofile_name_title"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="@color/myprofile_text_color" />
+                android:textColor="@color/text_color" />
 
             <TextView
                 android:id="@+id/userFullNameSharedPrefs"
@@ -99,7 +99,7 @@
                 android:layout_marginTop="12dp"
                 android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/myprofile_text_color"/>
+                android:textColor="@color/text_color"/>
 
         </LinearLayout>
 
@@ -121,7 +121,7 @@
                 android:text="@string/myprofile_career_title"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="@color/myprofile_text_color" />
+                android:textColor="@color/text_color" />
 
             <TextView
                 android:id="@+id/userTitleSharedPrefs"
@@ -130,7 +130,7 @@
                 android:layout_marginTop="12dp"
                 android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/myprofile_text_color" />
+                android:textColor="@color/text_color" />
             </LinearLayout>
 
         <LinearLayout
@@ -151,7 +151,7 @@
                 android:text="@string/myprofile_company_title"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="@color/myprofile_text_color" />
+                android:textColor="@color/text_color" />
 
             <TextView
                 android:id="@+id/userLocationSharedPrefs"
@@ -160,7 +160,7 @@
                 android:layout_marginTop="12dp"
                 android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/myprofile_text_color"/>
+                android:textColor="@color/text_color"/>
         </LinearLayout>
 
         <LinearLayout
@@ -181,7 +181,7 @@
                 android:text="@string/myprofile_location_title"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:textColor="@color/myprofile_text_color" />
+                android:textColor="@color/text_color" />
 
             <TextView
                 android:id="@+id/userCompanySharedPrefs"
@@ -190,7 +190,7 @@
                 android:layout_marginTop="12dp"
                 android:textSize="16dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/myprofile_text_color"/>
+                android:textColor="@color/text_color"/>
             </LinearLayout>
 
         <LinearLayout
@@ -211,7 +211,7 @@
                     android:text="@string/skills"
                     android:textSize="18dp"
                     android:textStyle="bold"
-                    android:textColor="@color/myprofile_text_color" />
+                    android:textColor="@color/text_color" />
 
         <TextView
             android:id="@+id/multiAutoCompleteTextView"
@@ -219,7 +219,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="@string/myskills1"
-            android:textColor="@color/myprofile_text_color"
+            android:textColor="@color/text_color"
             android:textSize="16dp"/>
         </LinearLayout>
 
@@ -241,7 +241,7 @@
             android:text="@string/interests"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:textColor="@color/myprofile_text_color"
+            android:textColor="@color/text_color"
 />
 
 
@@ -249,7 +249,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/myinterests1"
-            android:textColor="@color/myprofile_text_color"
+            android:textColor="@color/text_color"
             android:id="@+id/multiAutoCompleteTextView4"/>
 
         </LinearLayout>

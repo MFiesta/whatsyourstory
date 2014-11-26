@@ -22,6 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
         android:textSize="25sp"
         android:gravity="center"/>
 
@@ -32,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/choose_skills_text"
         android:gravity="center"
+        android:paddingBottom="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />
@@ -156,8 +159,8 @@
         android:id="@+id/nextbutton"
         android:text="@string/nextbuttonskills"
         style="?android:textAppearanceSmall"
-        android:layout_width="360sp"
-        android:layout_height="45sp"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
         android:layout_marginTop="16sp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"

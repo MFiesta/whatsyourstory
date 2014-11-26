@@ -19,6 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/choose_interests_text"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="25sp"
@@ -33,7 +35,8 @@
         android:id="@+id/tell_us_interests_text"
         android:textSize="16sp"
         android:layout_below="@id/choose_interests_text"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:paddingBottom="20dp"/>
 
     <!-- Users will be able to select multiple buttons with
      interests that they have. Toggle will turn on to indicate a button is selected.
@@ -153,8 +156,8 @@
         android:id="@+id/nextbutton"
         android:text="@string/nextbuttoninterests"
         style="?android:textAppearanceSmall"
-        android:layout_width="360sp"
-        android:layout_height="45sp"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
         android:layout_marginTop="16sp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"

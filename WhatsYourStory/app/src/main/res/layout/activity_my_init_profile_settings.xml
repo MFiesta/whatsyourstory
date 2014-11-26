@@ -41,8 +41,8 @@
                 android:gravity="center"
                 android:textSize="@dimen/title_text"
                 android:textColor="#FFFFFF"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
                 android:layout_gravity="center_horizontal"/>
 
             <TextView
@@ -179,7 +179,7 @@
     <Button
         android:id="@+id/MyInitProfileNext"
         android:layout_below="@+id/edit_current_location"
-        android:layout_width="360dp"
+        android:layout_width="352dp"
         android:layout_height="45dp"
         android:text="@string/action_next_myInitProfile"
         android:layout_marginTop="16dp"
