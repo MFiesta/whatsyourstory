@@ -150,20 +150,6 @@
         android:textOff="@string/button3_row3textskills"
         android:textColor="#FFFFFF"/>
 
-    <!-- Users can add their own skills to the list. Eventually, what they
-     add should turn into a button and add to the screen. -->
-
-    <TextView
-        android:id="@+id/add_skills_text"
-        android:text="@string/addskillstext"
-        android:textColor="#FFFFFF"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/editText"
-        android:textSize="16sp"
-        android:layout_centerHorizontal="true" />
-
     <!-- Next, users will be taken to the Choose Interests page. -->
 
     <Button

@@ -149,9 +149,6 @@
         android:textOff="@string/button3_row3textinterests"
         android:textColor="#FFFFFF"/>
 
-<!-- Users can add their own interests to the list. Eventually, what they
- add should turn into a button and add to the screen. -->
-
     <Button
         android:id="@+id/nextbutton"
         android:text="@string/addinterestsbuttontext"
