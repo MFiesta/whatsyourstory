@@ -153,6 +153,37 @@
         android:textOff="Food"
         android:textColor="#FFFFFF"/>
 
+<<<<<<< HEAD
+<!-- Users can add their own interests to the list. Eventually, what they
+ add should turn into a button and add to the screen. -->
+
+    <TextView
+        android:id="@+id/add_skills_text"
+        android:text="Add your own skills:"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_above="@+id/nextbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/nextbutton"
+        android:text="Next"
+        style="?android:textAppearanceSmall"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+=======
     <Button
         android:id="@+id/nextbutton"
         android:text="@string/nextbuttoninterests"
