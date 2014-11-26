@@ -57,12 +57,12 @@
     <string name="interests">Interests:</string>
     <string name="myname">Steve Rogers</string>
     <string name="myinterests">Interests:</string>
-    <string name="myinterests1">Computer Science, Windows, CSS</string>S
+    <string name="myinterests1">Computer Science, Windows</string>S
     <string name="myexperiences">Experience:</string>
     <string name="myexperiences1">Watercolor, Engineering</string>
     <string name="myexperiences2">Darling of America</string>
     <string name="myskills">Skills:</string>
-    <string name="myskills1">Shield throwing</string>
+    <string name="myskills1">CSS, Craft beer</string>
     <string name="mylocation">Anytown, USA</string>
     <string name="mytitle">Captain America</string>
 
