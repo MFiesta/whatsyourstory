@@ -4,19 +4,11 @@
     <string name="app_name">What\'s Your Story?</string>
 
     <!-- Login -->
-<<<<<<< HEAD
-    <string name="prompt_enter_username">Username</string>
-    <string name="prompt_enter_password">Password</string>
-    <string name="action_log_in">Log In</string>
-    <string name="action_sign_up">Sign Up</string>
-    <string name="action_log_in_short">Log In</string>
-=======
     <string name="prompt_enter_username">Username (Use "admin")</string>
     <string name="prompt_enter_password">Password (Use "admin")</string>
     <string name="action_log_in">LOG IN</string>
     <string name="action_sign_up">SIGN UP</string>
     <string name="action_log_in_short">LOG IN</string>
->>>>>>> master
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -52,17 +44,10 @@
     <string name="username">Eytan Adar</string>
     <string name="title">UMSI Faculty</string>
     <string name="location">Ann Arbor, MI</string>
-<<<<<<< HEAD
-    <string name="action_message">Message</string>
-    <string name="action_favorite">Favorite</string>
-    <string name="skills">Skills:</string>
-    <string name="experiences">Experience:</string>
-=======
     <string name="action_message">MESSAGE</string>
     <string name="action_favorite">FAVORITE</string>
     <string name="skills">Skills</string>
     <string name="experiences">Experience</string>
->>>>>>> master
     <string name="eytanexperiences">Worked with a client in Ann Arbor to redesign their promotional brochures</string>
     <string name="eytanskills">Graphic Design</string>
 
@@ -123,8 +108,6 @@
     <!-- Logout Dialog -->
     <string name="cancel">Cancel</string>
     <string name="logout">Yes, logout</string>
-<<<<<<< HEAD
-=======
 
     <!--Choose Skills-->
     <string name="chooseskills">Choose your skills</string>
