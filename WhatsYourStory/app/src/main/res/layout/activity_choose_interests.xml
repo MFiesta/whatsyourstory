@@ -151,7 +151,7 @@
 
     <Button
         android:id="@+id/nextbutton"
-        android:text="@string/addinterestsbuttontext"
+        android:text="@string/nextbuttoninterests"
         style="?android:textAppearanceSmall"
         android:layout_width="360sp"
         android:layout_height="45sp"
