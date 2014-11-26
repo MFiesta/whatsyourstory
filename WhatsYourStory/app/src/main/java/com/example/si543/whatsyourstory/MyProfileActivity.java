@@ -1,12 +1,9 @@
 package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -25,6 +22,7 @@ public class MyProfileActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_profile);
 
+        /**
         fullnameTextView = (TextView) findViewById(R.id.userFullNameSharedPrefs);
         titleTextView = (TextView) findViewById(R.id.userTitleSharedPrefs);
         companyTextView = (TextView) findViewById(R.id.userCompanySharedPrefs);
@@ -39,9 +37,10 @@ public class MyProfileActivity extends Activity {
         fullnameTextView.setText(fullname);
         titleTextView.setText(title);
         companyTextView.setText(company);
-        locationTextView.setText(location);
+        locationTextView.setText(location);         */
 
     }
+
 
     public void EditMyProfileNext (View view) {
         Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);
