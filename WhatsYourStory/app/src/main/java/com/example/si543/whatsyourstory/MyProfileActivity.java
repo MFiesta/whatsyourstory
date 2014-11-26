@@ -16,11 +16,14 @@ import android.widget.TextView;
 public class MyProfileActivity extends Activity {
 
     public static final String DEFAULT="N/A";
+
     TextView fullnameTextView, titleTextView, companyTextView, locationTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_profile);
+
 
         fullnameTextView = (TextView) findViewById(R.id.userFullNameSharedPrefs);
         titleTextView = (TextView) findViewById(R.id.userTitleSharedPrefs);
@@ -39,6 +42,7 @@ public class MyProfileActivity extends Activity {
         locationTextView.setText(location);
 
     }
+
 
     public void EditMyProfileNext (View view) {
         Intent EditMyProfileActivity = new Intent(this, ChooseSkillsActivity.class);

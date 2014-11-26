@@ -3,6 +3,7 @@
 package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,10 +24,19 @@ public class ChooseSkillsActivity extends Activity {
     ToggleButton button2_row3;
     ToggleButton button3_row3;
 
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class ChooseSkillsActivity extends Activity {
+
+>>>>>>> master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_skills);
+<<<<<<< HEAD
 
         button1_row1 = (ToggleButton) findViewById(R.id.button1_row1);
         button2_row1 = (ToggleButton) findViewById(R.id.button2_row1);
@@ -55,6 +65,11 @@ public class ChooseSkillsActivity extends Activity {
 
         editor.apply();
 
+=======
+    }
+
+    public void skillsNext(View view) {
+>>>>>>> master
         Intent ChooseSkillsActivity = new Intent(this, ChooseInterestsActivity.class);
         startActivity(ChooseSkillsActivity);
     }

@@ -41,7 +41,7 @@
                 android:gravity="center"
                 android:textSize="@dimen/title_text"
                 android:textColor="#FFFFFF"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_gravity="center_horizontal"/>
 
@@ -51,12 +51,12 @@
                 android:text="@string/sign_up_tagline"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:paddingBottom="30dp"
+                android:paddingBottom="40dp"
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"/>
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/choose_your_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Choose Your Username"
@@ -76,7 +76,7 @@
                 android:layout_height="1dip"
                 android:background="#ffe8e8e8" />
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/choose_your_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_password"
@@ -132,7 +132,7 @@
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
-                android:layout_width="360dp"
+                android:layout_width="352dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_next_interests"
