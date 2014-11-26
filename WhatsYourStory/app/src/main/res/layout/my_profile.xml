@@ -76,6 +76,7 @@
         android:id="@+id/userFullNameSharedPrefs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/myprofile_text_color"/>
 
@@ -84,6 +85,7 @@
         android:id="@+id/userTitleSharedPrefs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/myprofile_text_color" />
 
@@ -91,6 +93,7 @@
         android:id="@+id/userLocationSharedPrefs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/myprofile_text_color"/>
 
@@ -98,17 +101,18 @@
         android:id="@+id/userCompanySharedPrefs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@drawable/button_text"/>
+        android:textColor="@color/myprofile_text_color"/>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/card_dropshadow"
-            android:layout_marginTop="4dp"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginTop="3dp"
             android:padding="20dp"
             android:orientation="vertical" >
 
