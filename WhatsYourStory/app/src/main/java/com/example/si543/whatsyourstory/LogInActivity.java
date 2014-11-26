@@ -58,7 +58,7 @@ public class LogInActivity extends Activity {
                     //insert Shared prefs manager here?
                     //SharedPreferences sharedPreferences=getSharedPreferences("CheckSignUp", Context.MODE_PRIVATE);
 
-                    if(username.equals("test") && password.equals("test")){
+                    if(username.equals("admin") && password.equals("admin")){
 
                         //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
                         //if (sharedpreferences.contains(name)) == true && (sharedpreferences.contains(pass) == true)

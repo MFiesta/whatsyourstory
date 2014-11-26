@@ -4,8 +4,8 @@
     <string name="app_name">What\'s Your Story?</string>
 
     <!-- Login -->
-    <string name="prompt_enter_username">Username</string>
-    <string name="prompt_enter_password">Password</string>
+    <string name="prompt_enter_username">Username (Use "admin")</string>
+    <string name="prompt_enter_password">Password (Use "admin")</string>
     <string name="action_log_in">LOG IN</string>
     <string name="action_sign_up">SIGN UP</string>
     <string name="action_log_in_short">LOG IN</string>
