@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.content.SharedPreferences;
+import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +57,7 @@ public class FeedActivity extends Activity {
 
         initDataMessage();
 
-        initDataFavorites();
+        //initDataFavorites();
 
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -181,6 +183,9 @@ public class FeedActivity extends Activity {
     //display fragment view for selected nav drawer item
     private void displayView(int position) {
         Fragment fragment = null;
+        SharedPreferences sharedPreferences = getApplicationContext()
+                .getSharedPreferences("My Pref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         switch (position) {
             //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
             case 0:
@@ -203,6 +208,8 @@ public class FeedActivity extends Activity {
                 break;
             case 4:
                 Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                editor.clear();
+                editor.apply();
                 startActivity(logOut);
             default:
                 break;
@@ -236,7 +243,7 @@ public class FeedActivity extends Activity {
 
     }
 
-    private void initDataFavorites() {
+    /**private void initDataFavorites() {
 
         List<Integer> list = new ArrayList<Integer>();
 
@@ -245,6 +252,6 @@ public class FeedActivity extends Activity {
         SharedPreferencesUtility.putFavoriteList(this, "teams", list);
 
 
-    }
+    }**/
 
 }

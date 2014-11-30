@@ -39,7 +39,7 @@ public class OtherUserProfileActivity extends Activity {
         initList();
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(FeedActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(HomeFragment.EXTRA_MESSAGE);
 
         id = (int) Long.parseLong(message);
 
@@ -84,7 +84,13 @@ public class OtherUserProfileActivity extends Activity {
 
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-        favorites.add(id);
+        if(favorites.contains(id)){
+            System.out.println("User already favorited");
+        } else{
+            favorites.add(values.get(id).getName());
+        }
+
+        //right now it's adding the ids but we need the
 
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
 
