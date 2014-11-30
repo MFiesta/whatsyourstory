@@ -66,7 +66,7 @@ public class FavoritesActivity extends Activity {
     private void initList() {
 
         //gets the favorite list
-        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "ProfActData");
 
         for(int f: favorites) {
 
@@ -76,7 +76,7 @@ public class FavoritesActivity extends Activity {
         }
     }
 
-    List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+    List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "ProfActData");
 
     public void openFavoriteUserDetail(int position) {
 

@@ -184,7 +184,8 @@ public class FeedActivity extends Activity {
     private void displayView(int position) {
         Fragment fragment = null;
         SharedPreferences sharedPreferences = getApplicationContext()
-                .getSharedPreferences("My Pref", Context.MODE_PRIVATE);
+                .getSharedPreferences("ProfActData", Context.MODE_PRIVATE);
+        //how do we delete multiple sharedprefs?
         SharedPreferences.Editor editor = sharedPreferences.edit();
         switch (position) {
             //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
