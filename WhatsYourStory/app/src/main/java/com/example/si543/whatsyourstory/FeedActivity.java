@@ -5,7 +5,9 @@ package com.example.si543.whatsyourstory;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -178,6 +180,9 @@ public class FeedActivity extends Activity {
     //display fragment view for selected nav drawer item
     private void displayView(int position) {
         Fragment fragment = null;
+        SharedPreferences sharedPreferences = getApplicationContext()
+                .getSharedPreferences("My Pref", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         switch (position) {
             //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
             case 0:
@@ -200,6 +205,8 @@ public class FeedActivity extends Activity {
                 //break;
             case 3:
                 Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                editor.clear();
+                editor.apply();
                 startActivity(logOut);
             default:
                 break;
