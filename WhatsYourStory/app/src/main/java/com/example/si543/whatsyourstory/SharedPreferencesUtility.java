@@ -17,7 +17,7 @@ import java.util.List;
 
 public class SharedPreferencesUtility {
 
-    public static final String DEFAULT="N/A";
+    public static final String DEFAULT="";
 
     //method to getStringList for messages
     public static List<String> getStringList(Activity activity, String key) {
@@ -58,18 +58,21 @@ public class SharedPreferencesUtility {
 
         Log.d("favorites list", listString);
 
-        if (TextUtils.isDigitsOnly(DEFAULT)) {
+        if (listString.length() != 0) {
 
-            Log.d("t first time", DEFAULT);
+            Log.d("t first time", listString);
 
-            String[] list = listString.split(";");
+            String[] list = listString.split(";;");
 
             // loop through teams
             for (String t: list) {
 
-            favorites.add(Integer.parseInt(t));
+                String[] favoriteNames = t.split(";");
+                String name = favoriteNames[0];
 
-            Log.d("t after turn into int", t);
+                favorites.add(Integer.parseInt(name));
+
+            Log.d("t after turn into int", name);
 
             }
 
@@ -86,7 +89,7 @@ public class SharedPreferencesUtility {
         List<String> fav = new ArrayList<String>();
 
         for (Integer myInt: list) {
-            fav.add(String.valueOf(myInt));
+            fav.add(Integer.toString(myInt));
         }
 
 

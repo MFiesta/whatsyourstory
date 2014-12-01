@@ -79,6 +79,14 @@ public class OtherUserProfileActivity extends Activity {
         startActivity(sendIntent);
     }
 
+    private void initDataFavorites() {
+
+        List<Integer> favorites = new ArrayList<Integer>();
+
+        SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
+
+    }
+
     //Adds profile to favorites list
     public void addFavorite(View view) {
 
@@ -137,15 +145,6 @@ public class OtherUserProfileActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void initDataFavorites() {
-
-        List<Integer> list = new ArrayList<Integer>();
-
-        SharedPreferencesUtility.putFavoriteList(this, "favorites", list);
-
-
     }
 
 }

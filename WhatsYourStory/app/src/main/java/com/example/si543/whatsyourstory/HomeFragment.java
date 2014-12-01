@@ -13,6 +13,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import static android.content.Intent.getIntent;
 
 
 public class HomeFragment extends Fragment {
@@ -21,6 +24,8 @@ public class HomeFragment extends Fragment {
     // set adapter for feed's listview
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
+    int id;
+
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,6 +33,7 @@ public class HomeFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_feed, container, false);
         ListView feedList = (ListView) rootView.findViewById(R.id.feedListView);
+
         initList();
 
         // adapters are what we use to associate the list variable and its contents with the list view
