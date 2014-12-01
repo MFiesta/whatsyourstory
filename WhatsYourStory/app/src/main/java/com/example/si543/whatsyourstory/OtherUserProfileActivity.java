@@ -84,11 +84,8 @@ public class OtherUserProfileActivity extends Activity {
 
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-        if(favorites.contains(id)){
-            System.out.println("User already favorited");
-        } else{
-            favorites.add(id);
-        }
+
+        favorites.add(id);
 
         //right now it's adding the ids but we need the
 

@@ -61,7 +61,7 @@ public class SharedPreferencesUtility {
         // loop through teams
         for (String t: list) {
 
-            if (TextUtils.isDigitsOnly("favorites")) {
+            if (TextUtils.isDigitsOnly(t)) {
 
                 Log.d("t first time", t);
 
