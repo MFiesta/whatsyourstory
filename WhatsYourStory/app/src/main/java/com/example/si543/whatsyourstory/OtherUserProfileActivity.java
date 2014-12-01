@@ -143,9 +143,7 @@ public class OtherUserProfileActivity extends Activity {
 
         List<Integer> list = new ArrayList<Integer>();
 
-        list.add(id);
-
-        SharedPreferencesUtility.putFavoriteList(this, "teams", list);
+        SharedPreferencesUtility.putFavoriteList(this, "favorites", list);
 
 
     }
