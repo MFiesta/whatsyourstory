@@ -1,35 +1,29 @@
 package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
-import android.content.Context;
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
+import android.os.Environment;
 import android.provider.MediaStore;
-
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ArrayAdapter;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.os.Environment;
-import android.widget.Button;
-import android.content.ActivityNotFoundException;
+
 import java.io.File;
-import android.content.pm.ResolveInfo;
-import android.content.ComponentName;
-import android.graphics.drawable.Drawable;
 import java.util.ArrayList;
 import java.util.List;
-
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
@@ -60,6 +54,7 @@ public class SetMyInitProfileActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_init_profile_settings);
+
 
         //Full name, title, company, location input text
         edit_full_name = (EditText) findViewById(R.id.edit_full_name);
@@ -98,6 +93,8 @@ public class SetMyInitProfileActivity extends Activity {
                     startActivityForResult(Intent.createChooser(intent, "Complete action using"), PICK_FROM_FILE);
                 }
             }
+
+
         } );
 
         final AlertDialog dialog = builder.create();

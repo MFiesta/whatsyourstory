@@ -3,12 +3,17 @@ package com.example.si543.whatsyourstory;
 //Alice Rhee
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.os.Handler;
+
+
 
 public class SignUpActivity extends Activity {
 
@@ -17,13 +22,41 @@ public class SignUpActivity extends Activity {
     public static final String pass = "passwordKey";
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         username = (EditText)findViewById(R.id.choose_your_username);
         password = (EditText)findViewById(R.id.choose_your_password);
+
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                showAlert();
+            }
+        }, 500);
+
     }
+
+
+    public void showAlert () {
+        AlertDialog ad = new AlertDialog.Builder(this).create();
+        ad.setCancelable(false); // This blocks the 'BACK' button
+        ad.setMessage("Welcome! We’re glad you’re joining us.  Here you can: 1) find people whose stories and experiences interest you → 2) Connect with them through the app →  3) Listen to their story in a no-pressure environment.\n" +
+                "Let’s get started! \n");
+        ad.setButton("OK", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+
+            }
+        });
+
+        ad.show();
+
+    }
+
 
     public void SignUpNext(View view) {
             //method called onClicking the Next button
