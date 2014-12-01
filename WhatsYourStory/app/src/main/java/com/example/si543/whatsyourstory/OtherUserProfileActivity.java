@@ -75,13 +75,10 @@ public class OtherUserProfileActivity extends Activity {
 
     }
 
-//Message Intent - calls sms messaging on phone - Stephanie Wooten
+//Message Intent 
    public void Message (View view){
-       Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-       sendIntent.putExtra("address", "555-555-5555");
-       sendIntent.setType("vnd.android-dir/mms-sms");
+       //Add message activity intents here
 
-       startActivity(sendIntent);
     }
 
 //Takes user to favorites list
