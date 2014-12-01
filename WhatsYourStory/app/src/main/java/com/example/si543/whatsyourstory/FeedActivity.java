@@ -183,10 +183,6 @@ public class FeedActivity extends Activity {
     //display fragment view for selected nav drawer item
     private void displayView(int position) {
         Fragment fragment = null;
-        SharedPreferences sharedPreferences = getApplicationContext()
-                .getSharedPreferences("ProfActData", Context.MODE_PRIVATE);
-        //how do we delete multiple sharedprefs?
-        SharedPreferences.Editor editor = sharedPreferences.edit();
         switch (position) {
             //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
             case 0:
@@ -208,9 +204,12 @@ public class FeedActivity extends Activity {
                 startActivity(intent);
                 break;
             case 4:
-                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                SharedPreferences sharedPreferences = getApplicationContext()
+                        .getSharedPreferences("ProfActData", Context.MODE_MULTI_PROCESS);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.apply();
+                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
                 startActivity(logOut);
             default:
                 break;

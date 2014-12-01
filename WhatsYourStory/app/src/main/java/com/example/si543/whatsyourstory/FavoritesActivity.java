@@ -24,12 +24,14 @@ public class FavoritesActivity extends Activity {
         // the string variable we use for sending messages with intents - no idea what this means yet
         public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
-        // a list class type must be used when using a list view
-        // list items are added to a list view programatically and not through xml
+        // a list class for the actual list of favorites pulled from the SharedPreferences Utility
         List<Map<String, String>> favList = new ArrayList<Map<String,String>>();
 
+        //list for the feed data, which contains data that will be used to populate the favorites list
         ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
+        //declaring the public integer "id" to be used to populate the favorites list by the ids associated
+        //with each individual feed user
         public int id;
 
         @Override
@@ -37,15 +39,16 @@ public class FavoritesActivity extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_favorites);
 
-            // we call this initList function to fill in our list class variable with our team names
+            // we call this initList function to fill in our list class variable with our favorites
             initList();
+
 
             initFeedList();
 
             // adapters are what we use to associate the list variable and its contents with the list view
             ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
             //update the XML files referenced below
-            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favList, android.R.layout.simple_list_item_1, new String[] {"favorites"}, new int[] {android.R.id.text1});
+            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favList, android.R.layout.simple_list_item_1, new String[] {"ProfActData"}, new int[] {android.R.id.text1});
             favoriteUsersListView.setAdapter(simpleAdpt);
 
             // setOnItemClickListener tells the activity what to do when a list item is clicked on
