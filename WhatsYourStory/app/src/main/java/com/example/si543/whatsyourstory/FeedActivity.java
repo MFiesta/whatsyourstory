@@ -74,9 +74,9 @@ public class FeedActivity extends Activity {
         //Messages - Need Counter
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], true, "1"));
         //Favorites
-        //navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
-        //Log Out
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3]));
+        //Log Out
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4]));
 
         //set the nav drawer list adapter
         adapter = new NavDrawerListAdapter(getApplicationContext(), navDrawerItems);
@@ -198,11 +198,11 @@ public class FeedActivity extends Activity {
                 startActivity(viewMsgs);
                 break;
             //If user selects "Favorites" - takes them to list of favorited contacts
-            //case 3:
-                //Intent intent = new Intent(FeedActivity.this, FavoritesActivity.class);
-                //startActivity(intent);
-                //break;
             case 3:
+                Intent intent = new Intent(FeedActivity.this, FavoritesActivity.class);
+                startActivity(intent);
+                break;
+            case 4:
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
