@@ -111,7 +111,7 @@
                 android:text="@string/action_message"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:layout_width="fill_parent"
+                android:layout_width="160dp"
                 android:layout_height="40dp"
                 android:background="@drawable/otheruser_button"
                 android:layout_marginTop="15dp"
@@ -121,7 +121,7 @@
                 android:onClick="Message"
                 android:layout_gravity="center"
                 />
-<!--
+
             <Button
                 android:id="@+id/otheruser_favorite"
                 android:text="@string/action_favorite"
@@ -136,7 +136,6 @@
                 android:onClick="Favorite"
                 android:layout_gravity="center"
                 />
-                -->
 
         </LinearLayout>
 
