@@ -57,9 +57,7 @@ public class FeedActivity extends Activity {
 
         mTitle = mDrawerTitle = "What's Your Story?";
 
-        //initDataMessage();
-
-        //initDataFavorites();
+        initDataMessage();
 
         //load nav drawer list items
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
@@ -244,15 +242,5 @@ public class FeedActivity extends Activity {
 
     }
 
-    /**private void initDataFavorites() {
-
-        List<Integer> list = new ArrayList<Integer>();
-
-        list.add(0);
-
-        SharedPreferencesUtility.putFavoriteList(this, "teams", list);
-
-
-    }**/
 
 }

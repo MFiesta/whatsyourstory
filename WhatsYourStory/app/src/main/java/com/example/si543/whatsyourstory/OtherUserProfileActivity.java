@@ -38,6 +38,8 @@ public class OtherUserProfileActivity extends Activity {
 
         initList();
 
+        initDataFavorites();
+
         Intent intent = getIntent();
         String message = intent.getStringExtra(HomeFragment.EXTRA_MESSAGE);
 
@@ -135,6 +137,17 @@ public class OtherUserProfileActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void initDataFavorites() {
+
+        List<Integer> list = new ArrayList<Integer>();
+
+        list.add(id);
+
+        SharedPreferencesUtility.putFavoriteList(this, "teams", list);
+
+
     }
 
 }
