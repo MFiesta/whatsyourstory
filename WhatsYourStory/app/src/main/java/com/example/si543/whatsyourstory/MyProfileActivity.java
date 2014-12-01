@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
+
 /**
  * Created by chiahuihsieh on 10/27/14
  * Modified by Stephanie Wooten 11/14
@@ -30,7 +32,7 @@ public class MyProfileActivity extends Activity {
         companyTextView = (TextView) findViewById(R.id.userCompanySharedPrefs);
         locationTextView = (TextView) findViewById(R.id.userLocationSharedPrefs);
 
-        SharedPreferences sharedPreferences=getSharedPreferences("ProfActData", Context.MODE_MULTI_PROCESS);
+        SharedPreferences sharedPreferences=getDefaultSharedPreferences(this);
         String fullname=sharedPreferences.getString("fullname", DEFAULT);
         String title=sharedPreferences.getString("title", DEFAULT);
         String company=sharedPreferences.getString("company", DEFAULT);
