@@ -34,6 +34,8 @@ public class FavoritesActivity extends Activity {
         //with each individual feed user
         public int id;
 
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -41,7 +43,6 @@ public class FavoritesActivity extends Activity {
 
             // we call this initList function to fill in our list class variable with our favorites
             initList();
-
 
             initFeedList();
 
@@ -79,8 +80,6 @@ public class FavoritesActivity extends Activity {
         }
     }
 
-    List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
-
     public void openFavoriteUserDetail(int position) {
 
         int temp = favorites.get(position);
@@ -92,11 +91,11 @@ public class FavoritesActivity extends Activity {
 
         // this method helps us minimize the amount of repeat calls we need to make in initList to place
         // a team name into out list.
-        private HashMap<String, String> createFav(String key, String name) {
+        /**private HashMap<String, String> createFav(String key, String name) {
             HashMap<String, String> fav = new HashMap<String, String>();
             fav.put(key, name);
             return fav;
-        }
+        }**/
 
     //Add item to adapter
     private void initFeedList() {

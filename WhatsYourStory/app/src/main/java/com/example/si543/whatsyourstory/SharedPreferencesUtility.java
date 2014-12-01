@@ -44,7 +44,7 @@ public class SharedPreferencesUtility {
     }
 
     //method to getStringList for favorites
-    public static List<Integer> getFavoriteList(Activity activity, String favKey) {
+    public static List<Integer> getFavoriteList(Activity activity, String key) {
 
         //List<String> fav = new ArrayList<String>();
 
@@ -52,9 +52,7 @@ public class SharedPreferencesUtility {
 
         // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
-        String listString = preferences.getString(favKey, "");
-
-        Log.d("get fav liststring", listString);
+        String listString = preferences.getString("favorites", "");
 
         String[] list = listString.split(";");
 
@@ -63,13 +61,17 @@ public class SharedPreferencesUtility {
         // loop through teams
         for (String t: list) {
 
-            Log.d("t first time", t);
+            if (TextUtils.isDigitsOnly("favorites")) {
 
-            favorites.add(Integer.parseInt(t));
+                Log.d("t first time", t);
 
-            Log.d("t after turn into int", t);
+                favorites.add(Integer.parseInt(t));
+
+                Log.d("t after turn into int", t);
 
             }
+
+        }
 
 
         return favorites;
@@ -77,7 +79,7 @@ public class SharedPreferencesUtility {
     }
 
 
-    public static void putFavoriteList(Activity activity, String favKey, List<Integer> list) {
+    public static void putFavoriteList(Activity activity, String key, List<Integer> list) {
 
         List<String> fav = new ArrayList<String>();
 
@@ -88,7 +90,7 @@ public class SharedPreferencesUtility {
 
         String listString = TextUtils.join(";", fav);
 
-        myPutString(activity, "ProfActData", listString);
+        myPutString(activity, "favorites", listString);
 
         Log.d("put fav", listString);
     }
