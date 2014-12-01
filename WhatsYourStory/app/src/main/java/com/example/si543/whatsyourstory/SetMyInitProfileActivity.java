@@ -7,6 +7,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.preference.PreferenceManager;
+
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 //Stephanie Wooten
 //Michelle Fiesta - SharedPreferences functionality 11/23
@@ -33,7 +36,7 @@ public class SetMyInitProfileActivity extends Activity {
 
     public void MyInitProfileNext(View view) {
         //Putting SharedPreferences for full name, title, company, and location
-        SharedPreferences sharedPreferences=getSharedPreferences("ProfActData", Context.MODE_MULTI_PROCESS);
+        SharedPreferences sharedPreferences=getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("fullname", edit_full_name.getText().toString());
         editor.putString("title", edit_current_title.getText().toString());

@@ -48,7 +48,7 @@ public class FavoritesActivity extends Activity {
             // adapters are what we use to associate the list variable and its contents with the list view
             ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
             //update the XML files referenced below
-            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favList, android.R.layout.simple_list_item_1, new String[] {"ProfActData"}, new int[] {android.R.id.text1});
+            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favList, android.R.layout.simple_list_item_1, new String[] {"favorites"}, new int[] {android.R.id.text1});
             favoriteUsersListView.setAdapter(simpleAdpt);
 
             // setOnItemClickListener tells the activity what to do when a list item is clicked on
@@ -69,7 +69,7 @@ public class FavoritesActivity extends Activity {
     private void initList() {
 
         //gets the favorite list
-        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "ProfActData");
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
         for(int f: favorites) {
 
@@ -79,7 +79,7 @@ public class FavoritesActivity extends Activity {
         }
     }
 
-    List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "ProfActData");
+    List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
     public void openFavoriteUserDetail(int position) {
 

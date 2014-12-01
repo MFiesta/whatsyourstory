@@ -23,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
+
 public class FeedActivity extends Activity {
 
 
@@ -55,7 +57,7 @@ public class FeedActivity extends Activity {
 
         mTitle = mDrawerTitle = "What's Your Story?";
 
-        initDataMessage();
+        //initDataMessage();
 
         //initDataFavorites();
 
@@ -204,8 +206,7 @@ public class FeedActivity extends Activity {
                 startActivity(intent);
                 break;
             case 4:
-                SharedPreferences sharedPreferences = getApplicationContext()
-                        .getSharedPreferences("ProfActData", Context.MODE_MULTI_PROCESS);
+                SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.apply();
