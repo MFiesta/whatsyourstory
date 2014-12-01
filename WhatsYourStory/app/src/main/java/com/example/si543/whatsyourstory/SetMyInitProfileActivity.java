@@ -31,6 +31,8 @@ import java.util.List;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
+
 //Stephanie Wooten
 //Michelle Fiesta - SharedPreferences functionality 11/23
 //Alice Rhee - Picture functionality 11/24
@@ -265,7 +267,7 @@ public class SetMyInitProfileActivity extends Activity {
 
     public void MyInitProfileNext(View view) {
         //Putting SharedPreferences for full name, title, company, and location
-        SharedPreferences sharedPreferences=getSharedPreferences("ProfActData", Context.MODE_MULTI_PROCESS);
+        SharedPreferences sharedPreferences=getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("fullname", edit_full_name.getText().toString());
         editor.putString("title", edit_current_title.getText().toString());

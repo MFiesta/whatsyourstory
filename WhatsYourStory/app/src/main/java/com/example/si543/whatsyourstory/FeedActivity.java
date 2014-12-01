@@ -22,6 +22,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
+
 public class FeedActivity extends Activity {
 
 
@@ -180,9 +182,6 @@ public class FeedActivity extends Activity {
     //display fragment view for selected nav drawer item
     private void displayView(int position) {
         Fragment fragment = null;
-        SharedPreferences sharedPreferences = getApplicationContext()
-                .getSharedPreferences("My Pref", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
         switch (position) {
             //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
             case 0:
@@ -204,9 +203,11 @@ public class FeedActivity extends Activity {
                 //startActivity(intent);
                 //break;
             case 3:
-                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.apply();
+                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
                 startActivity(logOut);
             default:
                 break;
