@@ -22,13 +22,6 @@
         android:orientation="vertical">
 
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/feedListView">
-
-        </ListView>
-
     </LinearLayout>
 
     </FrameLayout>
