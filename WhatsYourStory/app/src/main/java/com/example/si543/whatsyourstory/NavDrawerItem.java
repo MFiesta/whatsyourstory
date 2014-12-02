@@ -6,9 +6,6 @@ package com.example.si543.whatsyourstory;
 public class NavDrawerItem {
 
     private String title;
-    private String count = "0";
-    // boolean to set visiblity of the counter
-    private boolean isCounterVisible = false;
 
     public NavDrawerItem(){}
 
