@@ -48,7 +48,6 @@ public class NavDrawerListAdapter extends BaseAdapter {
         }
 
         TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
-        TextView txtCount = (TextView) convertView.findViewById(R.id.counter);
 
         txtTitle.setText(navDrawerItems.get(position).getTitle());
 
