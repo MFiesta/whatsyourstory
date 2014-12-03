@@ -4,6 +4,7 @@
     <color name ="bg_grey">#F2F2F2</color>
     <color name ="white">#FFFFFF</color>
     <color name="text_color">#424242</color>
+    <color name="dialog_bg">#4DD0E1</color>
 
 
 </resources>

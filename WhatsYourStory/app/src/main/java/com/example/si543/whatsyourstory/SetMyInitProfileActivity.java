@@ -13,6 +13,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -97,6 +98,7 @@ public class SetMyInitProfileActivity extends Activity {
 
         } );
 
+
         final AlertDialog dialog = builder.create();
 
         editPictureTextView = (TextView) findViewById(R.id.edit_picture);
@@ -108,6 +110,35 @@ public class SetMyInitProfileActivity extends Activity {
                 dialog.show();
             }
         });
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                showAlert();
+            }
+        }, 500);
+
+    }
+
+    public void showAlert () {
+        AlertDialog ad = new AlertDialog.Builder(this).create();
+        //LayoutInflater inflater = this.getLayoutInflater();
+        //ad.setView(inflater.inflate(R.layout.dialog_signup_layout, null));
+        ad.setCancelable(false); // This blocks the 'BACK' button
+
+        ad.setMessage("Are you a master entrepreneur? Do you have a knack for microbrewing? Add those skills here! ");
+
+
+        ad.setButton("OK", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+
+            }
+        });
+
+        ad.show();
+
     }
 
     @Override

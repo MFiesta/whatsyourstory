@@ -24,6 +24,7 @@
     <string name="action_next_interests">NEXT</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="sign_up_tagline">Find out more about life experiences you are interested in</string>
+    <string name="TextView01">1) find people whose stories and experiences interest you</string>
 
     <!-- Set My initial Profile -->
     <string name="action_my_init_profile_next">Next</string>
@@ -40,7 +41,7 @@
 
 
     <!-- Choose your interests -->
-    <string name="action_interests_next">See</string>
+    <string name="action_interests_next">FIND PEOPLE</string>
 
     <!-- Profileview -->
     <string name="username">Eytan Adar</string>
