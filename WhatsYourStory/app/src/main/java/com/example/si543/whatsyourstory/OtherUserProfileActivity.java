@@ -38,8 +38,6 @@ public class OtherUserProfileActivity extends Activity {
 
         initList();
 
-        initDataFavorites();
-
         Intent intent = getIntent();
         String message = intent.getStringExtra(HomeFragment.EXTRA_MESSAGE);
 
@@ -79,14 +77,6 @@ public class OtherUserProfileActivity extends Activity {
         startActivity(sendIntent);
     }
 
-    private void initDataFavorites() {
-
-        List<Integer> favorites = new ArrayList<Integer>();
-
-        SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
-
-    }
-
     //Adds profile to favorites list
     public void addFavorite(View view) {
 
@@ -94,10 +84,9 @@ public class OtherUserProfileActivity extends Activity {
 
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-
         favorites.add(id);
 
-        //right now it's adding the ids but we need the
+        Log.d("addFavorite", favorites.toString());
 
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
 

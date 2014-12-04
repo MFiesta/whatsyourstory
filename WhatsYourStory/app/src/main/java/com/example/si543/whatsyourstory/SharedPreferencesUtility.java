@@ -56,23 +56,22 @@ public class SharedPreferencesUtility {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         String listString = preferences.getString("favorites", DEFAULT);
 
-        Log.d("favorites list", listString);
+        Log.d("getFavoriteList listString", listString);
 
         if (listString.length() != 0) {
 
-            Log.d("t first time", listString);
+            Log.d("getFavoriteList if listString", listString);
 
-            String[] list = listString.split(";;");
+            String[] list = listString.split(";");
 
             // loop through teams
             for (String t: list) {
 
-                String[] favoriteNames = t.split(";");
-                String name = favoriteNames[0];
+                Log.d("getFavoriteList loop t", "" + t);
 
-                favorites.add(Integer.parseInt(name));
+                favorites.add(Integer.parseInt(t));
 
-            Log.d("t after turn into int", name);
+                Log.d("getFavoriteList loop name", t);
 
             }
 
@@ -88,7 +87,10 @@ public class SharedPreferencesUtility {
 
         List<String> fav = new ArrayList<String>();
 
-        for (Integer myInt: list) {
+        for (int myInt: list) {
+
+            Log.d("putFavoriteList loop myInt", "" + myInt);
+
             fav.add(Integer.toString(myInt));
         }
 
@@ -97,7 +99,7 @@ public class SharedPreferencesUtility {
 
         myPutString(activity, "favorites", listString);
 
-        Log.d("put fav", listString);
+        Log.d("putFavoriteList listString", listString);
     }
 
 

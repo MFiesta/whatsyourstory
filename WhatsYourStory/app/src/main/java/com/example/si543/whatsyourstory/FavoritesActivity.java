@@ -41,9 +41,9 @@ public class FavoritesActivity extends Activity {
             setContentView(R.layout.activity_favorites);
 
             // we call this initList function to fill in our list class variable with our favorites
-            initList();
-
             initFeedList();
+
+            initList();
 
             // adapters are what we use to associate the list variable and its contents with the list view
             ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
@@ -91,7 +91,13 @@ public class FavoritesActivity extends Activity {
         //gets the favorite list
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
+        if(favorites.size() == 0){
+            //set default textview as not visible - if this is true, show it, otherwise keep it not visible
+        }
+
         for(int f: favorites) {
+
+            Log.d("initList loop f", "" + f);
 
             FeedUserData user = values.get(f);
             favList.add(createFav("favorite", user.getName()));
