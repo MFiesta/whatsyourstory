@@ -82,16 +82,23 @@ public class OtherUserProfileActivity extends Activity {
 
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-        favorites.add(id);
+        //checks to see if favorite is already in user's favorites list
+        if(favorites.contains(id)){
+            Toast.makeText(getApplicationContext(), "This user is already in your favorites!",
+                    Toast.LENGTH_LONG).show();
+        }else {
+
+            favorites.add(id);
+
+            // toast message long
+
+            Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
+                    Toast.LENGTH_LONG).show();
+        };
 
         Log.d("addFavorite", favorites.toString());
 
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
-
-        // toast message long
-
-        Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
-                Toast.LENGTH_LONG).show();
 
     }
 
