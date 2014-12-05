@@ -10,14 +10,23 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.util.Log;
+import android.widget.Toast;
 
+
+import java.util.List;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class OtherUserProfileActivity extends Activity {
 
 
+    // the string variable we use for sending messages with intents - no idea what this means yet
+    public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
+
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
+
+    int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,10 +90,22 @@ public class OtherUserProfileActivity extends Activity {
 
     }
 
-//Takes user to favorites list
-    public void Favorite (View view){
-        Intent favoriteIntent = new Intent (this, FavoritesActivity.class);
-        startActivity(favoriteIntent);
+    //Adds profile to favorites list
+    public void addFavorite(View view) {
+
+        // add favorite
+
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
+        favorites.add(id);
+
+        SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
+
+        // toast message long
+
+        Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
+                Toast.LENGTH_LONG).show();
+
     }
 
 //Action Bar - star
