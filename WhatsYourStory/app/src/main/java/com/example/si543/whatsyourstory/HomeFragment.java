@@ -21,6 +21,8 @@ public class HomeFragment extends Fragment {
     // set adapter for feed's listview
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
+    int id;
+
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
