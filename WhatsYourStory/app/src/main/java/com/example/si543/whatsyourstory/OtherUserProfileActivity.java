@@ -6,17 +6,21 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.util.Log;
 import android.widget.Toast;
+import android.content.SharedPreferences;
 
-
-import java.util.List;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class OtherUserProfileActivity extends Activity {
 
@@ -36,9 +40,9 @@ public class OtherUserProfileActivity extends Activity {
         initList();
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(FeedActivity.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(HomeFragment.EXTRA_MESSAGE);
 
-        int id = (int) Long.parseLong(message);
+        id = (int) Long.parseLong(message);
 
         // Create the text view
 
@@ -63,25 +67,6 @@ public class OtherUserProfileActivity extends Activity {
 
         TextView textViewLocation = (TextView) findViewById(R.id.textView_OtherUserLocation);
         textViewLocation.setText(values.get(id).getLocation());
-        }
-
-        //Add item to adapter
-    private void initList() {
-        FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
-        values.add(user);
-        user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
-        values.add(user);
-        user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
-        values.add(user);
-        user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
-        values.add(user);
-        user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
-        values.add(user);
-        user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
-        values.add(user);
-        user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
-        values.add(user);
-
     }
 
 //Message Intent 
@@ -99,12 +84,33 @@ public class OtherUserProfileActivity extends Activity {
 
         favorites.add(id);
 
+        Log.d("addFavorite", favorites.toString());
+
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
 
         // toast message long
 
         Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
                 Toast.LENGTH_LONG).show();
+
+    }
+
+    //Add item to adapter
+    private void initList() {
+        FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
+        values.add(user);
+        user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
+        values.add(user);
+        user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
+        values.add(user);
+        user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
+        values.add(user);
+        user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
+        values.add(user);
+        user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
+        values.add(user);
+        user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
+        values.add(user);
 
     }
 
