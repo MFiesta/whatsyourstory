@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,8 @@ import java.util.List;
 // lets us use a list of string names for the message archive - code adapted from Teamivore
 
 public class SharedPreferencesUtility {
+
+    public static final String DEFAULT="";
 
     //method to getStringList for messages
     public static List<String> getStringList(Activity activity, String key) {
@@ -42,6 +45,64 @@ public class SharedPreferencesUtility {
 
     }
 
+    //method to getStringList for favorites
+    public static List<Integer> getFavoriteList(Activity activity, String key) {
+
+        //List<String> fav = new ArrayList<String>();
+
+        List<Integer> favorites = new ArrayList<Integer>();
+
+        // grab the preferences associated with messages activity
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        String listString = preferences.getString("favorites", DEFAULT);
+
+        Log.d("getFavoriteList listString", listString);
+
+        if (listString.length() != 0) {
+
+            Log.d("getFavoriteList if listString", listString);
+
+            String[] list = listString.split(";");
+
+            // loop through teams
+            for (String t: list) {
+
+                Log.d("getFavoriteList loop t", "" + t);
+
+                favorites.add(Integer.parseInt(t));
+
+                Log.d("getFavoriteList loop name", t);
+
+            }
+
+        }
+
+
+        return favorites;
+
+    }
+
+
+    public static void putFavoriteList(Activity activity, String key, List<Integer> list) {
+
+        List<String> fav = new ArrayList<String>();
+
+        for (int myInt: list) {
+
+            Log.d("putFavoriteList loop myInt", "" + myInt);
+
+            fav.add(Integer.toString(myInt));
+        }
+
+
+        String listString = TextUtils.join(";", fav);
+
+        myPutString(activity, "favorites", listString);
+
+        Log.d("putFavoriteList listString", listString);
+    }
+
+
     public static void putStringList(Activity activity, String key, List<String> list) {
 
         // for each string in the list, we want to add it to a new variable and separate the strings
@@ -56,6 +117,16 @@ public class SharedPreferencesUtility {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, listString);
+        editor.apply();
+
+    }
+
+    // utility that wraps together the sharedpreferences call into one method
+    private static void myPutString(Activity activity, String key, String value) {
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(key, value);
         editor.apply();
 
     }

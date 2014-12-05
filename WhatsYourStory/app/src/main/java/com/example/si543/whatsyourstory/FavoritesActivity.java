@@ -2,84 +2,128 @@ package com.example.si543.whatsyourstory;
 
 /**
  * Created by alicerhee on 10/25/14. Following Teamivore code
+ * Updated by Stephanie on 11/24 - Add SharedPrefs
  */
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FavoritesActivity extends Activity { //should it be extending ListActivity?
+public class FavoritesActivity extends Activity {
 
-        // the string variable we use for sending messages with intents - no idea what this means yet
-        public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
+    // the string variable we use for sending messages with intents - no idea what this means yet
+    public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
 
-        // a list class type must be used when using a list view
-        // list items are added to a list view programatically and not through xml
-        List<Map<String, String>> favoriteUsersList = new ArrayList<Map<String,String>>();
+    // a list class for the actual list of favorites pulled from the SharedPreferences Utility
+    List<Map<String, String>> favList = new ArrayList<Map<String,String>>();
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_favorites);
+    //list for the feed data, which contains data that will be used to populate the favorites list
+    ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
-            // we call this initList function to fill in our list class variable with our team names
-            initList();
+    //declaring the public integer "id" to be used to populate the favorites list by the ids associated
+    //with each individual feed user
+    public int id;
 
-            // adapters are what we use to associate the list variable and its contents with the list view
-            ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
-            //update the XML files referenced below
-            SimpleAdapter simpleAdpt = new SimpleAdapter(this, favoriteUsersList, android.R.layout.simple_list_item_1, new String[] {"favorited user"}, new int[] {android.R.id.text1});
-            favoriteUsersListView.setAdapter(simpleAdpt);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_favorites);
 
-            // setOnItemClickListener tells the activity what to do when a list item is clicked on
-            favoriteUsersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // we call this initList function to fill in our list class variable with our favorites
+        initFeedList();
 
-                public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
-                                        long id) {
-                    openFavoriteUserDetail(id);
-                }
-            });
+        initList();
 
-        }
+        // adapters are what we use to associate the list variable and its contents with the list view
+        ListView favoriteUsersListView = (ListView) findViewById(R.id.favoritesListView);
+        //update the XML files referenced below
+        SimpleAdapter simpleAdpt = new SimpleAdapter(this, favList, android.R.layout.simple_list_item_1, new String[] {"favorite"}, new int[] {android.R.id.text1});
+        favoriteUsersListView.setAdapter(simpleAdpt);
+
+        // setOnItemClickListener tells the activity what to do when a list item is clicked on
+        favoriteUsersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                                    long id) {
+                openFavoriteUserDetail(position);
+            }
+        });
+
+    }
+
+    //Add item to adapter
+    private void initFeedList() {
+        FeedUserData user = new FeedUserData("Eytan Adar", "Associate Professor at University of Michigan", "Ann Arbor", "adar_eytan.png");
+        values.add(user);
+        user = new FeedUserData("Alexis Peterka", "Senior UX Designer at CrowdCompass", "Ann Arbor", "alexis.png");
+        values.add(user);
+        user = new FeedUserData("Min-Chih (Tiffany) Liu", "Product Designer at Citrix", "San Francisco Bay Area", "tiffany_liu.png");
+        values.add(user);
+        user = new FeedUserData("Dimitriosyutaka Akimaru", "Founder at Sophus", "San Francisco, California", "dimitri.png");
+        values.add(user);
+        user = new FeedUserData("Ying Ying Liu", "User Experience Designer at YouTube", "San Francisco Bay Area", "ying_ying.png");
+        values.add(user);
+        user = new FeedUserData("Kevin Steigerwald", "Freelance Product Designer for Sproutworx, LLC", "San Francisco, Californiar", "kevin.png");
+        values.add(user);
+        user = new FeedUserData("Kelly Kowatch", "Program Manager, Service Engagement at University of Michigan", "Ann Arbor", "kelly_kowatch.png");
+        values.add(user);
+
+    }
+
     // openTeamDetail is called whenever a list item is clicked on
     // it calls for an intent that starts up the team detail activity and sends the team's id over
     // to the activity with the message variable declared at the top of the activity
 
-    //Alice says: how to figure out a way to make this a parameter so it all just doesn't go to Eytan?
-    public void openFavoriteUserDetail(long id) {
+    // initList simply adds our favorites to the list
+    private void initList() {
+
+        //gets the favorite list
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
+        if(favorites.size() == 0){
+            //set default textview as not visible - if this is true, show it, otherwise keep it not visible
+        }
+
+        for(int f: favorites) {
+
+            Log.d("initList loop f", "" + f);
+
+            FeedUserData user = values.get(f);
+            favList.add(createFav("favorite", user.getName()));
+
+            Log.d("favorite", user.getName());
+
+        }
+    }
+
+    public void openFavoriteUserDetail(int position) {
+
+        List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
+
+        int temp = favorites.get(position);
         Intent intent = new Intent(this, OtherUserProfileActivity.class);
-        String message = String.valueOf(id);
+        String message = String.valueOf(temp);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-        // initList simply adds our team names to the list variable
-        // in a real app, this would be where we query our database to retrieve the list of teams, but
-        // for the sake of our demo, this hard-coded data is sufficient
-        private void initList() {
-            favoriteUsersList.add(createTeam("favorited user", "Eytan Adar"));
-            favoriteUsersList.add(createTeam("favorited user", "Mark Newman"));
-            favoriteUsersList.add(createTeam("favorited user", "Joyojeet Pal"));
-            favoriteUsersList.add(createTeam("favorited user", "Steve Rogers"));
-            favoriteUsersList.add(createTeam("favorited user", "Deadpool"));
-            favoriteUsersList.add(createTeam("favorited user", "Batman"));
-            favoriteUsersList.add(createTeam("favorited user", "Aquaman"));
-        }
 
-        // this method helps us minimize the amount of repeat calls we need to make in initList to place
-        // a team name into out list. I (Alice) am keeping the variable 'team' for convenience.
-        private HashMap<String, String> createTeam(String key, String name) {
-            HashMap<String, String> team = new HashMap<String, String>();
-            team.put(key, name);
-            return team;
-        }
-
+    // this method helps us minimize the amount of repeat calls we need to make in initList to place
+    // a team name into out list.
+    private HashMap<String, String> createFav(String key, String name) {
+        HashMap<String, String> fav = new HashMap<String, String>();
+        fav.put(key, name);
+        return fav;
     }
+
+}
