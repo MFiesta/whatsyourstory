@@ -97,10 +97,7 @@
     <string name="action_contact">Contact this person</string>
 
     <!-- Favorites -->
-    <string-array name="favorites_list">
-        <item>Eytan Adar</item>
-        <item>Captain America</item>
-    </string-array>
+    <string name="myFavorites">My Favorites</string>
 
     <!-- Logout Dialog -->
     <string name="cancel">Cancel</string>

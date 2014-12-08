@@ -4,6 +4,25 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+        android:background="#4DD0E1">
+
+        <TextView
+            android:id="@+id/FeedDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myFavorites"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
 
     <!-- Default TextView for FavoritesActivity.java -->
     <TextView
