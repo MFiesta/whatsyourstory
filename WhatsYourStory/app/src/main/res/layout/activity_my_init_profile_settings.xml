@@ -168,6 +168,11 @@
         android:textCursorDrawable="@drawable/color_cursor"
         android:paddingLeft="20dp"/>
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#ffe8e8e8" />
+
     <EditText
         android:id="@+id/edit_phone_number"
         android:layout_below="@+id/editText5"
