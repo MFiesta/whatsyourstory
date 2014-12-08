@@ -3,14 +3,13 @@ package com.example.si543.whatsyourstory;
 //Alice Rhee
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 
 
@@ -27,43 +26,23 @@ public class SignUpActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        username = (EditText)findViewById(R.id.choose_your_username);
-        password = (EditText)findViewById(R.id.choose_your_password);
+        username = (EditText) findViewById(R.id.choose_your_username);
+        password = (EditText) findViewById(R.id.choose_your_password);
 
-
+        final SignUpTutorialDialog sampleDialog = new SignUpTutorialDialog(this, ""
+                );
+        sampleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                showAlert();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                sampleDialog.show();
             }
-        }, 500);
-
+        }, 400);
     }
 
 
 
 
-    public void showAlert () {
-        AlertDialog ad = new AlertDialog.Builder(this).create();
-        //LayoutInflater inflater = this.getLayoutInflater();
-        //ad.setView(inflater.inflate(R.layout.dialog_signup_layout, null));
-        ad.setCancelable(false); // This blocks the 'BACK' button
-        ad.setTitle("We’re glad you’re joining us.");
-        ad.setMessage("Find people whose stories and experiences interest you, and connect with them through the app");
-
-
-        ad.setButton("OK", new DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.dismiss();
-
-            }
-        });
-
-        ad.show();
-
-    }
 
     public void SignUpNext(View view) {
             //method called onClicking the Next button
