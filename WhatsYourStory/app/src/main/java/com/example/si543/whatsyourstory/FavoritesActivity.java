@@ -7,13 +7,11 @@ package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.util.ArrayList;
