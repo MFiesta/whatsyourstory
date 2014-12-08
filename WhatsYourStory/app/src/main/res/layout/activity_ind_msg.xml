@@ -23,14 +23,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Welcome to What\'s Your Story!"
             android:id="@+id/msgFromWhatsYourStory_welcome"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
             android:textColor="@color/text_color"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/welcome_message"
         android:id="@+id/msgFromWhatsYourStory"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"

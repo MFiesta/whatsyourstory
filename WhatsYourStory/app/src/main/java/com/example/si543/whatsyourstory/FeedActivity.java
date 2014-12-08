@@ -235,6 +235,8 @@ public class FeedActivity extends Activity {
 
         List<String> msgList = new ArrayList<String>();
 
+        msgList.add("Message From: What's Your Story");
+
         SharedPreferencesUtility.putStringList(this, "messages",  msgList);
 
     }

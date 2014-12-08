@@ -1,6 +1,6 @@
 package com.example.si543.whatsyourstory;
 
-//Alice Rhee & Stephanie Wooten (addFavorite method)
+//Alice Rhee & Stephanie Wooten (addFavorite and Message methods)
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,11 +8,10 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.SharedPreferences;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -67,7 +66,11 @@ public class OtherUserProfileActivity extends Activity {
 
 //Message Intent 
    public void Message (View view){
-       //Add message activity intents here
+       //calls sms messaging on phone
+       Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+       sendIntent.putExtra("address", "555-555-5555");
+       sendIntent.setType("vnd.android-dir/mms-sms");
+       startActivity(sendIntent);
 
     }
 
@@ -92,7 +95,7 @@ public class OtherUserProfileActivity extends Activity {
 
             Toast.makeText(getApplicationContext(), "This member has been added to your favorites!",
                     Toast.LENGTH_LONG).show();
-        };
+        }
 
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
 
