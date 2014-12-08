@@ -35,7 +35,7 @@ public class OtherUserProfileActivity extends Activity {
         initList();
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(HomeFragment.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(FeedFragment.EXTRA_MESSAGE);
 
         id = (int) Long.parseLong(message);
 

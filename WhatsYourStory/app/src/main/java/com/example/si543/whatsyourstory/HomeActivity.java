@@ -5,7 +5,6 @@ package com.example.si543.whatsyourstory;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -24,7 +23,7 @@ import java.util.List;
 
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
-public class FeedActivity extends Activity {
+public class HomeActivity extends Activity {
 
 
     private DrawerLayout mDrawerLayout;
@@ -185,21 +184,21 @@ public class FeedActivity extends Activity {
         switch (position) {
             //If user selects "Home" on nav drawer, it closes drawer and takes them to feed
             case 0:
-                fragment = new HomeFragment();
+                fragment = new FeedFragment();
                 break;
             //If user selects "My Profile" - Takes to My Profile Activity
             case 1:
-                Intent editProfile = new Intent(FeedActivity.this, MyProfileActivity.class);
+                Intent editProfile = new Intent(HomeActivity.this, MyProfileActivity.class);
                 startActivity(editProfile);
                 break;
             //If user selects "Messages" - Takes user to Message archive
             case 2:
-                Intent viewMsgs = new Intent(FeedActivity.this, MessagesListActivity.class);
+                Intent viewMsgs = new Intent(HomeActivity.this, MessagesListActivity.class);
                 startActivity(viewMsgs);
                 break;
             //If user selects "Favorites" - takes them to list of favorited contacts
             case 3:
-                Intent intent = new Intent(FeedActivity.this, FavoritesActivity.class);
+                Intent intent = new Intent(HomeActivity.this, FavoritesActivity.class);
                 startActivity(intent);
                 break;
             case 4:
@@ -207,7 +206,7 @@ public class FeedActivity extends Activity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.apply();
-                Intent logOut = new Intent(FeedActivity.this, LogInActivity.class);
+                Intent logOut = new Intent(HomeActivity.this, LogInActivity.class);
                 startActivity(logOut);
             default:
                 break;
@@ -225,7 +224,7 @@ public class FeedActivity extends Activity {
             mDrawerLayout.closeDrawer(mDrawerList);
         } else {
             //error in creating fragment
-            Log.e("FeedActivity", "Error in creating fragment");
+            Log.e("HomeActivity", "Error in creating fragment");
         }
 
     }

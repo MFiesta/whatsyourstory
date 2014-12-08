@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FeedActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -51,7 +51,7 @@
         <activity
             android:name=".MyProfileActivity"
             android:label="My Profile"
-            android:parentActivityName=".FeedActivity" >
+            android:parentActivityName=".HomeActivity" >
 
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -62,7 +62,7 @@
         <activity
             android:name=".MessagesListActivity"
             android:label="Message Archive"
-            android:parentActivityName=".FeedActivity" >
+            android:parentActivityName=".HomeActivity" >
 
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -106,7 +106,7 @@
         <activity
             android:name=".OtherUserProfileActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".FeedActivity" >
+            android:parentActivityName=".HomeActivity" >
 
             <!-- A child of the main activity -->
             <!-- Parent activity meta-data to support 4.0 and lower -->

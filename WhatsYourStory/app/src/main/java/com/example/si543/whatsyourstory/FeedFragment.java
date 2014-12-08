@@ -15,8 +15,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class HomeFragment extends Fragment {
-    public HomeFragment(){}
+public class FeedFragment extends Fragment {
+    public FeedFragment(){}
 
     // set adapter for feed's listview
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();

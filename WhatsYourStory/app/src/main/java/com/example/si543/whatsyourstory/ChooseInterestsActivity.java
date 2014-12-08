@@ -32,9 +32,9 @@ public class ChooseInterestsActivity extends Activity {
 
 
     public void interestsNext(View view) {
-        Intent ChooseInterestsActivity = new Intent(this, FeedActivity.class);
+        Intent ChooseInterestsActivity = new Intent(this, HomeActivity.class);
         startActivity(ChooseInterestsActivity);
     }
 
-    //Takes user to FeedActivity after they select their Interests
+    //Takes user to NavDrawerActivity after they select their Interests
 }

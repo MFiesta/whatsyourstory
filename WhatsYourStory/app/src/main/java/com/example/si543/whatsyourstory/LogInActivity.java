@@ -6,11 +6,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
@@ -69,7 +65,7 @@ public class LogInActivity extends Activity {
                         //Checks whether the preferences contains a preference. Returns true if the preference exists in the preferences, otherwise false.
 
                         // Starting the next Activity
-                        Intent i = new Intent(getApplicationContext(), FeedActivity.class);
+                        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                         startActivity(i);
 
                         SharedPreferences sharedPreferences=getSharedPreferences("CheckLogin", Context.MODE_MULTI_PROCESS);
@@ -104,7 +100,7 @@ public class LogInActivity extends Activity {
     }
 
     public void LogIn(View view) {
-        Intent LogInActivity = new Intent(this, FeedActivity.class);
+        Intent LogInActivity = new Intent(this, HomeActivity.class);
         startActivity(LogInActivity);
     }
 
