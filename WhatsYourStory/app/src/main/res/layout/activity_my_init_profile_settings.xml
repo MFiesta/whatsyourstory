@@ -168,6 +168,26 @@
         android:textCursorDrawable="@drawable/color_cursor"
         android:paddingLeft="20dp"/>
 
+    <EditText
+        android:id="@+id/edit_phone_number"
+        android:layout_below="@+id/editText5"
+        android:layout_alignLeft="@+id/edit_current_location"
+        android:layout_alignStart="@+id/edit_current_location"
+        android:layout_alignRight="@+id/edit_current_location"
+        android:layout_alignEnd="@+id/edit_current_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/prompt_phone_number"
+        android:textColorHint="#a8a8a8"
+        android:ems="10"
+        android:padding="13dp"
+        android:inputType="text"
+        android:textSize="@dimen/edit_text_account"
+        android:background="@drawable/text_rounded_corner_bottom"
+        android:autoText="false"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:paddingLeft="20dp"/>
+
     <Button
         android:id="@+id/MyInitProfileNext"
         android:layout_below="@+id/edit_current_location"

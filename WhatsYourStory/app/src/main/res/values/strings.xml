@@ -32,6 +32,7 @@
     <string name="prompt_name">Your Full Name</string>
     <string name="prompt_company">Enter Your Current Company</string>
     <string name="prompt_location">Current Location (City, State/Country)</string>
+    <string name="prompt_phone_number">Your Phone Number</string>
     <string name="init_profile_title">About You</string>
     <string name="init_profile_tagline">Help us match with people you are interested in</string>
     <string name="action_next_myInitProfile">NEXT</string>
