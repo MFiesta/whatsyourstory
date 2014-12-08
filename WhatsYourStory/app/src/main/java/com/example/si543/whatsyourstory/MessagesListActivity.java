@@ -34,15 +34,6 @@ public class MessagesListActivity extends Activity{
         setContentView(R.layout.activity_messagelist);
 
 
-        /**
-         * Check login method wil check user login status
-         * If false it will redirect user to login page, else won't do anything
-         * */
-    //public void checkLogin(){
-        // Check login status
-        //if(!this.isLoggedIn()){
-        //this would call SharedPrefs with the Messages API 
-
         // we call this initList function to fill in our list class variable with our messages
         initList();
 
