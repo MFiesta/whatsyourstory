@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 /**
- * Created by Rogue on 12/8/14.
+ * Created by Stephanie Wooten on 12/8/14.
  */
 public class MessageAlertDialog extends DialogFragment {
 
