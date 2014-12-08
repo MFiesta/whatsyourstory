@@ -6,7 +6,6 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 /**
  * Created by Rogue on 12/8/14.
@@ -17,7 +16,8 @@ public class MessageAlertDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(("Message Dialog"));
+
+        builder.setTitle(("Send Message"));
         builder.setMessage("This will take you outside of this app to your phone's texting feature. Is that okay?");
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
