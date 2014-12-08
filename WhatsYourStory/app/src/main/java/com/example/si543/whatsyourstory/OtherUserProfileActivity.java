@@ -1,14 +1,12 @@
 package com.example.si543.whatsyourstory;
 
-//Alice Rhee
+//Alice Rhee & Stephanie Wooten (addFavorite method)
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,9 +16,7 @@ import android.content.SharedPreferences;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class OtherUserProfileActivity extends Activity {
 
@@ -78,25 +74,25 @@ public class OtherUserProfileActivity extends Activity {
     //Adds profile to favorites list
     public void addFavorite(View view) {
 
-        // add favorite
+        // get favorites list from SharedPreferences
 
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
         //checks to see if favorite is already in user's favorites list
         if(favorites.contains(id)){
-            Toast.makeText(getApplicationContext(), "This user is already in your favorites!",
+            Toast.makeText(getApplicationContext(), "This member is already in your favorites!",
                     Toast.LENGTH_LONG).show();
         }else {
+
+            //add id from the specific user profile to the favorites list
 
             favorites.add(id);
 
             // toast message long
 
-            Toast.makeText(getApplicationContext(), "This user has been added to your favorites!",
+            Toast.makeText(getApplicationContext(), "This member has been added to your favorites!",
                     Toast.LENGTH_LONG).show();
         };
-
-        Log.d("addFavorite", favorites.toString());
 
         SharedPreferencesUtility.putFavoriteList(this, "favorites", favorites);
 
@@ -121,7 +117,7 @@ public class OtherUserProfileActivity extends Activity {
 
     }
 
-//Action Bar - star
+//Action Bar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -129,15 +125,5 @@ public class OtherUserProfileActivity extends Activity {
         return true;
     }
 
-    //@Override
-    //public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        //int id = item.getItemId();
-        //if (id == R.id.action_settings) {
-        //    return true;
-        //}
-        //return super.onOptionsItemSelected(item);
     }
 
