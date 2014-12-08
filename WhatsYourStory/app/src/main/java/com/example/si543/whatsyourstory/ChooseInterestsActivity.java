@@ -36,5 +36,5 @@ public class ChooseInterestsActivity extends Activity {
         startActivity(ChooseInterestsActivity);
     }
 
-    //Takes user to NavDrawerActivity after they select their Interests
+    //Takes user to HomeActivity after they select their Interests
 }

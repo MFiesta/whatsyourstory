@@ -104,7 +104,7 @@ public class LogInActivity extends Activity {
         startActivity(LogInActivity);
     }
 
-    //LogIn if user already has un, password; Takes user to FeedActivity
+    //LogIn if user already has un, password; Takes user to HomeActivity
 
     public void SignUp(View view){
         Intent SignUpActivity = new Intent(this, SignUpActivity.class);
