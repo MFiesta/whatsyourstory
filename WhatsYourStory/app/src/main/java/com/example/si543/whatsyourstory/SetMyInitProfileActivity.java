@@ -16,6 +16,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -110,36 +111,19 @@ public class SetMyInitProfileActivity extends Activity {
                 dialog.show();
             }
         });
+
+        //Tutorial Dialog
+        final SetMyInitTutorialDialog sampleDialog = new SetMyInitTutorialDialog(this, "");
+        sampleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Delay dialog
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                showAlert();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                sampleDialog.show();
             }
-        }, 500);
-
+        }, 400);
     }
 
-    public void showAlert () {
-        AlertDialog ad = new AlertDialog.Builder(this).create();
-        //LayoutInflater inflater = this.getLayoutInflater();
-        //ad.setView(inflater.inflate(R.layout.dialog_signup_layout, null));
-        ad.setCancelable(false); // This blocks the 'BACK' button
-
-        ad.setMessage("Are you a master entrepreneur? Do you have a knack for microbrewing? Add those skills here! ");
-
-
-        ad.setButton("OK", new DialogInterface.OnClickListener() {
-
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.dismiss();
-
-            }
-        });
-
-        ad.show();
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

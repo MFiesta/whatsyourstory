@@ -29,9 +29,10 @@ public class SignUpActivity extends Activity {
         username = (EditText) findViewById(R.id.choose_your_username);
         password = (EditText) findViewById(R.id.choose_your_password);
 
-        final SignUpTutorialDialog sampleDialog = new SignUpTutorialDialog(this, ""
-                );
+        //Tutorial Dialog
+        final SignUpTutorialDialog sampleDialog = new SignUpTutorialDialog(this, "");
         sampleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Delay dialog
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
