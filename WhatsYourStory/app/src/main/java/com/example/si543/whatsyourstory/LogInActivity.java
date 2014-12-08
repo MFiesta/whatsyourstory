@@ -15,12 +15,6 @@ public class LogInActivity extends Activity {
 
     private static final String IS_LOGGEDIN = "IsLoggedIn";
 
-    // User name (make variable public to access from outside)
-    public static final String username = "username";
-
-    // Email address (make variable public to access from outside)
-    public static final String password = "password";
-
     // Email, password edittext
     EditText usernameinput, passwordinput;
 
@@ -55,14 +49,6 @@ public class LogInActivity extends Activity {
                     //SharedPreferences sharedPreferences=getSharedPreferences("CheckSignUp", Context.MODE_PRIVATE);
 
                     if(username.equals("admin") && password.equals("admin")){
-
-                        //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
-                        //if (sharedpreferences.contains(name)) == true && (sharedpreferences.contains(pass) == true)
-
-                        //TODO: Figure out how to make this check info from local SharedPrefs from Sign Up
-                        //TODO: requestfocus?
-                        //Try contains(String key) Accorting to the Javadocs,
-                        //Checks whether the preferences contains a preference. Returns true if the preference exists in the preferences, otherwise false.
 
                         // Starting the next Activity
                         Intent i = new Intent(getApplicationContext(), HomeActivity.class);
