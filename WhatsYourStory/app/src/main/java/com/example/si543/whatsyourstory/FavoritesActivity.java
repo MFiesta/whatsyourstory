@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,6 +35,8 @@ public class FavoritesActivity extends Activity {
     //declaring the public integer "id" to be used to populate the favorites list by the ids associated
     //with each individual feed user
     public int id;
+
+    TextView textViewName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,20 +94,20 @@ public class FavoritesActivity extends Activity {
         //gets the favorite list
         List<Integer> favorites = SharedPreferencesUtility.getFavoriteList(this, "favorites");
 
-        if(favorites.size() == 0){
-            //set default textview as not visible - if this is true, show it, otherwise keep it not visible
+        //set default TextView as not visible - if this is true, show it, otherwise keep it not visible
+        if (favorites.size() == 0) {
+            textViewName = (TextView) findViewById(R.id.favoritesTextView);
+            textViewName.setText("You have no favorites yet!");
+        } else {
+
+            for (int f : favorites) {
+
+                FeedUserData user = values.get(f);
+                favList.add(createFav("favorite", user.getName()));
+
+            }
         }
 
-        for(int f: favorites) {
-
-            Log.d("initList loop f", "" + f);
-
-            FeedUserData user = values.get(f);
-            favList.add(createFav("favorite", user.getName()));
-
-            Log.d("favorite", user.getName());
-
-        }
     }
 
     public void openFavoriteUserDetail(int position) {

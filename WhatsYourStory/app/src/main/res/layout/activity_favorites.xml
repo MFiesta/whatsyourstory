@@ -4,8 +4,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ListView doesn't allow for populating within XML. To populate a list view, you must use an
-         adapter class such as the one we use in FavoritesActivity.java -->
+
+    <!-- Default TextView for FavoritesActivity.java -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/favoritesTextView"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingTop="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- ListView for FavoritesActivity.java -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
