@@ -2,7 +2,7 @@ package com.example.si543.whatsyourstory;
 
 /**
  * Created by alicerhee on 10/25/14. Following Teamivore code
- * Updated by Stephanie on 11/24 - Add SharedPrefs
+ * Updated by Stephanie on 11/24 - Add SharedPrefs (with help from Alice)
  */
 
 import android.app.Activity;
