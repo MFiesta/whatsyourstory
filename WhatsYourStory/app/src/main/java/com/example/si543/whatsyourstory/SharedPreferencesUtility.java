@@ -17,8 +17,6 @@ import java.util.List;
 
 public class SharedPreferencesUtility {
 
-    public static final String DEFAULT="";
-
     //method to getStringList for messages
     public static List<String> getStringList(Activity activity, String key) {
 
@@ -54,24 +52,16 @@ public class SharedPreferencesUtility {
 
         // grab the preferences associated with messages activity
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);
-        String listString = preferences.getString("favorites", DEFAULT);
-
-        Log.d("getFavoriteList listString", listString);
+        String listString = preferences.getString("favorites", "");
 
         if (listString.length() != 0) {
-
-            Log.d("getFavoriteList if listString", listString);
 
             String[] list = listString.split(";");
 
             // loop through teams
             for (String t: list) {
 
-                Log.d("getFavoriteList loop t", "" + t);
-
                 favorites.add(Integer.parseInt(t));
-
-                Log.d("getFavoriteList loop name", t);
 
             }
 
