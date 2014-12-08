@@ -12,7 +12,7 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 /**
  * Created by chiahuihsieh on 10/27/14
- * Modified by Stephanie Wooten 11/14
+ * Modified by Stephanie Wooten 11/14 - changed to DefaultSharedPreferences
  * Modified by Michelle Fiesta 11/23
  */
 public class MyProfileActivity extends Activity {
