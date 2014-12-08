@@ -27,9 +27,6 @@ public class OtherUserProfileActivity extends Activity {
 
     int id;
 
-    // Alert Dialog Manager
-    AlertDialogManager msgAlert = new AlertDialogManager();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,14 +65,10 @@ public class OtherUserProfileActivity extends Activity {
     }
 
 //Message Intent 
-   public void Message (View view){
+   public void messageDialog (View view){
 
-       msgAlert.showAlertDialog(OtherUserProfileActivity.this, "This will take you outside of this app to your default texting app.", "Is that okay?", true);
-       //calls sms messaging on phone
-       Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-       sendIntent.putExtra("address", "555-555-5555");
-       sendIntent.setType("vnd.android-dir/mms-sms");
-       startActivity(sendIntent);
+       MessageAlertDialog myAlert = new MessageAlertDialog();
+       myAlert.show(getFragmentManager(), "Message Alert");
 
     }
 

@@ -99,9 +99,9 @@
     <!-- Favorites -->
     <string name="myFavorites">My Favorites</string>
 
-    <!-- Logout Dialog -->
+    <!-- Message Dialog -->
     <string name="cancel">Cancel</string>
-    <string name="logout">Yes, logout</string>
+    <string name="send_message">Go to texting app</string>
 
     <!--Choose Skills-->
     <string name="chooseskills">Choose your skills</string>

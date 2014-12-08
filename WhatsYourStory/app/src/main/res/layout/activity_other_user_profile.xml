@@ -118,7 +118,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="22dp"
                 android:layout_marginRight="10dp"
-                android:onClick="Message"
+                android:onClick="messageDialog"
                 android:layout_gravity="center"
                 />
 
