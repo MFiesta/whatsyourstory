@@ -17,14 +17,17 @@ public class MessageAlertDialog extends DialogFragment {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+        //creates MessageAlert box warning that user is going to leave the app for SMS messaging
         builder.setTitle(("Send Message"));
         builder.setMessage("This will take you outside of this app to your phone's texting feature. Is that okay?");
+        //allows user to hit "Cancel" which will take them back to the OtherUserProfile
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
 
             }
         });
+        //user says it's okay to go to SMS messaging - takes them to SMS messaging
         builder.setPositiveButton(R.string.send_message, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {

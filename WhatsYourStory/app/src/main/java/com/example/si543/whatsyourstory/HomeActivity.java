@@ -198,6 +198,7 @@ public class HomeActivity extends Activity {
                 Intent intent = new Intent(HomeActivity.this, FavoritesActivity.class);
                 startActivity(intent);
                 break;
+            //clears shared preferences and takes user back to LogInActivity - LogOut
             case 4:
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();

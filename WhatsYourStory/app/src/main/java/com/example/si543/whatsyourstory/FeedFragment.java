@@ -21,6 +21,7 @@ public class FeedFragment extends Fragment {
     // set adapter for feed's listview
     ArrayList<FeedUserData> values = new ArrayList<FeedUserData>();
 
+    //declare id for use with favorites list
     int id;
 
     public final static String EXTRA_MESSAGE = "com.example.si543.whatsyourstory.MESSAGE";
