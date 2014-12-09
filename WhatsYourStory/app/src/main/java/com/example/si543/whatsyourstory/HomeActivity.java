@@ -125,9 +125,6 @@ public class HomeActivity extends Activity {
         }
         //Handle action bar actions click
         switch (item.getItemId()) {
-            //case R.id.action_settings:
-            //    NavUtils.navigateUpFromSameTask(this);
-            //    return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
