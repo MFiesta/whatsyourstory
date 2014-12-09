@@ -64,7 +64,8 @@ public class OtherUserProfileActivity extends Activity {
         textViewLocation.setText(values.get(id).getLocation());
     }
 
-//Message Intent 
+    //Message Intent - when they select the Message button it pops-up the MessageAlertDialog to verify
+    //they're okay going to SMS messaging
    public void messageDialog (View view){
 
        MessageAlertDialog myAlert = new MessageAlertDialog();
