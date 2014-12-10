@@ -68,12 +68,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button1_prog_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Java", "Java, ");
+                editor.putString("JavaInt", "Java, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Java", "");
+                editor.putString("JavaInt", "");
                 editor.apply();
             }
         }
@@ -81,12 +81,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button2_prog_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("C++","C++, ");
+                editor.putString("C++Int","C++, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("C++", "");
+                editor.putString("C++Int", "");
                 editor.apply();
             }
         }
@@ -94,12 +94,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button3_prog_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Python", "Python, ");
+                editor.putString("PythonInt", "Python, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Python", "");
+                editor.putString("PythonInt", "");
                 editor.apply();
             }
         }
@@ -107,12 +107,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button4_prog_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Ruby", "Ruby, ");
+                editor.putString("RubyInt", "Ruby, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Ruby", "");
+                editor.putString("RubyInt", "");
                 editor.apply();
             }
         }
@@ -120,12 +120,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button5_prog_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Javascript", "Javascript, ");
+                editor.putString("JavascriptInt", "Javascript, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Javascript", "");
+                editor.putString("JavascriptInt", "");
                 editor.apply();
             }
         }
@@ -133,12 +133,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button1_des_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("UX Design", "UX Design, ");
+                editor.putString("UX DesignInt", "UX Design, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("UX Design", "");
+                editor.putString("UX DesignInt", "");
                 editor.apply();
             }
         }
@@ -146,12 +146,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button2_des_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Web Design", "Web Design, ");
+                editor.putString("Web DesignInt", "Web Design, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Web Design", "");
+                editor.putString("Web DesignInt", "");
                 editor.apply();
             }
         }
@@ -159,12 +159,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button3_des_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("HTML", "HTML, ");
+                editor.putString("HTMLInt", "HTML, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("HTML", "");
+                editor.putString("HTMLInt", "");
                 editor.apply();
             }
         }
@@ -172,12 +172,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button4_des_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("CSS", "CSS, ");
+                editor.putString("CSSInt", "CSS, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("CSS", "");
+                editor.putString("CSSInt", "");
                 editor.apply();
             }
         }
@@ -185,12 +185,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button5_des_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Illustrator", "Illustrator, ");
+                editor.putString("IllustratorInt", "Illustrator, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Illustrator", "");
+                editor.putString("IllustratorInt", "");
                 editor.apply();
             }
         }
@@ -198,12 +198,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button1_hob_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Dance", "Dance, ");
+                editor.putString("DanceInt", "Dance, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Dance", "");
+                editor.putString("DanceInt", "");
                 editor.apply();
             }
         }
@@ -211,12 +211,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button2_hob_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Jogging", "Jogging, ");
+                editor.putString("JoggingInt", "Jogging, ");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Jogging", "");
+                editor.putString("JoggingInt", "");
                 editor.apply();
             }
         }
@@ -224,12 +224,12 @@ public class ChooseInterestsActivity extends Activity {
             if (button3_des_interests.isChecked()) {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Food", "Food");
+                editor.putString("FoodInt", "Food");
                 editor.apply();
             } else {
                 SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Food", "");
+                editor.putString("FoodInt", "");
                 editor.apply();
             }
         }
