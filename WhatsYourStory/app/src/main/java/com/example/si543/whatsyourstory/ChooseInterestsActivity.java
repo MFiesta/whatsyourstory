@@ -16,7 +16,7 @@ public class ChooseInterestsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_interests);
-
+        //Tutorial Dialog
         final ChooseInterestsTutorialDialog sampleDialog = new ChooseInterestsTutorialDialog(this, "");
         sampleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //Delay dialog

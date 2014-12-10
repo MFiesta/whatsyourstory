@@ -15,7 +15,7 @@ public class ChooseSkillsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_skills);
-
+        //Tutorial Dialog
         final ChooseSkillsTutorialDialog sampleDialog = new ChooseSkillsTutorialDialog(this, "");
         sampleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //Delay dialog
