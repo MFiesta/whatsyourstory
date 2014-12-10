@@ -1,6 +1,7 @@
 package com.example.si543.whatsyourstory;
 
 //Alice Rhee & Stephanie Wooten (addFavorite and Message methods)
+//Chia Hui (retrieve User Data including Picture from Feed List)
 
 import android.app.Activity;
 import android.content.Intent;

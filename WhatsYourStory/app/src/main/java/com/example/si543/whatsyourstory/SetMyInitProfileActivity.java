@@ -32,6 +32,7 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 //Stephanie Wooten
 //Michelle Fiesta - SharedPreferences functionality 11/23
 //Alice Rhee - Picture functionality 11/24
+//Chia Hui(Add Tutorial Dialog)
 
 public class SetMyInitProfileActivity extends Activity {
 

@@ -1,6 +1,7 @@
 package com.example.si543.whatsyourstory;
 
 //Alice Rhee
+//Chia Hui(Add Tutorial Dialog)
 
 import android.app.Activity;
 import android.content.Context;
