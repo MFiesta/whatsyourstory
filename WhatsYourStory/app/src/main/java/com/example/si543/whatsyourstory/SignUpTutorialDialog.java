@@ -32,7 +32,7 @@ public class SignUpTutorialDialog extends Dialog {
         super.onCreate(savedInstanceState);
 
         //dialog content - Layout, Title, Message, Button
-        setContentView(R.layout.dialog_layout);
+        setContentView(R.layout.dialog_tutorial_layout);
         TextView textDialogTitle = (TextView) findViewById(R.id.dialog_title);
         textDialogTitle.setText("Welcome!");
         TextView textDialogMessage = (TextView) findViewById(R.id.dialog_message);
