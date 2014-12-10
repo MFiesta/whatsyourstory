@@ -47,7 +47,10 @@ public class SignUpActivity extends Activity {
 
 
     public void SignUpNext(View view) {
-            //method called onClicking the Next button
+        Intent SetProfileActivity = new Intent(this, SetMyInitProfileActivity.class);
+        startActivity(SetProfileActivity);
+
+        //method called onClicking the Next button
             //input username, password, confirm password, email info
         //would concatenate the email with the username and password in real life
         // TODO: dialog box when password inputs do not match up?
@@ -62,8 +65,7 @@ public class SignUpActivity extends Activity {
         editor.putString(pass, p);
         editor.apply();
 
-        Intent SetProfileActivity = new Intent(this, SetMyInitProfileActivity.class);
-        startActivity(SetProfileActivity);
+
         finish(); //finishes the activity/destroys it
         }
 }

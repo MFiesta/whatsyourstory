@@ -33,7 +33,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
     public Object getItem(int position) {
         return navDrawerItems.get(position);
     }
-    //gets the ID for the item for the list
+    //gets the ID for getthe item for the list
     @Override
     public long getItemId(int position) {
         return position;
