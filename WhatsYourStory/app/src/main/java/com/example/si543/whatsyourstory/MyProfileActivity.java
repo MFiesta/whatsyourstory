@@ -1,7 +1,6 @@
 package com.example.si543.whatsyourstory;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,31 +16,34 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
  */
 public class MyProfileActivity extends Activity {
 
-    public static final String DEFAULT="N/A";
-
-    TextView fullnameTextView, titleTextView, companyTextView, locationTextView;
+    TextView fullnameTextView, titleTextView, companyTextView, locationTextView, userSkillsTextView, userInterestsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_profile);
 
-
         fullnameTextView = (TextView) findViewById(R.id.userFullNameSharedPrefs);
         titleTextView = (TextView) findViewById(R.id.userTitleSharedPrefs);
         companyTextView = (TextView) findViewById(R.id.userCompanySharedPrefs);
         locationTextView = (TextView) findViewById(R.id.userLocationSharedPrefs);
+        userSkillsTextView = (TextView) findViewById(R.id.userSkillsSharedPrefs);
+        userInterestsTextView = (TextView) findViewById(R.id.userInterestsSharedPrefs);
 
         SharedPreferences sharedPreferences=getDefaultSharedPreferences(this);
-        String fullname=sharedPreferences.getString("fullname", DEFAULT);
-        String title=sharedPreferences.getString("title", DEFAULT);
-        String company=sharedPreferences.getString("company", DEFAULT);
-        String location=sharedPreferences.getString("location", DEFAULT);
+        String fullname=sharedPreferences.getString("fullname", null);
+        String title=sharedPreferences.getString("title", null);
+        String company=sharedPreferences.getString("company", null);
+        String location=sharedPreferences.getString("location", null);
+        String skills=sharedPreferences.getString("Java", null) + sharedPreferences.getString("C++", null) + sharedPreferences.getString("Python", null) + sharedPreferences.getString("Ruby", null) + sharedPreferences.getString("Javascript", null) + sharedPreferences.getString("UX Design", null) + sharedPreferences.getString("Web Design", null) + sharedPreferences.getString("HTML", null) + sharedPreferences.getString("CSS", null) + sharedPreferences.getString("Illustrator", null) + sharedPreferences.getString("Dance", null) + sharedPreferences.getString("Jogging", null) + sharedPreferences.getString("Food", null);
+        String interests=sharedPreferences.getString("Java", null) + sharedPreferences.getString("C++", null) + sharedPreferences.getString("Python", null) + sharedPreferences.getString("Ruby", null) + sharedPreferences.getString("Javascript", null) + sharedPreferences.getString("UX Design", null) + sharedPreferences.getString("Web Design", null) + sharedPreferences.getString("HTML", null) + sharedPreferences.getString("CSS", null) + sharedPreferences.getString("Illustrator", null) + sharedPreferences.getString("Dance", null) + sharedPreferences.getString("Jogging", null) + sharedPreferences.getString("Food", null);
 
         fullnameTextView.setText(fullname);
         titleTextView.setText(title);
         companyTextView.setText(company);
         locationTextView.setText(location);
+        userSkillsTextView.setText(skills);
+        userInterestsTextView.setText(interests);
 
     }
 

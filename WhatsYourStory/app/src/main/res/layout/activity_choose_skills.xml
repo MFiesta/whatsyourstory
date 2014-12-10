@@ -45,112 +45,170 @@
      among users of the app. For purposes of this course, it will initally populate with
      pre-selected buttons. -->
 
+    <TextView
+        android:id="@+id/choose_skills_programming"
+        android:text="@string/choose_skills_programming"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/tell_us_skills_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
     <ToggleButton
-        android:id="@+id/button1_row1"
-        android:text="@string/button1_row1textskills"
+        android:id="@+id/button1_prog"
+        android:text="@string/button1_progtextskills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tell_us_skills_text"
+        android:layout_below="@+id/choose_skills_programming"
         android:layout_alignParentStart="true"
-        android:textOn="@string/button1_row1textskills"
-        android:textOff="@string/button1_row1textskills"
+        android:textOn="@string/button1_progtextskills"
+        android:textOff="@string/button1_progtextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button2_row1"
-        android:text="@string/button2_row1textskills"
-        android:layout_toEndOf="@id/button1_row1"
+        android:id="@+id/button2_prog"
+        android:text="@string/button2_progtextskills"
+        android:layout_toEndOf="@id/button1_prog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tell_us_skills_text"
-        android:textOn="@string/button2_row1textskills"
-        android:textOff="@string/button2_row1textskills"
+        android:layout_below="@+id/choose_skills_programming"
+        android:textOn="@string/button2_progtextskills"
+        android:textOff="@string/button2_progtextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button3_row1"
-        android:text="@string/button3_row1textskills"
+        android:id="@+id/button3_prog"
+        android:text="@string/button3_progtextskills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/button2_row1"
-        android:layout_below="@+id/tell_us_skills_text"
-        android:textOn="@string/button3_row1textskills"
-        android:textOff="@string/button3_row1textskills"
+        android:layout_toEndOf="@id/button2_prog"
+        android:layout_below="@+id/choose_skills_programming"
+        android:textOn="@string/button3_progtextskills"
+        android:textOff="@string/button3_progtextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button1_row2"
-        android:text="@string/button1_row2textskills"
-        android:layout_below="@+id/button1_row1"
+        android:id="@+id/button4_prog"
+        android:text="@string/button4_progtextskills"
+        android:layout_below="@+id/button1_prog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button1_row2textskills"
-        android:textOff="@string/button1_row2textskills"
+        android:textOn="@string/button4_progtextskills"
+        android:textOff="@string/button4_progtextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button2_row2"
-        android:text="@string/button2_row2textskills"
-        android:layout_below="@+id/button2_row1"
-        android:layout_toEndOf="@+id/button1_row2"
+        android:id="@+id/button5_prog"
+        android:text="@string/button5_progtextskills"
+        android:layout_below="@+id/button1_prog"
+        android:layout_toEndOf="@+id/button4_prog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button2_row2textskills"
-        android:textOff="@string/button2_row2textskills"
+        android:textOn="@string/button5_progtextskills"
+        android:textOff="@string/button5_progtextskills"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/choose_skills_design"
+        android:text="@string/choose_skills_design"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/button5_prog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <ToggleButton
+        android:id="@+id/button1_des"
+        android:text="@string/button1_destextskills"
+        android:layout_below="@+id/choose_skills_design"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="@string/button1_destextskills"
+        android:textOff="@string/button1_destextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button3_row2"
-        android:text="@string/button3_row2textskills"
-        android:layout_below="@+id/button2_row1"
-        android:layout_toEndOf="@+id/button2_row2"
+        android:id="@+id/button2_des"
+        android:text="@string/button2_destextskills"
+        android:layout_below="@+id/choose_skills_design"
+        android:layout_toEndOf="@id/button1_des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button3_row2textskills"
-        android:textOff="@string/button3_row2textskills"
+        android:textOn="@string/button2_destextskills"
+        android:textOff="@string/button2_destextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button4_row2"
-        android:text="@string/button4_row2textskills"
-        android:layout_below="@+id/button3_row1"
-        android:layout_toEndOf="@id/button3_row2"
+        android:id="@+id/button3_des"
+        android:text="@string/button3_destextskills"
+        android:layout_below="@+id/button1_des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button4_row2textskills"
-        android:textOff="@string/button4_row2textskills"
+        android:textOn="@string/button3_destextskills"
+        android:textOff="@string/button3_destextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button1_row3"
-        android:text="@string/button1_row3textskills"
-        android:layout_below="@+id/button1_row2"
+        android:id="@+id/button4_des"
+        android:text="@string/button4_destextskills"
+        android:layout_below="@+id/button1_des"
+        android:layout_toEndOf="@+id/button3_des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button1_row3textskills"
-        android:textOff="@string/button1_row3textskills"
+        android:textOn="@string/button4_destextskills"
+        android:textOff="@string/button4_destextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button2_row3"
-        android:text="@string/button2_row3textskills"
-        android:layout_below="@+id/button2_row2"
-        android:layout_toEndOf="@+id/button1_row3"
+        android:id="@+id/button5_des"
+        android:text="@string/button5_destextskills"
+        android:layout_below="@+id/button1_des"
+        android:layout_toEndOf="@id/button4_des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button2_row3textskills"
-        android:textOff="@string/button2_row3textskills"
+        android:textOn="@string/button5_destextskills"
+        android:textOff="@string/button5_destextskills"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/choose_skills_hobbies"
+        android:text="@string/choose_skills_hobbies"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/button3_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <ToggleButton
+        android:id="@+id/button1_hob"
+        android:text="@string/button1_hobtextskills"
+        android:layout_below="@+id/choose_skills_hobbies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="@string/button1_hobtextskills"
+        android:textOff="@string/button1_hobtextskills"
         android:textColor="#FFFFFF"/>
 
     <ToggleButton
-        android:id="@+id/button3_row3"
-        android:text="@string/button3_row3textskills"
-        android:layout_below="@+id/button2_row2"
-        android:layout_toEndOf="@id/button2_row3"
+        android:id="@+id/button2_hob"
+        android:text="@string/button2_hobtextskills"
+        android:layout_below="@+id/choose_skills_hobbies"
+        android:layout_toEndOf="@id/button1_hob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/button3_row3textskills"
-        android:textOff="@string/button3_row3textskills"
+        android:textOn="@string/button2_hobtextskills"
+        android:textOff="@string/button2_hobtextskills"
+        android:textColor="#FFFFFF"/>
+
+    <ToggleButton
+        android:id="@+id/button3_hob"
+        android:text="@string/button3_hobtextskills"
+        android:layout_below="@+id/choose_skills_hobbies"
+        android:layout_toEndOf="@id/button2_hob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="@string/button3_hobtextskills"
+        android:textOff="@string/button3_hobtextskills"
         android:textColor="#FFFFFF"/>
 
     <!-- Next, users will be taken to the Choose Interests page. -->
