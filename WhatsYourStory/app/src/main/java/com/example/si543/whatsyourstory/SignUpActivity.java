@@ -46,7 +46,7 @@ public class SignUpActivity extends Activity {
 
 
 
-    public void SignUpNext(View view) {
+    public void signUpNext(View view) {
         Intent SetProfileActivity = new Intent(this, SetMyInitProfileActivity.class);
         startActivity(SetProfileActivity);
 

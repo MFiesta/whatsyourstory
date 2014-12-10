@@ -141,7 +141,7 @@
                 android:textSize="18sp"
                 android:textColor="@drawable/button_text"
                 android:background= "@drawable/button_shape"
-                android:onClick="SignUpNext"
+                android:onClick="signUpNext"
                 android:layout_gravity="center_horizontal" />
 
 
