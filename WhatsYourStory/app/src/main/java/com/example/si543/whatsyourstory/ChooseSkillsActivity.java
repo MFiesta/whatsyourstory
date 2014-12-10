@@ -48,7 +48,6 @@ public class ChooseSkillsActivity extends Activity {
         button2_hob = (ToggleButton) findViewById(R.id.button2_hob);
         button3_hob = (ToggleButton) findViewById(R.id.button3_hob);
 
-
         final ChooseSkillsTutorialDialog sampleDialog = new ChooseSkillsTutorialDialog(this, "");
         sampleDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //Delay dialog

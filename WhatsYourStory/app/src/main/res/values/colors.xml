@@ -5,6 +5,9 @@
     <color name ="white">#FFFFFF</color>
     <color name="text_color">#424242</color>
     <color name="dialog_bg">#4DD0E1</color>
+    <color name="dialog_message">#424242</color>
+    <color name="dialog_title">#00B8D4</color>
+    <color name="toggle_btn">#40FFFFFF</color>
 
 
 </resources>

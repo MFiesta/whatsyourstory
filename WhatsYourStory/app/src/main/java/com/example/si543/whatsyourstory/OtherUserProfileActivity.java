@@ -1,6 +1,7 @@
 package com.example.si543.whatsyourstory;
 
 //Alice Rhee & Stephanie Wooten (addFavorite and Message methods)
+//Chia Hui (retrieve User Data including Picture from Feed List)
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,8 +12,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,10 +65,10 @@ public class OtherUserProfileActivity extends Activity {
 
     //Message Intent - when they select the Message button it pops-up the MessageAlertDialog to verify
     //they're okay going to SMS messaging
-   public void messageDialog (View view){
+    public void messageDialog (View view){
 
-       MessageAlertDialog myAlert = new MessageAlertDialog();
-       myAlert.show(getFragmentManager(), "Message Alert");
+        MessageAlertDialog myAlert = new MessageAlertDialog();
+        myAlert.show(getFragmentManager(), "Message Alert");
 
     }
 
